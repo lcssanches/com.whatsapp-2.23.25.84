@@ -1,0 +1,62 @@
+.class public LX/2V9;
+.super Ljava/lang/Object;
+
+
+# instance fields
+.field public final A00:LX/1oK;
+
+
+# direct methods
+.method public constructor <init>(LX/1oK;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, LX/2V9;->A00:LX/1oK;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public A00()V
+    .locals 4
+
+    const-string v0, "HistorySyncWorkManager/startHistorySync"
+
+    invoke-static {v0}, Lcom/whatsapp/util/Log;->i(Ljava/lang/String;)V
+
+    iget-object v0, p0, LX/2V9;->A00:LX/1oK;
+
+    invoke-static {v0}, LX/3l0;->A01(LX/3l0;)LX/0Yj;
+
+    move-result-object v3
+
+    sget-object v2, LX/0GK;->A03:LX/0GK;
+
+    const-class v0, Lcom/whatsapp/companiondevice/sync/HistorySyncWorker;
+
+    new-instance v1, LX/0BE;
+
+    invoke-direct {v1, v0}, LX/0BE;-><init>(Ljava/lang/Class;)V
+
+    sget-object v0, LX/0Fo;->A02:LX/0Fo;
+
+    invoke-virtual {v1, v0}, LX/0Rr;->A05(LX/0Fo;)V
+
+    invoke-static {}, LX/0yL;->A07()LX/0Ya;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, LX/0Rr;->A04(LX/0Ya;)V
+
+    invoke-static {v1}, LX/0yT;->A0M(LX/0Rr;)LX/0BG;
+
+    move-result-object v1
+
+    const-string v0, "HISTORY_SYNC_WORK_UNIQUE_NAME"
+
+    invoke-virtual {v3, v2, v1, v0}, LX/0Yj;->A07(LX/0GK;LX/0BG;Ljava/lang/String;)V
+
+    return-void
+.end method

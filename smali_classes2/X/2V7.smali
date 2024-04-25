@@ -1,0 +1,52 @@
+.class public final LX/2V7;
+.super Ljava/lang/Object;
+
+
+# instance fields
+.field public final A00:LX/46s;
+
+
+# direct methods
+.method public constructor <init>(LX/46s;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    invoke-static {p1, v0}, LX/7mO;->A0V(Ljava/lang/Object;I)V
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, LX/2V7;->A00:LX/46s;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final A00(ILjava/lang/String;Ljava/lang/String;)V
+    .locals 2
+
+    new-instance v1, LX/1SE;
+
+    invoke-direct {v1}, LX/1SE;-><init>()V
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    iput-object v0, v1, LX/1SE;->A00:Ljava/lang/Integer;
+
+    invoke-static {p3}, LX/34s;->A01(Ljava/lang/String;)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    iput-object v0, v1, LX/1SE;->A01:Ljava/lang/Integer;
+
+    iput-object p2, v1, LX/1SE;->A02:Ljava/lang/String;
+
+    iget-object v0, p0, LX/2V7;->A00:LX/46s;
+
+    invoke-interface {v0, v1}, LX/46s;->Bft(LX/3gN;)V
+
+    return-void
+.end method

@@ -1,0 +1,12 @@
+.class public LX/6Wf;
+.super Lcom/google/android/gms/common/api/ApiException;
+
+
+# direct methods
+.method public constructor <init>(Lcom/google/android/gms/common/api/Status;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/google/android/gms/common/api/ApiException;-><init>(Lcom/google/android/gms/common/api/Status;)V
+
+    return-void
+.end method

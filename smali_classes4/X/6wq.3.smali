@@ -1,0 +1,109 @@
+.class public final LX/6wq;
+.super LX/2Wd;
+
+# interfaces
+.implements LX/8vb;
+.implements LX/43A;
+.implements LX/8vW;
+.implements LX/47x;
+.implements LX/8vY;
+
+
+# instance fields
+.field public final A00:Ljava/lang/Long;
+
+.field public final A01:Ljava/lang/String;
+
+
+# direct methods
+.method public constructor <init>(LX/39Z;)V
+    .locals 9
+
+    invoke-direct {p0}, LX/2Wd;-><init>()V
+
+    move-object v2, p1
+
+    invoke-static {p1}, LX/2Wd;->A06(LX/39Z;)[Ljava/lang/String;
+
+    move-result-object v7
+
+    const-class v3, Ljava/lang/String;
+
+    const/4 v8, 0x0
+
+    const/4 v6, 0x0
+
+    invoke-static {}, LX/0yM;->A0Q()Ljava/lang/Long;
+
+    move-result-object v4
+
+    const-wide/16 v0, 0x28
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v5
+
+    invoke-static/range {v2 .. v8}, LX/3A2;->A08(LX/39Z;Ljava/lang/Class;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Object;[Ljava/lang/String;Z)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    iput-object v0, p0, LX/6wq;->A01:Ljava/lang/String;
+
+    invoke-static {}, LX/2Wd;->A05()[Ljava/lang/String;
+
+    move-result-object v7
+
+    const-class v3, Ljava/lang/Long;
+
+    const-wide/16 v0, 0x190
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v4
+
+    const-wide/16 v0, 0x1f3
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v5
+
+    invoke-static/range {v2 .. v8}, LX/3A2;->A08(LX/39Z;Ljava/lang/Class;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Object;[Ljava/lang/String;Z)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Long;
+
+    iput-object v0, p0, LX/6wq;->A00:Ljava/lang/Long;
+
+    iput-object p1, p0, LX/2Wd;->A00:LX/39Z;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public AvB(LX/7Of;)V
+    .locals 0
+
+    invoke-virtual {p1, p0}, LX/7Of;->A00(LX/8vY;)V
+
+    return-void
+.end method
+
+.method public B4O()Ljava/lang/Long;
+    .locals 1
+
+    iget-object v0, p0, LX/6wq;->A00:Ljava/lang/Long;
+
+    return-object v0
+.end method
+
+.method public BCL()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, LX/6wq;->A01:Ljava/lang/String;
+
+    return-object v0
+.end method
