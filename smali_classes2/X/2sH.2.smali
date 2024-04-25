@@ -123,7 +123,6 @@
     move-result-object v0
     :try_end_2
     .catch Ljava/security/NoSuchAlgorithmException; {:try_start_2 .. :try_end_2} :catch_0
-    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_2 .. :try_end_2} :catch_1
     .catch Ljava/security/InvalidKeyException; {:try_start_2 .. :try_end_2} :catch_1
 
     :try_start_3

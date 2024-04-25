@@ -165,7 +165,7 @@
 
     invoke-direct {v5}, Landroid/app/ActivityManager$MemoryInfo;-><init>()V
 
-    const-wide/16 v3, 0x400
+    const-wide/16 v3, 0x800
 
     if-nez v0, :cond_0
 
@@ -212,7 +212,7 @@
 
     invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-wide/16 v15, 0x400
+    const-wide/16 v15, 0x800
 
     div-long/2addr v0, v15
 

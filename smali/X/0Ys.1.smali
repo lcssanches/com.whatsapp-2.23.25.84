@@ -1094,7 +1094,6 @@
     .catch Ljava/util/concurrent/ExecutionException; {:try_start_5 .. :try_end_5} :catch_2
     .catch Ljava/lang/InterruptedException; {:try_start_5 .. :try_end_5} :catch_0
     .catch Ljava/util/concurrent/TimeoutException; {:try_start_5 .. :try_end_5} :catch_1
-    .catch Ljava/lang/InterruptedException; {:try_start_5 .. :try_end_5} :catch_3
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_5 .. :try_end_5} :catch_4
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_5
 

@@ -336,6 +336,10 @@
 
     check-cast v6, Ljava/util/List;
 
+    iget-object v5, v3, Lcom/whatsapp/status/playback/fragment/StatusPlaybackContactFragment;->A0R:Lcom/whatsapp/jid/UserJid;
+
+    invoke-static {v6, v5}, Lcom/Lzm/Settings/Tools/Status;->A04(Ljava/lang/Object;Lcom/whatsapp/jid/Jid;)Ljava/lang/Object;
+
     iget-object v5, p1, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v5, Ljava/util/Map;

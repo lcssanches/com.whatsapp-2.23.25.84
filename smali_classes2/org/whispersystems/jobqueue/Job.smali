@@ -4236,7 +4236,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_9b
+    if-nez v0, :cond_9c
 
     const-string v0, "Fetch2FAEmailStatusJob/onRun: email status fetching failed"
 
@@ -4280,7 +4280,7 @@
 
     move-result-object v7
 
-    if-eqz v7, :cond_9b
+    if-eqz v7, :cond_9c
 
     iget-object v1, v0, LX/3yW;->serverMessageIds:Ljava/util/List;
 
@@ -4348,7 +4348,7 @@
 
     move-result v1
 
-    if-nez v1, :cond_9b
+    if-nez v1, :cond_9c
 
     invoke-static {v7}, LX/2j1;->A00(Lcom/whatsapp/jid/Jid;)LX/2j1;
 
@@ -4475,7 +4475,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_9b
+    if-eqz v1, :cond_9c
 
     invoke-static {v4}, LX/0yL;->A02(Ljava/util/Iterator;)J
 
@@ -4526,7 +4526,7 @@
 
     iget-boolean v1, v0, LX/3yN;->isCancelled:Z
 
-    if-nez v1, :cond_9b
+    if-nez v1, :cond_9c
 
     const-string v1, "NewsletterSubscribersGraphqlJob/onRun"
 
@@ -4621,7 +4621,7 @@
 
     iget-boolean v1, v0, LX/3yN;->isCancelled:Z
 
-    if-nez v1, :cond_9b
+    if-nez v1, :cond_9c
 
     invoke-static {}, LX/001;->A0r()Ljava/lang/StringBuilder;
 
@@ -4763,7 +4763,7 @@
 
     iget-boolean v1, v0, LX/3yN;->isCancelled:Z
 
-    if-nez v1, :cond_9b
+    if-nez v1, :cond_9c
 
     invoke-static {}, LX/001;->A0r()Ljava/lang/StringBuilder;
 
@@ -5250,7 +5250,7 @@
 
     invoke-virtual/range {v22 .. v22}, LX/3fv;->close()V
 
-    if-eqz v6, :cond_9b
+    if-eqz v6, :cond_9c
 
     instance-of v5, v0, Lcom/whatsapp/jobqueue/job/messagejob/ProcessVCardMessageJob;
 
@@ -6287,9 +6287,7 @@
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3}, LX/32D;->A00()Z
-
-    move-result v1
+    const/4 v1, 0x0
 
     invoke-static {v2, v1}, LX/0yK;->A1V(Ljava/lang/StringBuilder;Z)V
 
@@ -6452,9 +6450,9 @@
 
     move-result v1
 
-    if-nez v1, :cond_9b
+    if-nez v1, :cond_9c
 
-    if-eqz v4, :cond_9b
+    if-eqz v4, :cond_9c
 
     :try_start_2a
     iget-object v4, v0, Lcom/whatsapp/jobqueue/job/SyncDeviceForAdvValidationJob;->A01:LX/3Hj;
@@ -6477,11 +6475,7 @@
 
     move-result-object v1
 
-    check-cast v1, LX/32D;
-
-    invoke-virtual {v1}, LX/32D;->A00()Z
-
-    move-result v1
+    const/4 v1, 0x0
 
     if-eqz v1, :cond_44
 
@@ -6740,7 +6734,7 @@
 
     if-eq v3, v1, :cond_4c
 
-    if-eqz v3, :cond_9b
+    if-eqz v3, :cond_9c
 
     invoke-static {}, LX/001;->A0r()Ljava/lang/StringBuilder;
 
@@ -7048,7 +7042,7 @@
     :cond_52
     instance-of v1, v0, Lcom/whatsapp/jobqueue/job/SendReadReceiptJob;
 
-    if-eqz v1, :cond_55
+    if-eqz v1, :cond_56
 
     check-cast v0, Lcom/whatsapp/jobqueue/job/SendReadReceiptJob;
 
@@ -7064,7 +7058,7 @@
 
     instance-of v1, v7, LX/1Zm;
 
-    if-eqz v1, :cond_54
+    if-eqz v1, :cond_55
 
     const/4 v8, 0x0
 
@@ -7105,7 +7099,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_9b
+    if-eqz v1, :cond_9c
 
     iget-object v6, v0, Lcom/whatsapp/jobqueue/job/SendReadReceiptJob;->A01:LX/2sG;
 
@@ -7133,6 +7127,13 @@
 
     iput-object v1, v3, LX/2j1;->A02:Lcom/whatsapp/jid/Jid;
 
+    sget v1, Lcom/Lzm/Settings/Tools/Privacy;->Lzm_HideRead:I
+
+    if-eqz v1, :cond_53
+
+    return-void
+
+    :cond_53
     const-string/jumbo v1, "receipt"
 
     iput-object v1, v3, LX/2j1;->A05:Ljava/lang/String;
@@ -7175,13 +7176,13 @@
 
     move-result-object v2
 
-    if-eqz v2, :cond_53
+    if-eqz v2, :cond_54
 
     const/4 v1, 0x6
 
     invoke-virtual {v2, v1}, LX/2su;->A03(I)V
 
-    :cond_53
+    :cond_54
     iget-object v2, v0, Lcom/whatsapp/jobqueue/job/SendReadReceiptJob;->A00:LX/36T;
 
     const/16 v1, 0x59
@@ -7200,7 +7201,7 @@
 
     return-void
 
-    :cond_54
+    :cond_55
     iget-object v1, v0, Lcom/whatsapp/jobqueue/job/SendReadReceiptJob;->participant:Ljava/lang/String;
 
     invoke-virtual {v2, v1}, LX/34x;->A04(Ljava/lang/String;)LX/1Za;
@@ -7209,10 +7210,10 @@
 
     goto/16 :goto_20
 
-    :cond_55
+    :cond_56
     instance-of v1, v0, Lcom/whatsapp/jobqueue/job/SendPlayedReceiptJobV2;
 
-    if-eqz v1, :cond_5b
+    if-eqz v1, :cond_5c
 
     check-cast v0, Lcom/whatsapp/jobqueue/job/SendPlayedReceiptJobV2;
 
@@ -7252,7 +7253,7 @@
 
     const/4 v7, 0x0
 
-    if-eqz v1, :cond_58
+    if-eqz v1, :cond_59
 
     iget-object v1, v3, Landroid/util/Pair;->first:Ljava/lang/Object;
 
@@ -7264,7 +7265,7 @@
 
     instance-of v1, v1, LX/1ZU;
 
-    if-nez v1, :cond_58
+    if-nez v1, :cond_59
 
     const/4 v1, 0x1
 
@@ -7273,7 +7274,7 @@
     :goto_21
     invoke-virtual {v0}, Lcom/whatsapp/jobqueue/job/SendPlayedReceiptJobV2;->A08()Ljava/lang/String;
 
-    if-nez v1, :cond_5a
+    if-nez v1, :cond_5b
 
     iget-object v13, v0, Lcom/whatsapp/jobqueue/job/SendPlayedReceiptJobV2;->A00:LX/2H6;
 
@@ -7316,7 +7317,7 @@
 
     array-length v1, v4
 
-    if-ge v6, v1, :cond_59
+    if-ge v6, v1, :cond_5a
 
     invoke-virtual {v11}, Landroid/content/ContentValues;->clear()V
 
@@ -7334,7 +7335,7 @@
 
     iget-object v1, v12, LX/2b5;->A00:LX/1Za;
 
-    if-eqz v1, :cond_56
+    if-eqz v1, :cond_57
 
     invoke-static {v5, v1}, LX/37n;->A03(LX/37n;Lcom/whatsapp/jid/Jid;)Ljava/lang/Long;
 
@@ -7344,7 +7345,7 @@
 
     invoke-virtual {v11, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    :cond_56
+    :cond_57
     iget-object v1, v12, LX/2b5;->A02:[Ljava/lang/Long;
 
     aget-object v2, v1, v6
@@ -7387,13 +7388,13 @@
 
     cmp-long v1, v9, v4
 
-    if-nez v1, :cond_57
+    if-nez v1, :cond_58
 
     const-string v1, "PlayedSelfReceiptStore/insertPlayedSelfReceipt fail to insert"
 
     invoke-static {v1}, Lcom/whatsapp/util/Log;->w(Ljava/lang/String;)V
 
-    :cond_57
+    :cond_58
     invoke-virtual {v14}, LX/3fu;->A00()V
     :try_end_2c
     .catchall {:try_start_2c .. :try_end_2c} :catchall_10
@@ -7409,21 +7410,21 @@
 
     goto :goto_22
 
-    :cond_58
+    :cond_59
     const/4 v1, 0x0
 
     const-string/jumbo v8, "played-self"
 
     goto/16 :goto_21
 
-    :cond_59
+    :cond_5a
     iget-boolean v1, v0, Lcom/whatsapp/jobqueue/job/SendPlayedReceiptJobV2;->playedSelfFromPeer:Z
 
-    if-eqz v1, :cond_5a
+    if-eqz v1, :cond_5b
 
     return-void
 
-    :cond_5a
+    :cond_5b
     new-instance v2, LX/2j1;
 
     invoke-direct {v2}, LX/2j1;-><init>()V
@@ -7494,10 +7495,10 @@
 
     goto/16 :goto_1f
 
-    :cond_5b
+    :cond_5c
     instance-of v1, v0, Lcom/whatsapp/jobqueue/job/SendPlayedReceiptJob;
 
-    if-eqz v1, :cond_5e
+    if-eqz v1, :cond_5f
 
     check-cast v0, Lcom/whatsapp/jobqueue/job/SendPlayedReceiptJob;
 
@@ -7513,7 +7514,7 @@
 
     move-result v1
 
-    if-nez v1, :cond_5d
+    if-nez v1, :cond_5e
 
     iget-object v1, v0, Lcom/whatsapp/jobqueue/job/SendPlayedReceiptJob;->remoteResourceRawJid:Ljava/lang/String;
 
@@ -7528,13 +7529,13 @@
 
     move-object v8, v2
 
-    if-nez v1, :cond_5c
+    if-nez v1, :cond_5d
 
     move-object v8, v9
 
     move-object v9, v2
 
-    :cond_5c
+    :cond_5d
     invoke-static {v8}, LX/2j1;->A00(Lcom/whatsapp/jid/Jid;)LX/2j1;
 
     move-result-object v2
@@ -7585,15 +7586,15 @@
 
     goto/16 :goto_1f
 
-    :cond_5d
+    :cond_5e
     const/4 v2, 0x0
 
     goto :goto_23
 
-    :cond_5e
+    :cond_5f
     instance-of v1, v0, Lcom/whatsapp/jobqueue/job/SendPermanentFailureReceiptJob;
 
-    if-eqz v1, :cond_5f
+    if-eqz v1, :cond_60
 
     check-cast v0, Lcom/whatsapp/jobqueue/job/SendPermanentFailureReceiptJob;
 
@@ -7669,10 +7670,10 @@
 
     goto/16 :goto_1f
 
-    :cond_5f
+    :cond_60
     instance-of v1, v0, Lcom/whatsapp/jobqueue/job/SendOrderStatusUpdateFailureReceiptJob;
 
-    if-eqz v1, :cond_60
+    if-eqz v1, :cond_61
 
     check-cast v0, Lcom/whatsapp/jobqueue/job/SendOrderStatusUpdateFailureReceiptJob;
 
@@ -7726,10 +7727,10 @@
 
     goto/16 :goto_1f
 
-    :cond_60
+    :cond_61
     instance-of v1, v0, Lcom/whatsapp/jobqueue/job/SendMediaErrorReceiptJob;
 
-    if-eqz v1, :cond_67
+    if-eqz v1, :cond_68
 
     check-cast v0, Lcom/whatsapp/jobqueue/job/SendMediaErrorReceiptJob;
 
@@ -7749,7 +7750,7 @@
 
     const/4 v3, 0x0
 
-    if-nez v1, :cond_66
+    if-nez v1, :cond_67
 
     iget-object v1, v0, Lcom/whatsapp/jobqueue/job/SendMediaErrorReceiptJob;->remoteResourceRawJid:Ljava/lang/String;
 
@@ -7762,7 +7763,7 @@
 
     iget-object v1, v0, Lcom/whatsapp/jobqueue/job/SendMediaErrorReceiptJob;->myPrimaryJid:Ljava/lang/String;
 
-    if-eqz v1, :cond_64
+    if-eqz v1, :cond_65
 
     const/4 v6, 0x1
 
@@ -7777,19 +7778,19 @@
 
     move-result v1
 
-    if-nez v1, :cond_61
+    if-nez v1, :cond_62
 
     instance-of v1, v8, LX/1ZQ;
 
-    if-nez v1, :cond_61
+    if-nez v1, :cond_62
 
     move-object v9, v3
 
-    if-eqz v2, :cond_61
+    if-eqz v2, :cond_62
 
     move-object v9, v8
 
-    :cond_61
+    :cond_62
     invoke-static {v7}, LX/2j1;->A00(Lcom/whatsapp/jid/Jid;)LX/2j1;
 
     move-result-object v2
@@ -7806,11 +7807,11 @@
 
     iput-object v1, v2, LX/2j1;->A07:Ljava/lang/String;
 
-    if-nez v6, :cond_62
+    if-nez v6, :cond_63
 
     move-object v3, v9
 
-    :cond_62
+    :cond_63
     iput-object v3, v2, LX/2j1;->A01:Lcom/whatsapp/jid/Jid;
 
     invoke-virtual {v2}, LX/2j1;->A01()LX/3DU;
@@ -7851,7 +7852,7 @@
 
     check-cast v11, [B
 
-    if-eqz v6, :cond_63
+    if-eqz v6, :cond_64
 
     iget-object v10, v0, Lcom/whatsapp/jobqueue/job/SendMediaErrorReceiptJob;->messageId:Ljava/lang/String;
 
@@ -7880,7 +7881,7 @@
 
     goto/16 :goto_1f
 
-    :cond_63
+    :cond_64
     iget-object v2, v0, Lcom/whatsapp/jobqueue/job/SendMediaErrorReceiptJob;->messageId:Ljava/lang/String;
 
     iget-object v1, v0, Lcom/whatsapp/jobqueue/job/SendMediaErrorReceiptJob;->category:Ljava/lang/String;
@@ -7911,29 +7912,29 @@
 
     goto :goto_26
 
-    :cond_64
+    :cond_65
     const/4 v6, 0x0
 
     move-object v7, v8
 
-    if-eqz v2, :cond_65
+    if-eqz v2, :cond_66
 
     move-object v7, v9
 
-    :cond_65
+    :cond_66
     invoke-static {v7}, LX/3A6;->A07(Ljava/lang/Object;)V
 
     goto/16 :goto_25
 
-    :cond_66
+    :cond_67
     move-object v9, v3
 
     goto/16 :goto_24
 
-    :cond_67
+    :cond_68
     instance-of v1, v0, Lcom/whatsapp/jobqueue/job/SendFinalLiveLocationRetryJob;
 
-    if-eqz v1, :cond_68
+    if-eqz v1, :cond_69
 
     check-cast v0, Lcom/whatsapp/jobqueue/job/SendFinalLiveLocationRetryJob;
 
@@ -7987,10 +7988,10 @@
 
     goto/16 :goto_2e
 
-    :cond_68
+    :cond_69
     instance-of v1, v0, Lcom/whatsapp/jobqueue/job/SendFinalLiveLocationNotificationJob;
 
-    if-eqz v1, :cond_69
+    if-eqz v1, :cond_6a
 
     check-cast v0, Lcom/whatsapp/jobqueue/job/SendFinalLiveLocationNotificationJob;
 
@@ -8052,7 +8053,7 @@
 
     move-result-object v8
 
-    if-eqz v8, :cond_82
+    if-eqz v8, :cond_83
 
     iget-object v4, v10, LX/36c;->A0R:Ljava/lang/Object;
 
@@ -8060,10 +8061,10 @@
 
     goto/16 :goto_33
 
-    :cond_69
+    :cond_6a
     instance-of v1, v0, Lcom/whatsapp/jobqueue/job/SendEngagedReceiptJob;
 
-    if-eqz v1, :cond_6a
+    if-eqz v1, :cond_6b
 
     check-cast v0, Lcom/whatsapp/jobqueue/job/SendEngagedReceiptJob;
 
@@ -8077,7 +8078,7 @@
 
     instance-of v1, v7, LX/1ZQ;
 
-    if-eqz v1, :cond_84
+    if-eqz v1, :cond_85
 
     iget-wide v4, v0, Lcom/whatsapp/jobqueue/job/SendEngagedReceiptJob;->originalMessageTimestamp:J
 
@@ -8085,7 +8086,7 @@
 
     cmp-long v1, v4, v2
 
-    if-lez v1, :cond_84
+    if-lez v1, :cond_85
 
     const-wide/32 v1, 0x5265c00
 
@@ -8093,7 +8094,7 @@
 
     iget-object v1, v0, Lcom/whatsapp/jobqueue/job/SendEngagedReceiptJob;->A00:LX/2tf;
 
-    if-nez v1, :cond_83
+    if-nez v1, :cond_84
 
     const-string/jumbo v0, "time"
 
@@ -8103,10 +8104,10 @@
 
     throw v0
 
-    :cond_6a
+    :cond_6b
     instance-of v1, v0, Lcom/whatsapp/jobqueue/job/SendDisableLiveLocationJob;
 
-    if-eqz v1, :cond_6b
+    if-eqz v1, :cond_6c
 
     check-cast v0, Lcom/whatsapp/jobqueue/job/SendDisableLiveLocationJob;
 
@@ -8116,7 +8117,7 @@
 
     move-result-object v12
 
-    if-nez v12, :cond_88
+    if-nez v12, :cond_89
 
     invoke-static {}, LX/001;->A0r()Ljava/lang/StringBuilder;
 
@@ -8132,10 +8133,10 @@
 
     return-void
 
-    :cond_6b
+    :cond_6c
     instance-of v1, v0, Lcom/whatsapp/jobqueue/job/SendDeleteHistorySyncMmsJob;
 
-    if-eqz v1, :cond_6c
+    if-eqz v1, :cond_6d
 
     check-cast v0, Lcom/whatsapp/jobqueue/job/SendDeleteHistorySyncMmsJob;
 
@@ -8183,10 +8184,10 @@
 
     return-void
 
-    :cond_6c
+    :cond_6d
     instance-of v1, v0, Lcom/whatsapp/jobqueue/job/RotateSignedPreKeyJob;
 
-    if-eqz v1, :cond_70
+    if-eqz v1, :cond_71
 
     check-cast v0, Lcom/whatsapp/jobqueue/job/RotateSignedPreKeyJob;
 
@@ -8210,7 +8211,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_6f
+    if-eqz v1, :cond_70
 
     iget-object v1, v0, Lcom/whatsapp/jobqueue/job/RotateSignedPreKeyJob;->A01:LX/36a;
 
@@ -8227,7 +8228,7 @@
 
     move-result v1
 
-    if-nez v1, :cond_6d
+    if-nez v1, :cond_6e
 
     invoke-static {}, LX/001;->A0r()Ljava/lang/StringBuilder;
 
@@ -8246,7 +8247,7 @@
 
     return-void
 
-    :cond_6d
+    :cond_6e
     iget-object v1, v0, Lcom/whatsapp/jobqueue/job/RotateSignedPreKeyJob;->A04:LX/36T;
 
     invoke-virtual {v1}, LX/36T;->A04()Ljava/lang/String;
@@ -8299,13 +8300,13 @@
 
     const/16 v1, 0x1f7
 
-    if-eq v3, v1, :cond_8b
+    if-eq v3, v1, :cond_8c
 
     const/16 v2, 0x199
 
     const-string/jumbo v1, "server error code returned during rotate signed pre key job; errorCode="
 
-    if-ne v3, v2, :cond_6e
+    if-ne v3, v2, :cond_6f
 
     invoke-static {v3, v1}, LX/0yL;->A0c(ILjava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8323,7 +8324,7 @@
 
     check-cast v4, [B
 
-    if-eqz v4, :cond_9b
+    if-eqz v4, :cond_9c
 
     iget-object v1, v0, Lcom/whatsapp/jobqueue/job/RotateSignedPreKeyJob;->A01:LX/36a;
 
@@ -8331,14 +8332,14 @@
 
     move-result v1
 
-    if-eqz v1, :cond_8a
+    if-eqz v1, :cond_8b
 
     invoke-virtual {v0, v4}, Lcom/whatsapp/jobqueue/job/RotateSignedPreKeyJob;->A09([B)V
 
     return-void
 
-    :cond_6e
-    if-eqz v3, :cond_9b
+    :cond_6f
+    if-eqz v3, :cond_9c
 
     invoke-static {v3, v1}, LX/0yL;->A0c(ILjava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8346,7 +8347,7 @@
 
     goto :goto_28
 
-    :cond_6f
+    :cond_70
     iget-object v2, v0, Lcom/whatsapp/jobqueue/job/RotateSignedPreKeyJob;->A02:LX/2gM;
 
     const/16 v1, 0xa
@@ -8359,10 +8360,10 @@
 
     goto/16 :goto_27
 
-    :cond_70
+    :cond_71
     instance-of v1, v0, Lcom/whatsapp/jobqueue/job/ReceiptProcessingJob;
 
-    if-eqz v1, :cond_72
+    if-eqz v1, :cond_73
 
     check-cast v0, Lcom/whatsapp/jobqueue/job/ReceiptProcessingJob;
 
@@ -8393,7 +8394,7 @@
     const/4 v4, 0x0
 
     :goto_29
-    if-ge v4, v7, :cond_8c
+    if-ge v4, v7, :cond_8d
 
     iget-object v1, v0, Lcom/whatsapp/jobqueue/job/ReceiptProcessingJob;->keyRemoteChatJidRawString:[Ljava/lang/String;
 
@@ -8403,7 +8404,7 @@
 
     move-result-object v3
 
-    if-eqz v3, :cond_71
+    if-eqz v3, :cond_72
 
     iget-object v1, v0, Lcom/whatsapp/jobqueue/job/ReceiptProcessingJob;->keyFromMe:[Z
 
@@ -8419,15 +8420,15 @@
 
     invoke-virtual {v5, v1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
 
-    :cond_71
+    :cond_72
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_29
 
-    :cond_72
+    :cond_73
     instance-of v1, v0, Lcom/whatsapp/jobqueue/job/ReceiptMultiTargetProcessingJob;
 
-    if-eqz v1, :cond_74
+    if-eqz v1, :cond_75
 
     check-cast v0, Lcom/whatsapp/jobqueue/job/ReceiptMultiTargetProcessingJob;
 
@@ -8476,7 +8477,7 @@
     const/4 v4, 0x0
 
     :goto_2a
-    if-ge v4, v5, :cond_8d
+    if-ge v4, v5, :cond_8e
 
     iget-object v1, v0, Lcom/whatsapp/jobqueue/job/ReceiptMultiTargetProcessingJob;->participantDeviceJidRawString:[Ljava/lang/String;
 
@@ -8486,7 +8487,7 @@
 
     move-result-object v3
 
-    if-eqz v3, :cond_73
+    if-eqz v3, :cond_74
 
     iget-object v1, v0, Lcom/whatsapp/jobqueue/job/ReceiptMultiTargetProcessingJob;->timestamp:[J
 
@@ -8498,24 +8499,24 @@
 
     invoke-static {v3, v1, v10}, LX/0yL;->A1E(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/AbstractCollection;)V
 
-    :cond_73
+    :cond_74
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_2a
 
-    :cond_74
+    :cond_75
     instance-of v1, v0, Lcom/whatsapp/jobqueue/job/GetVNameCertificateJob;
 
-    if-eqz v1, :cond_75
+    if-eqz v1, :cond_76
 
     check-cast v0, Lcom/whatsapp/jobqueue/job/GetVNameCertificateJob;
 
     goto/16 :goto_39
 
-    :cond_75
+    :cond_76
     instance-of v1, v0, Lcom/whatsapp/jobqueue/job/GetStatusPrivacyJob;
 
-    if-eqz v1, :cond_78
+    if-eqz v1, :cond_79
 
     check-cast v0, Lcom/whatsapp/jobqueue/job/GetStatusPrivacyJob;
 
@@ -8549,7 +8550,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_76
+    if-eqz v3, :cond_77
 
     iget-object v9, v6, LX/2xo;->A04:LX/8B6;
 
@@ -8567,7 +8568,7 @@
 
     invoke-virtual {v9, v7, v8, v4, v3}, LX/8B6;->markerAnnotate(IILjava/lang/String;I)V
 
-    :cond_76
+    :cond_77
     sget-object v4, LX/2wp;->A01:LX/2wp;
 
     const/16 v3, 0xf03
@@ -8576,7 +8577,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_77
+    if-eqz v3, :cond_78
 
     iget-object v12, v6, LX/2xo;->A01:LX/2tf;
 
@@ -8639,7 +8640,7 @@
 
     const/16 v1, 0x1f4
 
-    if-ne v2, v1, :cond_9b
+    if-ne v2, v1, :cond_9c
 
     invoke-static {}, LX/001;->A0r()Ljava/lang/StringBuilder;
 
@@ -8669,7 +8670,7 @@
 
     throw v0
 
-    :cond_77
+    :cond_78
     invoke-static {}, LX/0yU;->A1J()[LX/3DX;
 
     move-result-object v7
@@ -8718,16 +8719,16 @@
 
     goto :goto_2b
 
-    :cond_78
+    :cond_79
     instance-of v1, v0, Lcom/whatsapp/jobqueue/job/GeneratePrivacyTokenJob;
 
-    if-eqz v1, :cond_79
+    if-eqz v1, :cond_7a
 
     check-cast v0, Lcom/whatsapp/jobqueue/job/GeneratePrivacyTokenJob;
 
     iget-object v2, v0, Lcom/whatsapp/jobqueue/job/GeneratePrivacyTokenJob;->A01:Lcom/whatsapp/jid/UserJid;
 
-    if-nez v2, :cond_8e
+    if-nez v2, :cond_8f
 
     const-string v0, "GeneratePrivacyTokenJob/onRun Stored UserJid String was invalid"
 
@@ -8735,10 +8736,10 @@
 
     return-void
 
-    :cond_79
+    :cond_7a
     instance-of v1, v0, Lcom/whatsapp/jobqueue/job/DeleteAccountFromHsmServerJob;
 
-    if-eqz v1, :cond_7a
+    if-eqz v1, :cond_7b
 
     check-cast v0, Lcom/whatsapp/jobqueue/job/DeleteAccountFromHsmServerJob;
 
@@ -8770,7 +8771,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_9b
+    if-eqz v1, :cond_9c
 
     invoke-virtual {v6}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
 
@@ -8778,7 +8779,7 @@
 
     const/16 v1, 0x194
 
-    if-eq v2, v1, :cond_9b
+    if-eq v2, v1, :cond_9c
 
     invoke-static {}, LX/001;->A0r()Ljava/lang/StringBuilder;
 
@@ -8804,10 +8805,10 @@
 
     throw v0
 
-    :cond_7a
+    :cond_7b
     instance-of v1, v0, Lcom/whatsapp/jobqueue/job/BulkGetPreKeyJob;
 
-    if-eqz v1, :cond_91
+    if-eqz v1, :cond_92
 
     check-cast v0, Lcom/whatsapp/jobqueue/job/BulkGetPreKeyJob;
 
@@ -8845,7 +8846,7 @@
 
     iget-object v1, v0, Lcom/whatsapp/jobqueue/job/BulkGetPreKeyJob;->identityChangedJids:[Ljava/lang/String;
 
-    if-eqz v1, :cond_7c
+    if-eqz v1, :cond_7d
 
     invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
@@ -8858,7 +8859,7 @@
     :goto_2c
     iget v1, v0, Lcom/whatsapp/jobqueue/job/BulkGetPreKeyJob;->context:I
 
-    if-eqz v1, :cond_7b
+    if-eqz v1, :cond_7c
 
     new-instance v2, LX/1Sk;
 
@@ -8896,7 +8897,7 @@
 
     invoke-interface {v1, v2}, LX/46s;->Bft(LX/3gN;)V
 
-    :cond_7b
+    :cond_7c
     iget-object v5, v0, Lcom/whatsapp/jobqueue/job/BulkGetPreKeyJob;->A01:LX/36T;
 
     const/4 v1, 0x0
@@ -8953,7 +8954,7 @@
 
     goto/16 :goto_1f
 
-    :cond_7c
+    :cond_7d
     invoke-static {}, LX/001;->A0w()Ljava/util/ArrayList;
 
     move-result-object v3
@@ -9006,7 +9007,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_7d
+    if-eqz v1, :cond_7e
 
     iget-object v1, v0, Lcom/whatsapp/jobqueue/job/SendFinalLiveLocationRetryJob;->rawDeviceJid:Ljava/lang/String;
 
@@ -9043,11 +9044,11 @@
 
     iget-object v1, v0, Lcom/whatsapp/jobqueue/job/SendFinalLiveLocationRetryJob;->contextRawJid:Ljava/lang/String;
 
-    if-nez v1, :cond_7e
+    if-nez v1, :cond_7f
 
     goto :goto_30
 
-    :cond_7d
+    :cond_7e
     iget-object v3, v0, Lcom/whatsapp/jobqueue/job/SendFinalLiveLocationRetryJob;->A03:LX/2gM;
 
     const/4 v2, 0x3
@@ -9069,7 +9070,7 @@
 
     goto :goto_31
 
-    :cond_7e
+    :cond_7f
     invoke-static {v1}, LX/34x;->A02(Ljava/lang/String;)LX/1Za;
 
     move-result-object v4
@@ -9122,9 +9123,9 @@
 
     move-result v1
 
-    if-nez v1, :cond_80
+    if-nez v1, :cond_81
 
-    if-eqz v2, :cond_7f
+    if-eqz v2, :cond_80
 
     iget-wide v6, v9, LX/2qS;->A05:J
 
@@ -9132,16 +9133,16 @@
 
     cmp-long v1, v6, v2
 
-    if-gez v1, :cond_7f
+    if-gez v1, :cond_80
 
     monitor-exit v4
 
     goto :goto_35
 
-    :cond_7f
+    :cond_80
     invoke-virtual {v10, v9, v8}, LX/36c;->A0W(LX/2qS;LX/1g6;)V
 
-    :cond_80
+    :cond_81
     monitor-exit v4
     :try_end_32
     .catchall {:try_start_32 .. :try_end_32} :catchall_14
@@ -9165,7 +9166,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_81
+    if-eqz v1, :cond_82
 
     invoke-virtual {v0, v4}, Lcom/whatsapp/jobqueue/job/SendFinalLiveLocationNotificationJob;->A08(LX/1En;)LX/2Zt;
 
@@ -9194,7 +9195,7 @@
 
     goto :goto_36
 
-    :cond_81
+    :cond_82
     iget-object v3, v0, Lcom/whatsapp/jobqueue/job/SendFinalLiveLocationNotificationJob;->A02:LX/2gM;
 
     const/4 v2, 0x2
@@ -9224,7 +9225,7 @@
 
     throw v0
 
-    :cond_82
+    :cond_83
     :goto_35
     invoke-static {}, LX/001;->A0r()Ljava/lang/StringBuilder;
 
@@ -9259,18 +9260,18 @@
 
     return-void
 
-    :cond_83
+    :cond_84
     invoke-virtual {v1}, LX/2tf;->A0I()J
 
     move-result-wide v2
 
     cmp-long v1, v4, v2
 
-    if-gez v1, :cond_84
+    if-gez v1, :cond_85
 
     return-void
 
-    :cond_84
+    :cond_85
     invoke-static {v7}, LX/2j1;->A00(Lcom/whatsapp/jid/Jid;)LX/2j1;
 
     move-result-object v6
@@ -9331,13 +9332,13 @@
 
     move-result v1
 
-    if-eqz v1, :cond_85
+    if-eqz v1, :cond_86
 
     const-string v1, "id"
 
     invoke-static {v6, v1, v8}, LX/2se;->A0C(LX/2se;Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_85
+    :cond_86
     invoke-virtual {v6}, LX/2se;->A0E()LX/39Z;
 
     move-result-object v6
@@ -9384,13 +9385,13 @@
 
     move-result v1
 
-    if-eqz v1, :cond_86
+    if-eqz v1, :cond_87
 
     const-string/jumbo v1, "value"
 
     invoke-static {v2, v1, v14}, LX/2se;->A0C(LX/2se;Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_86
+    :cond_87
     invoke-virtual {v2, v8}, LX/2se;->A0H(LX/39Z;)V
 
     invoke-static {v2, v7}, LX/2se;->A06(LX/2se;LX/2se;)V
@@ -9415,7 +9416,7 @@
 
     iget-object v1, v0, Lcom/whatsapp/jobqueue/job/SendEngagedReceiptJob;->A01:LX/36T;
 
-    if-nez v1, :cond_87
+    if-nez v1, :cond_88
 
     const-string/jumbo v0, "messageClient"
 
@@ -9425,14 +9426,14 @@
 
     throw v0
 
-    :cond_87
+    :cond_88
     const/16 v0, 0x168
 
     invoke-virtual {v1, v2, v3, v0}, LX/36T;->A08(LX/39Z;LX/3DU;I)Ljava/util/concurrent/Future;
 
     return-void
 
-    :cond_88
+    :cond_89
     iget-object v1, v0, Lcom/whatsapp/jobqueue/job/SendDisableLiveLocationJob;->A00:LX/36c;
 
     invoke-virtual {v1, v12}, LX/36c;->A0d(LX/1Za;)Z
@@ -9443,7 +9444,7 @@
 
     move-result-object v2
 
-    if-eqz v1, :cond_89
+    if-eqz v1, :cond_8a
 
     const-string/jumbo v1, "skip disable live location job; sharing is currently enabled"
 
@@ -9458,7 +9459,7 @@
 
     return-void
 
-    :cond_89
+    :cond_8a
     const-string/jumbo v1, "starting disable live location job"
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -9557,7 +9558,7 @@
 
     goto :goto_38
 
-    :cond_8a
+    :cond_8b
     iget-object v3, v0, Lcom/whatsapp/jobqueue/job/RotateSignedPreKeyJob;->A02:LX/2gM;
 
     const/16 v2, 0x16
@@ -9572,7 +9573,7 @@
 
     return-void
 
-    :cond_8b
+    :cond_8c
     invoke-static {}, LX/001;->A0r()Ljava/lang/StringBuilder;
 
     move-result-object v2
@@ -9595,7 +9596,7 @@
 
     throw v0
 
-    :cond_8c
+    :cond_8d
     iget-object v1, v0, Lcom/whatsapp/jobqueue/job/ReceiptProcessingJob;->remoteJidRawString:Ljava/lang/String;
 
     invoke-static {v1}, LX/34z;->A01(Ljava/lang/String;)Lcom/whatsapp/jid/Jid;
@@ -9652,7 +9653,7 @@
 
     return-void
 
-    :cond_8d
+    :cond_8e
     iget v11, v0, Lcom/whatsapp/jobqueue/job/ReceiptMultiTargetProcessingJob;->status:I
 
     const/4 v9, 0x0
@@ -9766,14 +9767,14 @@
 
     throw v2
 
-    :cond_8e
+    :cond_8f
     iget-object v1, v0, Lcom/whatsapp/jobqueue/job/GeneratePrivacyTokenJob;->A00:LX/2ti;
 
     invoke-virtual {v1, v2}, LX/2ti;->A05(Lcom/whatsapp/jid/UserJid;)LX/2Gc;
 
     move-result-object v1
 
-    if-eqz v1, :cond_8f
+    if-eqz v1, :cond_90
 
     iget-wide v2, v1, LX/2Gc;->A00:J
 
@@ -9781,7 +9782,7 @@
 
     move-result-object v12
 
-    if-eqz v12, :cond_90
+    if-eqz v12, :cond_91
 
     iget-object v1, v0, Lcom/whatsapp/jobqueue/job/GeneratePrivacyTokenJob;->A00:LX/2ti;
 
@@ -9791,7 +9792,7 @@
 
     cmp-long v1, v2, v4
 
-    if-ltz v1, :cond_90
+    if-ltz v1, :cond_91
 
     iget-object v1, v0, Lcom/whatsapp/jobqueue/job/GeneratePrivacyTokenJob;->A02:LX/36T;
 
@@ -9905,10 +9906,10 @@
 
     goto/16 :goto_3b
 
-    :cond_8f
+    :cond_90
     const/4 v12, 0x0
 
-    :cond_90
+    :cond_91
     invoke-static {}, LX/001;->A0r()Ljava/lang/StringBuilder;
 
     move-result-object v2
@@ -9931,10 +9932,10 @@
 
     return-void
 
-    :cond_91
+    :cond_92
     instance-of v1, v0, LX/3yf;
 
-    if-eqz v1, :cond_95
+    if-eqz v1, :cond_96
 
     check-cast v0, LX/3yf;
 
@@ -9942,7 +9943,7 @@
 
     iget v2, v0, LX/3yf;->maxNumberOfRounds:I
 
-    if-lt v3, v2, :cond_92
+    if-lt v3, v2, :cond_93
 
     invoke-static {}, LX/001;->A0r()Ljava/lang/StringBuilder;
 
@@ -9964,7 +9965,7 @@
 
     return-void
 
-    :cond_92
+    :cond_93
     invoke-static {}, LX/001;->A0r()Ljava/lang/StringBuilder;
 
     move-result-object v2
@@ -9983,7 +9984,7 @@
 
     iget-object v7, v0, LX/3yf;->A03:LX/2HZ;
 
-    if-eqz v7, :cond_94
+    if-eqz v7, :cond_95
 
     iget-object v2, v0, LX/3yf;->groupsToFetch:Ljava/util/List;
 
@@ -10000,7 +10001,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_93
+    if-eqz v2, :cond_94
 
     invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -10028,7 +10029,7 @@
 
     goto :goto_3a
 
-    :cond_93
+    :cond_94
     new-instance v4, LX/3wt;
 
     invoke-direct {v4, v0, v1}, LX/3wt;-><init>(LX/3yf;LX/3ke;)V
@@ -10085,7 +10086,7 @@
 
     return-void
 
-    :cond_94
+    :cond_95
     const-string v0, "batchGetGroupInfoProtocolHelper"
 
     invoke-static {v0}, LX/0yL;->A0T(Ljava/lang/String;)Ljava/lang/RuntimeException;
@@ -10094,20 +10095,20 @@
 
     throw v0
 
-    :cond_95
+    :cond_96
     instance-of v1, v0, LX/3yS;
 
-    if-eqz v1, :cond_96
+    if-eqz v1, :cond_97
 
     check-cast v0, LX/3yS;
 
     iget-object v6, v0, LX/3yS;->A02:LX/36T;
 
-    if-eqz v6, :cond_9b
+    if-eqz v6, :cond_9c
 
     iget-object v1, v0, LX/3yS;->A01:LX/2pc;
 
-    if-eqz v1, :cond_9b
+    if-eqz v1, :cond_9c
 
     iget-object v0, v0, LX/3yS;->groupJidRawString:Ljava/lang/String;
 
@@ -10179,12 +10180,12 @@
     :goto_3c
     return-void
 
-    :cond_96
+    :cond_97
     check-cast v0, LX/3yV;
 
     iget-object v4, v0, LX/3yV;->A01:Lcom/whatsapp/community/membersuggestedgroups/MemberSuggestedGroupsManager;
 
-    if-nez v4, :cond_97
+    if-nez v4, :cond_98
 
     invoke-static {}, LX/001;->A0r()Ljava/lang/StringBuilder;
 
@@ -10203,10 +10204,10 @@
 
     return-void
 
-    :cond_97
+    :cond_98
     iget-object v2, v0, LX/3yV;->A00:LX/2uB;
 
-    if-eqz v2, :cond_98
+    if-eqz v2, :cond_99
 
     iget-object v1, v0, LX/3yV;->A03:LX/1ZZ;
 
@@ -10219,7 +10220,7 @@
 
     move-result-object v3
 
-    if-nez v3, :cond_99
+    if-nez v3, :cond_9a
 
     invoke-static {}, LX/001;->A0r()Ljava/lang/StringBuilder;
 
@@ -10229,12 +10230,12 @@
 
     goto :goto_3d
 
-    :cond_98
+    :cond_99
     const/4 v1, 0x0
 
     goto :goto_3e
 
-    :cond_99
+    :cond_9a
     invoke-virtual {v0}, LX/3yV;->A08()Ljava/lang/String;
 
     iget-object v2, v0, LX/3yV;->A03:LX/1ZZ;
@@ -10243,19 +10244,17 @@
 
     const/4 v0, 0x0
 
-    if-eqz v1, :cond_9a
+    if-eqz v1, :cond_9b
 
     invoke-virtual {v1}, LX/2Vp;->A00()Z
 
     move-result v0
 
-    :cond_9a
+    :cond_9b
     invoke-virtual {v4, v2, v3, v0}, Lcom/whatsapp/community/membersuggestedgroups/MemberSuggestedGroupsManager;->A05(LX/1ZZ;LX/1ZZ;Z)V
 
-    :cond_9b
+    :cond_9c
     return-void
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0x1

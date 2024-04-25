@@ -240,6 +240,10 @@
     goto :goto_0
 
     :cond_1
+    const/4 v0, 0x0
+
+    sput-boolean v0, Lcom/Lzm/Settings/Tools/Audio;->isAudio:Z
+
     new-instance v0, LX/32V;
 
     invoke-direct {v0, v2}, LX/32V;-><init>(Ljava/util/List;)V
@@ -459,6 +463,10 @@
     iput-wide v0, v4, LX/1fU;->A00:J
 
     move/from16 v0, p11
+
+    invoke-static {v0}, Lcom/Lzm/Settings/Tools/Audio;->getVN(I)I
+
+    move-result v0
 
     iput v0, v4, LX/37v;->A09:I
 

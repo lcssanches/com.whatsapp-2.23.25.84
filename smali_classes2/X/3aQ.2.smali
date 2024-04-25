@@ -137,11 +137,7 @@
     check-cast v5, Ljava/lang/Long;
 
     if-eqz v5, :cond_0
-    :try_end_0
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    :try_start_1
     invoke-static {v7}, LX/000;->A0j(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
@@ -161,8 +157,8 @@
     move-result-object v0
 
     invoke-virtual {p1, v0, v6, v2}, LX/32O;->A03(Ljava/io/Serializable;Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_1
-    .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_0
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
     :catch_0
     :cond_0
@@ -188,7 +184,7 @@
 
     mul-long/2addr v3, v0
 
-    :try_start_2
+    :try_start_1
     const-string/jumbo v6, "memory_stats"
 
     invoke-static {v2}, LX/000;->A0j(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -216,11 +212,7 @@
     check-cast v5, Ljava/lang/Long;
 
     if-eqz v5, :cond_1
-    :try_end_2
-    .catch Ljava/lang/RuntimeException; {:try_start_2 .. :try_end_2} :catch_1
-    .catch Ljava/lang/RuntimeException; {:try_start_2 .. :try_end_2} :catch_1
 
-    :try_start_3
     invoke-static {v2}, LX/000;->A0j(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
@@ -240,8 +232,8 @@
     move-result-object v0
 
     invoke-virtual {p1, v0, v6, v2}, LX/32O;->A03(Ljava/io/Serializable;Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_3
-    .catch Ljava/lang/RuntimeException; {:try_start_3 .. :try_end_3} :catch_1
+    :try_end_1
+    .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_1
 
     :catch_1
     :cond_1

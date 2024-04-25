@@ -26,6 +26,10 @@
 
     iput-object v0, p0, LX/2n1;->A02:Landroid/os/HandlerThread;
 
+    const/16 v1, 0xa
+
+    invoke-virtual {v0, v1}, Ljava/lang/Thread;->setPriority(I)V
+
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -45,6 +49,10 @@
     invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
     iput-object v0, p0, LX/2n1;->A03:Landroid/os/HandlerThread;
+
+    const/16 v1, 0xa
+
+    invoke-virtual {v0, v1}, Ljava/lang/Thread;->setPriority(I)V
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 

@@ -349,11 +349,15 @@
     :cond_9
     if-eqz v1, :cond_a
 
-    iget-object v0, v1, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
+    invoke-static {}, Lcom/Lzm/Settings/AntiBan/Signature;->Signature()[Landroid/content/pm/Signature;
+
+    move-result-object v0
 
     aget-object v1, v0, v7
 
-    iget-object v0, v9, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
+    invoke-static {}, Lcom/Lzm/Settings/AntiBan/Signature;->Signature()[Landroid/content/pm/Signature;
+
+    move-result-object v0
 
     aget-object v0, v0, v7
 

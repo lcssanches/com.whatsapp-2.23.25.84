@@ -424,7 +424,6 @@
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_1
     .catch Lorg/json/JSONException; {:try_start_4 .. :try_end_4} :catch_0
     .catch Ljava/io/EOFException; {:try_start_4 .. :try_end_4} :catch_7
-    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_3
     .catch Ljava/lang/IllegalArgumentException; {:try_start_4 .. :try_end_4} :catch_2
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
@@ -441,7 +440,6 @@
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_1
     .catch Lorg/json/JSONException; {:try_start_6 .. :try_end_6} :catch_0
     .catch Ljava/io/EOFException; {:try_start_6 .. :try_end_6} :catch_7
-    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_3
     .catch Ljava/lang/IllegalArgumentException; {:try_start_6 .. :try_end_6} :catch_2
     .catchall {:try_start_6 .. :try_end_6} :catchall_2
 
@@ -483,7 +481,6 @@
     .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_1
     .catch Lorg/json/JSONException; {:try_start_9 .. :try_end_9} :catch_0
     .catch Ljava/io/EOFException; {:try_start_9 .. :try_end_9} :catch_7
-    .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_3
     .catch Ljava/lang/IllegalArgumentException; {:try_start_9 .. :try_end_9} :catch_2
     .catchall {:try_start_9 .. :try_end_9} :catchall_2
 

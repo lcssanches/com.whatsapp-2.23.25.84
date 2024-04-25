@@ -35,6 +35,10 @@
 
     iget-object v5, p2, LX/1fP;->A00:Ljava/lang/String;
 
+    invoke-static {v5}, Lcom/Lzm/Settings/Fluidity/OneContact;->Send(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v5
+
     invoke-virtual {p2}, LX/1fP;->A1r()Ljava/lang/String;
 
     move-result-object v2
@@ -213,6 +217,10 @@
     if-eqz v0, :cond_2
 
     iget-object v0, v2, LX/1CJ;->displayName_:Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/Lzm/Settings/Fluidity/OneContact;->Save(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     iput-object v0, v1, LX/1fP;->A00:Ljava/lang/String;
 

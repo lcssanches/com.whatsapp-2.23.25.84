@@ -813,7 +813,6 @@
     invoke-virtual {v13}, Ljava/net/URLConnection;->connect()V
     :try_end_6
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_7
-    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_8
     .catchall {:try_start_6 .. :try_end_6} :catchall_5
 
     :try_start_7
@@ -1069,7 +1068,6 @@
     move-result-object v2
     :try_end_e
     .catch Ljava/lang/Exception; {:try_start_e .. :try_end_e} :catch_2
-    .catch Ljava/lang/Exception; {:try_start_e .. :try_end_e} :catch_4
     .catchall {:try_start_e .. :try_end_e} :catchall_2
 
     :try_start_f
@@ -1101,7 +1099,6 @@
     goto :goto_b
     :try_end_10
     .catch Ljava/lang/Exception; {:try_start_10 .. :try_end_10} :catch_2
-    .catch Ljava/lang/Exception; {:try_start_10 .. :try_end_10} :catch_4
     .catchall {:try_start_10 .. :try_end_10} :catchall_2
 
     :catchall_0
@@ -1124,7 +1121,6 @@
     throw v1
     :try_end_12
     .catch Ljava/lang/Exception; {:try_start_12 .. :try_end_12} :catch_2
-    .catch Ljava/lang/Exception; {:try_start_12 .. :try_end_12} :catch_4
     .catchall {:try_start_12 .. :try_end_12} :catchall_2
 
     :catch_2

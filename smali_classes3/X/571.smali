@@ -191,7 +191,6 @@
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/lang/ClassNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_6
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_6
 
     :try_start_2
@@ -222,7 +221,6 @@
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_0
     .catch Ljava/lang/ClassNotFoundException; {:try_start_5 .. :try_end_5} :catch_0
-    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_6
     .catch Lorg/json/JSONException; {:try_start_5 .. :try_end_5} :catch_6
 
     :catch_0
@@ -282,7 +280,6 @@
     :try_end_9
     .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_1
     .catch Ljava/lang/ClassNotFoundException; {:try_start_9 .. :try_end_9} :catch_1
-    .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_6
     .catch Lorg/json/JSONException; {:try_start_9 .. :try_end_9} :catch_6
 
     :catch_1
@@ -444,7 +441,6 @@
     :try_end_15
     .catch Lorg/json/JSONException; {:try_start_15 .. :try_end_15} :catch_3
     .catch Ljava/io/IOException; {:try_start_15 .. :try_end_15} :catch_6
-    .catch Lorg/json/JSONException; {:try_start_15 .. :try_end_15} :catch_6
 
     :catch_3
     :try_start_16
@@ -610,7 +606,6 @@
     :try_end_17
     .catch Lorg/json/JSONException; {:try_start_17 .. :try_end_17} :catch_5
     .catch Ljava/io/IOException; {:try_start_17 .. :try_end_17} :catch_6
-    .catch Lorg/json/JSONException; {:try_start_17 .. :try_end_17} :catch_6
 
     :try_start_18
     invoke-static {v1, v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;I)I
@@ -622,7 +617,6 @@
     .catch Ljava/lang/NumberFormatException; {:try_start_18 .. :try_end_18} :catch_4
     .catch Lorg/json/JSONException; {:try_start_18 .. :try_end_18} :catch_5
     .catch Ljava/io/IOException; {:try_start_18 .. :try_end_18} :catch_6
-    .catch Lorg/json/JSONException; {:try_start_18 .. :try_end_18} :catch_6
 
     :catch_4
     :cond_5
@@ -649,7 +643,6 @@
     :try_end_19
     .catch Lorg/json/JSONException; {:try_start_19 .. :try_end_19} :catch_5
     .catch Ljava/io/IOException; {:try_start_19 .. :try_end_19} :catch_6
-    .catch Lorg/json/JSONException; {:try_start_19 .. :try_end_19} :catch_6
 
     :catch_5
     :cond_6

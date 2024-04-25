@@ -571,7 +571,6 @@
     goto :goto_2
     :try_end_1
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
-    .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_1
 
     :catch_0
     :try_start_2
@@ -1265,7 +1264,6 @@
     goto :goto_9
     :try_end_1
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
-    .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_4
 
     :catch_0
     :try_start_2
@@ -1382,7 +1380,6 @@
     move-result-object v3
     :try_end_3
     .catch Lorg/json/JSONException; {:try_start_3 .. :try_end_3} :catch_2
-    .catch Lorg/json/JSONException; {:try_start_3 .. :try_end_3} :catch_4
 
     :try_start_4
     const-string v1, "is_form_disabled"
@@ -1443,8 +1440,6 @@
     goto :goto_c
     :try_end_4
     .catch Lorg/json/JSONException; {:try_start_4 .. :try_end_4} :catch_1
-    .catch Lorg/json/JSONException; {:try_start_4 .. :try_end_4} :catch_2
-    .catch Lorg/json/JSONException; {:try_start_4 .. :try_end_4} :catch_4
 
     :catch_1
     :try_start_5
@@ -1461,7 +1456,6 @@
     goto :goto_d
     :try_end_5
     .catch Lorg/json/JSONException; {:try_start_5 .. :try_end_5} :catch_2
-    .catch Lorg/json/JSONException; {:try_start_5 .. :try_end_5} :catch_4
 
     :catch_2
     :try_start_6
@@ -1529,7 +1523,6 @@
     goto :goto_f
     :try_end_7
     .catch Lorg/json/JSONException; {:try_start_7 .. :try_end_7} :catch_3
-    .catch Lorg/json/JSONException; {:try_start_7 .. :try_end_7} :catch_4
 
     :catch_3
     :try_start_8
@@ -3571,7 +3564,6 @@
     invoke-direct {v6, v5, v4, v3}, LX/3D8;-><init>(Ljava/lang/String;II)V
     :try_end_3
     .catch Lorg/json/JSONException; {:try_start_3 .. :try_end_3} :catch_1
-    .catch Lorg/json/JSONException; {:try_start_3 .. :try_end_3} :catch_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     :try_start_4
@@ -3756,7 +3748,6 @@
     invoke-direct {v7, v8}, LX/3Cv;-><init>(Ljava/util/List;)V
     :try_end_7
     .catch Lorg/json/JSONException; {:try_start_7 .. :try_end_7} :catch_2
-    .catch Lorg/json/JSONException; {:try_start_7 .. :try_end_7} :catch_3
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 
     :try_start_8

@@ -250,6 +250,8 @@
     invoke-static {p0, v1, v2, v0}, LX/3AC;->A0H(Landroid/content/Context;LX/36B;LX/33P;Z)V
 
     :goto_0
+    invoke-static {}, Lcom/Lzm/Settings/Fluidity/Logs;->FixCheckStatus()V
+
     invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     return-void
@@ -1031,6 +1033,8 @@
 
     :goto_0
     invoke-virtual {v6, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    invoke-static {}, Lcom/Lzm/Settings/Fluidity/Logs;->FixCheckStatus()V
 
     invoke-virtual {v6}, Landroid/app/Activity;->finish()V
 
@@ -3410,6 +3414,8 @@
     :goto_0
     invoke-virtual {p0, v4}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
+    invoke-static {}, Lcom/Lzm/Settings/Fluidity/Logs;->FixCheckStatus()V
+
     invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     return v3
@@ -3627,8 +3633,6 @@
     invoke-static {p0}, LX/3AQ;->A1G(Landroid/app/Activity;)V
 
     return v3
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0x0

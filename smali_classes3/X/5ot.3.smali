@@ -501,7 +501,6 @@
     throw v0
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
-    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
 
     :catch_0
     :try_start_4

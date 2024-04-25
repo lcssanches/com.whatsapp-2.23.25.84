@@ -3162,7 +3162,6 @@
     if-eqz v4, :cond_5
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
     :try_start_3
     iget-byte v9, v5, LX/37v;->A1I:B

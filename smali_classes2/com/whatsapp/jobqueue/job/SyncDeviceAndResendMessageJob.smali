@@ -932,11 +932,7 @@
 
     move-result-object v0
 
-    check-cast v0, LX/32D;
-
-    invoke-virtual {v0}, LX/32D;->A00()Z
-
-    move-result v5
+    const/4 v5, 0x0
 
     :goto_7
     if-eqz v5, :cond_2

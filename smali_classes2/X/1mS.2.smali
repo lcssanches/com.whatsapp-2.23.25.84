@@ -34,59 +34,5 @@
 .method public run()V
     .locals 3
 
-    :try_start_0
-    iget-object v0, p0, LX/1mS;->A01:Ljava/lang/Runnable;
-
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
-    iget-object v1, p0, LX/1mS;->A03:Ljava/util/Set;
-
-    monitor-enter v1
-
-    :try_start_1
-    iget-object v0, p0, LX/1mS;->A02:Ljava/lang/String;
-
-    invoke-interface {v1, v0}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
-
-    monitor-exit v1
-
     return-void
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-
-    :catchall_1
-    move-exception v2
-
-    iget-object v1, p0, LX/1mS;->A03:Ljava/util/Set;
-
-    monitor-enter v1
-
-    :try_start_2
-    iget-object v0, p0, LX/1mS;->A02:Ljava/lang/String;
-
-    invoke-interface {v1, v0}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
-
-    :goto_0
-    monitor-exit v1
-
-    goto :goto_1
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_2
-
-    :catchall_2
-    move-exception v2
-
-    goto :goto_0
-
-    :goto_1
-    throw v2
 .end method

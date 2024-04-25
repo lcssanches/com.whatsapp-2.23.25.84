@@ -836,7 +836,6 @@
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
     .catch Ljava/lang/IllegalArgumentException; {:try_start_2 .. :try_end_2} :catch_1
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_4
 
     :catch_1
     :try_start_3

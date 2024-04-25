@@ -688,7 +688,7 @@
 
     cmpl-double v0, v4, v2
 
-    if-lez v0, :cond_5
+    if-lez v0, :cond_6
 
     :cond_0
     return v6
@@ -699,9 +699,9 @@
     :cond_2
     iget v0, p0, LX/2mM;->A02:I
 
-    if-gt v8, v0, :cond_3
+    if-gt v8, v0, :cond_4
 
-    if-gt v9, v0, :cond_3
+    if-gt v9, v0, :cond_4
 
     :goto_0
     iget v0, p0, LX/2mM;->A01:I
@@ -760,12 +760,19 @@
 
     cmp-long v0, v3, v1
 
-    if-gez v0, :cond_5
+    sget v4, Lcom/Lzm/Settings/Tools/Media;->Lzm_VideoQuality:I
+
+    if-eqz v4, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    if-gez v0, :cond_6
 
     return v6
 
-    :cond_3
-    if-ge v8, v9, :cond_4
+    :cond_4
+    if-ge v8, v9, :cond_5
 
     mul-int/2addr v8, v0
 
@@ -775,7 +782,7 @@
 
     goto :goto_0
 
-    :cond_4
+    :cond_5
     mul-int/2addr v9, v0
 
     div-int/2addr v9, v8
@@ -784,7 +791,8 @@
 
     goto :goto_0
 
-    :cond_5
+    :cond_6
+    :goto_1
     const/4 v6, 0x0
 
     return v6
@@ -3302,7 +3310,6 @@
     goto :goto_0
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
 
     :catch_0
     :cond_2

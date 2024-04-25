@@ -1587,6 +1587,10 @@
 
     iput-object v2, v1, LX/3S3;->A07:LX/10W;
 
+    sget p0, Lcom/Lzm/Settings/Tools/Settings;->Lzm_Airplane:I
+
+    if-nez p0, :cond_0
+
     invoke-virtual {v2}, Ljava/lang/Thread;->start()V
 
     :cond_0

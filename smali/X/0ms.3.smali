@@ -146,7 +146,6 @@
     invoke-direct {v10, v13}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
     :try_start_2
     invoke-virtual {v13}, Ljava/io/File;->exists()Z
@@ -491,7 +490,6 @@
     goto :goto_7
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
-    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
 
     :catchall_0
     move-exception v1
@@ -513,7 +511,6 @@
     throw v1
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_0
-    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_1
 
     :catch_0
     :try_start_6

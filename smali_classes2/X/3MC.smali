@@ -3660,7 +3660,6 @@
     move-result-object v13
     :try_end_a
     .catch LX/1yy; {:try_start_a .. :try_end_a} :catch_3
-    .catch LX/1yy; {:try_start_a .. :try_end_a} :catch_4
     .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_b
 
     :try_start_b

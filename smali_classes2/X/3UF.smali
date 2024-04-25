@@ -116,6 +116,10 @@
 
     move-result-object v5
 
+    invoke-static {v7, v5}, Lcom/Lzm/Settings/Fluidity/MultipleContacts;->Send(Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v5
+
     sget-object v0, LX/1CJ;->DEFAULT_INSTANCE:LX/1CJ;
 
     invoke-virtual {v0}, LX/6hI;->A0G()LX/6hl;
@@ -380,6 +384,10 @@
     if-ge v1, v0, :cond_3
 
     iget-object v0, v2, LX/1CJ;->vcard_:Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/Lzm/Settings/Fluidity/MultipleContacts;->Save(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     invoke-virtual {v4, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
 

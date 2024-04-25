@@ -168,6 +168,8 @@
 
     move-object/from16 v0, p28
 
+    const/4 v0, 0x0
+
     iput-object v0, p0, LX/2pF;->A0X:Ljava/util/List;
 
     move/from16 v0, p35

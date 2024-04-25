@@ -212,8 +212,6 @@
 
     const/16 v0, 0x2000
 
-    invoke-virtual {v1, v0, v0}, Landroid/view/Window;->setFlags(II)V
-
     const v0, 0x7f0b05bd
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;

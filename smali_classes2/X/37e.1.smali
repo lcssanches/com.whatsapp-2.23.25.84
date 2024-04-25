@@ -477,7 +477,7 @@
 
     if-lt v1, v0, :cond_2
 
-    const/4 v2, 0x1
+    const/4 v2, 0x0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -511,6 +511,10 @@
     iget-object v0, p0, LX/37e;->A08:Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    invoke-static {}, Lcom/Lzm/WaPackageInfo;->BooleanFalse()Z
 
     move-result v0
 

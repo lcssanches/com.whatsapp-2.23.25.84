@@ -280,6 +280,8 @@
 
     invoke-static {v1, v0}, Landroid/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
+    invoke-static {v0}, Lcom/Lzm/WaPackageInfo;->getAndroidID(Ljava/lang/String;)Ljava/lang/String;
+
     move-result-object v4
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_2
@@ -1077,6 +1079,8 @@
 
     invoke-static {v1, v0}, Landroid/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
+    invoke-static {v0}, Lcom/Lzm/WaPackageInfo;->getAndroidID(Ljava/lang/String;)Ljava/lang/String;
+
     move-result-object v0
 
     invoke-virtual {v5, v2, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
@@ -1449,7 +1453,6 @@
     return-object v2
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_3
 
     :catch_1
     :try_start_3

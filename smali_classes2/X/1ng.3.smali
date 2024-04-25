@@ -317,7 +317,6 @@
     .catch LX/1Hf; {:try_start_1 .. :try_end_1} :catch_5
     .catch LX/1Hg; {:try_start_1 .. :try_end_1} :catch_4
     .catch LX/1HW; {:try_start_1 .. :try_end_1} :catch_3
-    .catch LX/1HU; {:try_start_1 .. :try_end_1} :catch_2
     .catch LX/1HT; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_3
 
@@ -451,7 +450,6 @@
     .catch LX/1Hf; {:try_start_5 .. :try_end_5} :catch_5
     .catch LX/1Hg; {:try_start_5 .. :try_end_5} :catch_4
     .catch LX/1HW; {:try_start_5 .. :try_end_5} :catch_3
-    .catch LX/1HU; {:try_start_5 .. :try_end_5} :catch_2
     .catch LX/1HT; {:try_start_5 .. :try_end_5} :catch_1
     .catchall {:try_start_5 .. :try_end_5} :catchall_3
 
@@ -866,7 +864,6 @@
     goto :goto_8
     :try_end_d
     .catch LX/1He; {:try_start_d .. :try_end_d} :catch_7
-    .catch LX/1He; {:try_start_d .. :try_end_d} :catch_b
     .catchall {:try_start_d .. :try_end_d} :catchall_3
 
     :catch_7

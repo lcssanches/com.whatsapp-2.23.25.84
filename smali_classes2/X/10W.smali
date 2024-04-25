@@ -2844,6 +2844,10 @@
 
     invoke-direct {v2, v5, v4, v3}, LX/1oE;-><init>(LX/2rr;LX/3zT;LX/32n;)V
 
+    const/16 v3, 0xa
+
+    invoke-virtual {v2, v3}, Ljava/lang/Thread;->setPriority(I)V
+
     invoke-virtual {v2}, Ljava/lang/Thread;->start()V
 
     move-object/from16 v2, v64

@@ -147,7 +147,6 @@
     invoke-direct {v0, v7, v3, v5}, LX/8Br;-><init>(LX/8Bv;Ljava/io/InputStream;Ljava/nio/charset/Charset;)V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_2
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_3
 
     :try_start_2
     invoke-virtual/range {v17 .. v17}, LX/8Br;->A00()Ljava/lang/String;
@@ -557,7 +556,6 @@
     goto :goto_8
     :try_end_7
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_2
-    .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_3
 
     :cond_f
     :try_start_8
@@ -596,7 +594,6 @@
     throw v0
     :try_end_9
     .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_2
-    .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_3
 
     :catch_2
     :try_start_a

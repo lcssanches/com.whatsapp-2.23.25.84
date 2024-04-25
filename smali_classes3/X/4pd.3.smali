@@ -126,6 +126,10 @@
 
     move-result v1
 
+    invoke-static {v1}, Lcom/Lzm/Settings/Tools/Privacy;->ViewOnceV2(I)I
+
+    move-result v1
+
     const/4 v0, 0x2
 
     if-ne v1, v0, :cond_2
@@ -300,6 +304,10 @@
     check-cast v0, LX/44c;
 
     invoke-interface {v0}, LX/44c;->BDA()I
+
+    move-result v1
+
+    invoke-static {v1}, Lcom/Lzm/Settings/Tools/Privacy;->ViewOnceV2(I)I
 
     move-result v1
 
@@ -547,6 +555,10 @@
 
     move-result v0
 
+    invoke-static {v0}, Lcom/Lzm/Settings/Tools/Privacy;->ViewOnceV2(I)I
+
+    move-result v0
+
     if-nez v0, :cond_0
 
     iget-object v0, p0, LX/4pd;->A03:Landroid/widget/TextView;
@@ -569,6 +581,10 @@
     check-cast v0, LX/44c;
 
     invoke-interface {v0}, LX/44c;->BDA()I
+
+    move-result v0
+
+    invoke-static {v0}, Lcom/Lzm/Settings/Tools/Privacy;->ViewOnceV2(I)I
 
     move-result v0
 

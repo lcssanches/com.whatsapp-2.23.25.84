@@ -204,7 +204,6 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_2
     .catch Ljava/lang/SecurityException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_0
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_4
 
     :goto_0
     :try_start_2
@@ -238,7 +237,6 @@
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_2
     .catch Ljava/lang/SecurityException; {:try_start_5 .. :try_end_5} :catch_1
     .catch Ljava/lang/IllegalArgumentException; {:try_start_5 .. :try_end_5} :catch_0
-    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_4
 
     :catchall_0
     move-exception v1
@@ -282,7 +280,6 @@
     .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_2
     .catch Ljava/lang/SecurityException; {:try_start_9 .. :try_end_9} :catch_1
     .catch Ljava/lang/IllegalArgumentException; {:try_start_9 .. :try_end_9} :catch_0
-    .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_4
 
     :catch_0
     :try_start_a

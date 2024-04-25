@@ -1273,7 +1273,6 @@
     goto :goto_b
     :try_end_2
     .catch Lorg/json/JSONException; {:try_start_2 .. :try_end_2} :catch_1
-    .catch Lorg/json/JSONException; {:try_start_2 .. :try_end_2} :catch_2
 
     :catch_1
     :try_start_3
@@ -2270,7 +2269,6 @@
     goto :goto_13
     :try_end_8
     .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_3
-    .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_4
 
     :catch_3
     :try_start_9

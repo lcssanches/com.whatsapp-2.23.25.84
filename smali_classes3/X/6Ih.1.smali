@@ -31,7 +31,7 @@
 
     iget v0, p0, LX/6Ih;->A01:I
 
-    if-eqz v0, :cond_f
+    if-eqz v0, :cond_10
 
     iget-object v2, p0, LX/6Ih;->A00:Ljava/lang/Object;
 
@@ -45,7 +45,7 @@
 
     const/4 v5, 0x0
 
-    if-eqz v3, :cond_15
+    if-eqz v3, :cond_16
 
     iget-object v1, v2, Lcom/whatsapp/status/playback/fragment/StatusPlaybackContactFragment;->A0n:Ljava/util/List;
 
@@ -71,7 +71,7 @@
 
     iget-boolean v0, v4, LX/549;->A0S:Z
 
-    if-eqz v0, :cond_15
+    if-eqz v0, :cond_16
 
     invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
@@ -163,7 +163,7 @@
 
     const v0, 0x7f0b1003
 
-    if-ne v1, v0, :cond_15
+    if-ne v1, v0, :cond_16
 
     iget-object v1, v4, LX/54B;->A0T:LX/5VY;
 
@@ -194,6 +194,25 @@
 
     move-result v1
 
+    invoke-static {}, Lcom/Lzm/Settings/Tools/Status;->StatusMenu()I
+
+    move-result v0
+
+    if-ne v1, v0, :cond_6
+
+    iget-object v1, v2, Lcom/whatsapp/status/playback/fragment/StatusPlaybackContactFragment;->A0R:Lcom/whatsapp/jid/UserJid;
+
+    invoke-virtual {v2}, LX/0fI;->A0Q()LX/03u;
+
+    move-result-object v3
+
+    invoke-static {v3, v1}, Lcom/Lzm/Settings/Tools/Status;->A05(Landroid/app/Activity;Lcom/whatsapp/jid/Jid;)V
+
+    :cond_6
+    invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
+
+    move-result v1
+
     iget-object v4, v2, Lcom/whatsapp/status/playback/fragment/StatusPlaybackContactFragment;->A0n:Ljava/util/List;
 
     iget v0, v2, Lcom/whatsapp/status/playback/fragment/StatusPlaybackContactFragment;->A00:I
@@ -214,13 +233,13 @@
 
     const/4 v6, 0x1
 
-    if-ne v1, v0, :cond_7
+    if-ne v1, v0, :cond_8
 
     iget-object v3, v2, Lcom/whatsapp/status/playback/fragment/StatusPlaybackContactFragment;->A0R:Lcom/whatsapp/jid/UserJid;
 
     iget-object v1, v2, Lcom/whatsapp/status/playback/fragment/StatusPlaybackContactFragment;->A0n:Ljava/util/List;
 
-    if-eqz v1, :cond_6
+    if-eqz v1, :cond_7
 
     iget v0, v2, Lcom/whatsapp/status/playback/fragment/StatusPlaybackContactFragment;->A00:I
 
@@ -250,21 +269,21 @@
 
     goto/16 :goto_0
 
-    :cond_6
+    :cond_7
     move-object v5, v7
 
     goto :goto_1
 
-    :cond_7
+    :cond_8
     const v0, 0x7f0b0ff3
 
-    if-ne v1, v0, :cond_9
+    if-ne v1, v0, :cond_a
 
     iget-object v3, v2, Lcom/whatsapp/status/playback/fragment/StatusPlaybackContactFragment;->A0R:Lcom/whatsapp/jid/UserJid;
 
     iget-object v1, v2, Lcom/whatsapp/status/playback/fragment/StatusPlaybackContactFragment;->A0n:Ljava/util/List;
 
-    if-eqz v1, :cond_8
+    if-eqz v1, :cond_9
 
     iget v0, v2, Lcom/whatsapp/status/playback/fragment/StatusPlaybackContactFragment;->A00:I
 
@@ -291,17 +310,17 @@
 
     goto :goto_2
 
-    :cond_8
+    :cond_9
     move-object v5, v7
 
     goto :goto_3
 
-    :cond_9
+    :cond_a
     const v0, 0x7f0b0fff
 
     const/16 v4, 0x16
 
-    if-ne v1, v0, :cond_a
+    if-ne v1, v0, :cond_b
 
     iget-object v1, v2, Lcom/whatsapp/status/playback/fragment/StatusPlaybackContactFragment;->A0C:LX/3KY;
 
@@ -317,10 +336,10 @@
 
     goto/16 :goto_0
 
-    :cond_a
+    :cond_b
     const v0, 0x7f0b0ffe
 
-    if-ne v1, v0, :cond_b
+    if-ne v1, v0, :cond_c
 
     iget-object v1, v2, Lcom/whatsapp/status/playback/fragment/StatusPlaybackContactFragment;->A0C:LX/3KY;
 
@@ -336,10 +355,10 @@
 
     goto/16 :goto_0
 
-    :cond_b
+    :cond_c
     const v0, 0x7f0b0fea
 
-    if-ne v1, v0, :cond_c
+    if-ne v1, v0, :cond_d
 
     invoke-static {v2}, LX/4C8;->A0m(Lcom/whatsapp/status/playback/fragment/StatusPlaybackBaseFragment;)LX/5PK;
 
@@ -357,10 +376,10 @@
 
     goto/16 :goto_0
 
-    :cond_c
+    :cond_d
     const v0, 0x7f0b0ff2
 
-    if-ne v1, v0, :cond_e
+    if-ne v1, v0, :cond_f
 
     invoke-static {}, LX/3AQ;->A1F()LX/3AQ;
 
@@ -384,7 +403,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_d
+    if-eqz v0, :cond_e
 
     const-string v1, "chatlockEntryPoint"
 
@@ -392,12 +411,12 @@
 
     invoke-virtual {v3, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    :cond_d
+    :cond_e
     invoke-static {v3, v2}, LX/5Y1;->A00(Landroid/content/Intent;LX/0fI;)V
 
     goto/16 :goto_0
 
-    :cond_e
+    :cond_f
     const v0, 0x7f0b101e
 
     if-ne v1, v0, :cond_0
@@ -464,7 +483,7 @@
 
     goto/16 :goto_2
 
-    :cond_f
+    :cond_10
     iget-object v6, p0, LX/6Ih;->A00:Ljava/lang/Object;
 
     check-cast v6, LX/5XM;
@@ -479,13 +498,13 @@
 
     const/4 v5, 0x1
 
-    if-eqz v2, :cond_14
+    if-eqz v2, :cond_15
 
     invoke-virtual {v2}, Landroid/app/Activity;->isFinishing()Z
 
     move-result v0
 
-    if-nez v0, :cond_14
+    if-nez v0, :cond_15
 
     invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
@@ -493,19 +512,19 @@
 
     const/4 v0, 0x2
 
-    if-eq v4, v0, :cond_11
+    if-eq v4, v0, :cond_12
 
     const/4 v0, 0x4
 
-    if-eq v4, v0, :cond_11
+    if-eq v4, v0, :cond_12
 
     const/4 v0, 0x5
 
-    if-ne v4, v0, :cond_12
+    if-ne v4, v0, :cond_13
 
     const/4 v3, 0x0
 
-    :cond_10
+    :cond_11
     iget-object v1, v6, LX/5XM;->A0E:LX/1Za;
 
     iget v0, v6, LX/5XM;->A04:I
@@ -518,24 +537,24 @@
 
     goto/16 :goto_0
 
-    :cond_11
+    :cond_12
     sget-object v3, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     goto :goto_4
 
-    :cond_12
+    :cond_13
     sget-object v3, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    if-eq v4, v0, :cond_10
+    if-eq v4, v0, :cond_11
 
     :goto_4
     const/4 v0, 0x4
 
-    if-eq v4, v0, :cond_10
+    if-eq v4, v0, :cond_11
 
     const/4 v0, 0x3
 
-    if-eq v4, v0, :cond_10
+    if-eq v4, v0, :cond_11
 
     const/4 v0, 0x6
 
@@ -543,13 +562,13 @@
 
     iget-object v1, v6, LX/5XM;->A0C:LX/3gO;
 
-    if-ne v4, v0, :cond_13
+    if-ne v4, v0, :cond_14
 
     invoke-interface {v2, v1}, LX/6Dm;->Bo9(LX/3gO;)V
 
     goto/16 :goto_0
 
-    :cond_13
+    :cond_14
     invoke-static {v3}, LX/3A6;->A07(Ljava/lang/Object;)V
 
     invoke-virtual {v3}, Ljava/lang/Boolean;->booleanValue()Z
@@ -560,14 +579,14 @@
 
     goto/16 :goto_0
 
-    :cond_14
+    :cond_15
     const-string v0, "GroupCallMenuHelper/onPopupMenuEventListener activity is finished/finishing"
 
     invoke-static {v0}, Lcom/whatsapp/util/Log;->w(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    :cond_15
+    :cond_16
     const/4 v0, 0x0
 
     return v0

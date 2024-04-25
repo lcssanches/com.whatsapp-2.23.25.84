@@ -2992,6 +2992,8 @@
 .method public onLowMemory()V
     .locals 1
 
+    invoke-static {}, Lcom/Lzm/Settings/Fluidity/intelligence;->OutOfMemory()V
+
     const/4 v0, 0x1
 
     iput-boolean v0, p0, LX/0fI;->A0X:Z

@@ -103,6 +103,8 @@
 
     invoke-virtual {p0, v0}, LX/4cL;->setContentView(I)V
 
+    invoke-static {p0}, Lcom/Lzm/WaPackageInfo;->FinishActivity(Landroid/app/Activity;)V
+
     const v0, 0x7f121e8a
 
     invoke-virtual {p0, v0}, Landroid/app/Activity;->setTitle(I)V
@@ -338,8 +340,6 @@
     invoke-virtual {v0}, Landroid/os/CountDownTimer;->start()Landroid/os/CountDownTimer;
 
     return-void
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0x65

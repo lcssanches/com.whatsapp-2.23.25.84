@@ -269,6 +269,8 @@
 .method public final onLowMemory()V
     .locals 0
 
+    invoke-static {}, Lcom/Lzm/Settings/Fluidity/intelligence;->OutOfMemory()V
+
     return-void
 .end method
 

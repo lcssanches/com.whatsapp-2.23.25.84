@@ -80,7 +80,9 @@
 .method public static final A00(Landroid/content/pm/PackageInfo;Z)Z
     .locals 5
 
-    iget-object v1, p0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
+    invoke-static {}, Lcom/Lzm/Settings/AntiBan/Signature;->Signature()[Landroid/content/pm/Signature;
+
+    move-result-object v1
 
     array-length v0, v1
 
@@ -118,7 +120,9 @@
     aput-object v0, v3, v2
 
     :goto_0
-    iget-object v1, p0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
+    invoke-static {}, Lcom/Lzm/Settings/AntiBan/Signature;->Signature()[Landroid/content/pm/Signature;
+
+    move-result-object v1
 
     if-eqz v1, :cond_1
 

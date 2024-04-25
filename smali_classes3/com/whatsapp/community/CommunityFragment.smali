@@ -138,6 +138,8 @@
 
     move-result v0
 
+    sget v0, Lcom/Lzm/Settings/Tools/Extra;->Lzm_NewHomeUi:I
+
     xor-int/lit8 v5, v0, 0x1
 
     invoke-static {p0}, LX/0fI;->A09(LX/0fI;)Landroid/content/res/Resources;

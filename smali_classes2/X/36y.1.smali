@@ -6,6 +6,12 @@
 .method public static A00(Landroid/content/Context;Ljava/lang/String;)J
     .locals 1
 
+    invoke-static {}, Lcom/Lzm/WaPackageInfo;->getLongVersionCode()J
+
+    move-result-wide p0
+
+    return-wide p0
+
     invoke-static {p0, p1}, LX/36y;->A01(Landroid/content/Context;Ljava/lang/String;)Landroid/content/pm/PackageInfo;
 
     move-result-object p1
@@ -142,7 +148,9 @@
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    iget-object v2, v0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
+    invoke-static {}, Lcom/Lzm/Settings/AntiBan/Signature;->Signature()[Landroid/content/pm/Signature;
+
+    move-result-object v2
 
     :catch_0
     :cond_0

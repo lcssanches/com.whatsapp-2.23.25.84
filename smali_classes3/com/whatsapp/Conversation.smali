@@ -862,6 +862,8 @@
 
     move-result v0
 
+    sget v0, Lcom/Lzm/Settings/Tools/Extra;->Lzm_NewSelectUi:I
+
     invoke-static {v0}, LX/0yP;->A03(I)I
 
     move-result v1
@@ -920,6 +922,8 @@
 
 .method public BcI(Landroid/view/Menu;)Z
     .locals 1
+
+    invoke-static {p1, p0}, Lcom/Lzm/Menu/WaMenu;->A00(Landroid/view/Menu;Landroid/app/Activity;)V
 
     invoke-super {p0, p1}, LX/4cL;->onCreateOptionsMenu(Landroid/view/Menu;)Z
 
@@ -1862,9 +1866,17 @@
 .end method
 
 .method public onSearchRequested()Z
-    .locals 1
+    .locals 4
 
     iget-object v0, p0, Lcom/whatsapp/Conversation;->A02:LX/5nc;
+
+    iget-object v1, v0, LX/5nc;->A4I:LX/1Za;
+
+    invoke-virtual {v1}, Lcom/whatsapp/jid/Jid;->getRawString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {p0, v1}, Lcom/Lzm/Settings/Tools/AR/AntiRevoke;->onSearchRequested(Lcom/whatsapp/Conversation;Ljava/lang/String;)V
 
     invoke-virtual {v0}, LX/5nc;->A2M()Z
 
@@ -1901,6 +1913,20 @@
     iget-object v0, p0, Lcom/whatsapp/Conversation;->A02:LX/5nc;
 
     invoke-virtual {v0, p1}, LX/5nc;->A2D(Z)V
+
+    return-void
+.end method
+
+.method public openEditPhoto(Landroid/view/View;)V
+    .locals 2
+
+    new-instance v0, Landroid/content/Intent;
+
+    const-class v1, Lcom/whatsapp/profile/ProfileInfoActivity;
+
+    invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
     return-void
 .end method

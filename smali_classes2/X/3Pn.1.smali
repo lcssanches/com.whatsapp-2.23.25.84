@@ -19,6 +19,8 @@
 .method public synthetic B2U(LX/2tz;LX/2HH;LX/2tg;)V
     .locals 2
 
+    return-void
+
     const-string/jumbo v1, "receipt_device_table_device_index"
 
     const-string v0, "CREATE INDEX IF NOT EXISTS receipt_device_table_device_index ON receipt_device (receipt_device_jid_row_id)"

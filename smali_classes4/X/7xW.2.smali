@@ -229,7 +229,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Ljava/io/File;->exists()Z
+    invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
     move-result v0
 
@@ -792,7 +792,7 @@
 
     aput-object v16, v14, v6
 
-    invoke-virtual {v12}, Ljava/io/File;->exists()Z
+    invoke-virtual {v12}, Ljava/io/File;->delete()Z
 
     move-result v10
 
@@ -813,7 +813,7 @@
 
     aput-object v16, v12, v6
 
-    invoke-virtual {v9}, Ljava/io/File;->exists()Z
+    invoke-virtual {v9}, Ljava/io/File;->delete()Z
 
     move-result v0
 
@@ -919,7 +919,7 @@
 
     iput v0, v1, LX/7N5;->A03:I
 
-    invoke-virtual {v10}, Ljava/io/File;->exists()Z
+    invoke-virtual {v10}, Ljava/io/File;->delete()Z
 
     move-result v0
 
@@ -1192,7 +1192,7 @@
 
     iget-object v5, p1, LX/7sj;->A0A:Ljava/io/File;
 
-    invoke-virtual {v5}, Ljava/io/File;->exists()Z
+    invoke-virtual {v5}, Ljava/io/File;->delete()Z
 
     move-result v0
 
@@ -1344,7 +1344,7 @@
 
     iget-object v0, p1, LX/7sj;->A0A:Ljava/io/File;
 
-    invoke-virtual {v0}, Ljava/io/File;->exists()Z
+    invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
     move-result v0
 

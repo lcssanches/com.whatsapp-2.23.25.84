@@ -52,6 +52,8 @@
 
     move-result v0
 
+    sget v0, Lcom/Lzm/Settings/Tools/Extra;->Lzm_NewFiltersUi:I
+
     if-eqz v0, :cond_0
 
     iget-object v0, p0, LX/5Qc;->A01:LX/5TM;

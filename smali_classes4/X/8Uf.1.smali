@@ -162,7 +162,6 @@
     move-result v1
     :try_end_1
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
-    .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_5
 
     :catch_0
     :cond_0
@@ -187,7 +186,6 @@
     move-result v1
     :try_end_3
     .catch Lorg/json/JSONException; {:try_start_3 .. :try_end_3} :catch_1
-    .catch Lorg/json/JSONException; {:try_start_3 .. :try_end_3} :catch_5
 
     :catch_1
     :cond_1
@@ -212,7 +210,6 @@
     move-result v1
     :try_end_5
     .catch Lorg/json/JSONException; {:try_start_5 .. :try_end_5} :catch_2
-    .catch Lorg/json/JSONException; {:try_start_5 .. :try_end_5} :catch_5
 
     :catch_2
     :cond_2
@@ -237,7 +234,6 @@
     move-result v1
     :try_end_7
     .catch Lorg/json/JSONException; {:try_start_7 .. :try_end_7} :catch_3
-    .catch Lorg/json/JSONException; {:try_start_7 .. :try_end_7} :catch_5
 
     :catch_3
     :cond_3
@@ -262,7 +258,6 @@
     move-result v1
     :try_end_9
     .catch Lorg/json/JSONException; {:try_start_9 .. :try_end_9} :catch_4
-    .catch Lorg/json/JSONException; {:try_start_9 .. :try_end_9} :catch_5
 
     :catch_4
     :cond_4

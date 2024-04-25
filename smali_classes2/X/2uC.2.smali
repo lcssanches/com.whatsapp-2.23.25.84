@@ -519,13 +519,88 @@
 .method public final A0N(LX/2wp;I)I
     .locals 4
 
+    const/4 v0, 0x1
+
+    invoke-static {p2, v0}, Lcom/Lzm/Settings/Tools/Media;->IntPropMediaSettings(II)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-static {}, Lcom/Lzm/Settings/Tools/Media;->PhotoQuality()I
+
+    move-result p1
+
+    return p1
+
+    :cond_0
+    const/4 v0, 0x2
+
+    invoke-static {p2, v0}, Lcom/Lzm/Settings/Tools/Media;->IntPropMediaSettings(II)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-static {}, Lcom/Lzm/Settings/Tools/Media;->MediaLimit()I
+
+    move-result p1
+
+    return p1
+
+    :cond_1
+    const/4 v0, 0x3
+
+    invoke-static {p2, v0}, Lcom/Lzm/Settings/Tools/Media;->IntPropMediaSettings(II)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-static {}, Lcom/Lzm/Settings/Tools/Media;->MediaQuality()I
+
+    move-result p1
+
+    return p1
+
+    :cond_2
+    const/4 v0, 0x4
+
+    invoke-static {p2, v0}, Lcom/Lzm/Settings/Tools/Media;->IntPropMediaSettings(II)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    invoke-static {}, Lcom/Lzm/Settings/Tools/Media;->AudioLimit()I
+
+    move-result p1
+
+    return p1
+
+    :cond_3
+    const/4 v0, 0x5
+
+    invoke-static {p2, v0}, Lcom/Lzm/Settings/Tools/Media;->IntPropMediaSettings(II)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    invoke-static {}, Lcom/Lzm/Settings/Tools/Choice/PrivacyUtils;->StatusLimit()I
+
+    move-result p1
+
+    return p1
+
+    :cond_4
     invoke-virtual {p0, p1, p2}, LX/2uC;->A0O(LX/2wp;I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/Number;
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_5
 
     invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
 
@@ -533,7 +608,7 @@
 
     return v0
 
-    :cond_0
+    :cond_5
     monitor-enter p0
 
     :try_start_0
@@ -543,7 +618,7 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_6
 
     invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
 
@@ -553,14 +628,14 @@
 
     return v0
 
-    :cond_1
+    :cond_6
     invoke-static {p0, p2}, LX/2uC;->A09(LX/2uC;I)V
 
     move-object v1, p0
 
     instance-of v0, p0, LX/1Pt;
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_9
 
     check-cast v1, LX/1Pt;
 
@@ -577,7 +652,7 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_a
 
     iget-object v2, p0, LX/2uC;->A03:Landroid/content/SharedPreferences;
 
@@ -595,13 +670,13 @@
 
     iget-boolean v0, p1, LX/2wp;->A00:Z
 
-    if-nez v0, :cond_3
+    if-nez v0, :cond_8
 
     move-object v1, p0
 
     instance-of v0, p0, LX/1Ps;
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_7
 
     check-cast v1, LX/1Ps;
 
@@ -614,21 +689,21 @@
 
     goto :goto_2
 
-    :cond_2
+    :cond_7
     iget-object v0, p0, LX/2uC;->A08:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {v3, v0, v2}, LX/0yM;->A1E(Ljava/lang/Object;Ljava/util/AbstractMap;I)V
 
     goto :goto_1
 
-    :cond_3
+    :cond_8
     iget-object v0, p0, LX/2uC;->A07:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {v3, v0, v2}, LX/0yM;->A1E(Ljava/lang/Object;Ljava/util/AbstractMap;I)V
 
     goto :goto_1
 
-    :cond_4
+    :cond_9
     check-cast v1, LX/1Ps;
 
     iget-object v0, v1, LX/1Ps;->A00:LX/1Pt;
@@ -640,7 +715,7 @@
     :goto_2
     return v2
 
-    :cond_5
+    :cond_a
     invoke-static {}, LX/001;->A0r()Ljava/lang/StringBuilder;
 
     move-result-object v1
@@ -1219,13 +1294,35 @@
 .method public final A0X(LX/2wp;I)Z
     .locals 4
 
+    invoke-virtual {p0, p2}, LX/2uC;->HiddenFunctions(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    invoke-virtual {p0, p2}, LX/2uC;->DisableHiddenFunctions(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
     invoke-virtual {p0, p1, p2}, LX/2uC;->A0O(LX/2wp;I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/Boolean;
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_2
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -1233,7 +1330,7 @@
 
     return v0
 
-    :cond_0
+    :cond_2
     monitor-enter p0
 
     :try_start_0
@@ -1243,7 +1340,7 @@
 
     check-cast v0, Ljava/lang/Boolean;
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_3
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -1253,14 +1350,14 @@
 
     return v0
 
-    :cond_1
+    :cond_3
     invoke-static {p0, p2}, LX/2uC;->A09(LX/2uC;I)V
 
     move-object v1, p0
 
     instance-of v0, p0, LX/1Pt;
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_6
 
     check-cast v1, LX/1Pt;
 
@@ -1277,7 +1374,7 @@
 
     check-cast v0, Ljava/lang/Boolean;
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_7
 
     iget-object v2, p0, LX/2uC;->A03:Landroid/content/SharedPreferences;
 
@@ -1295,13 +1392,13 @@
 
     iget-boolean v0, p1, LX/2wp;->A00:Z
 
-    if-nez v0, :cond_3
+    if-nez v0, :cond_5
 
     move-object v1, p0
 
     instance-of v0, p0, LX/1Ps;
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_4
 
     check-cast v1, LX/1Ps;
 
@@ -1314,21 +1411,21 @@
 
     goto :goto_2
 
-    :cond_2
+    :cond_4
     iget-object v0, p0, LX/2uC;->A08:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {v3, v0, v2}, LX/000;->A1C(Ljava/lang/Object;Ljava/util/AbstractMap;Z)V
 
     goto :goto_1
 
-    :cond_3
+    :cond_5
     iget-object v0, p0, LX/2uC;->A07:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {v3, v0, v2}, LX/000;->A1C(Ljava/lang/Object;Ljava/util/AbstractMap;Z)V
 
     goto :goto_1
 
-    :cond_4
+    :cond_6
     check-cast v1, LX/1Ps;
 
     iget-object v0, v1, LX/1Ps;->A00:LX/1Pt;
@@ -1340,7 +1437,7 @@
     :goto_2
     return v2
 
-    :cond_5
+    :cond_7
     invoke-static {}, LX/001;->A0r()Ljava/lang/StringBuilder;
 
     move-result-object v1
@@ -1361,4 +1458,928 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v0
+.end method
+
+.method public final DisableHiddenFunctions(I)Z
+    .locals 1
+
+    const/16 v0, 0xcbd
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x124b
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x15ad
+
+    if-ne v0, p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
+
+    :goto_1
+    return p1
+.end method
+
+.method public final HiddenFunctions(I)Z
+    .locals 1
+
+    const/16 v0, 0x572
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x159d
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xab2
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xa67
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x892
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x3d6
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x15ba
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x133d
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xb62
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x1708
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x1969
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x16a6
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x19e5
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xf91
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x11ac
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x1585
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x1586
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x14e9
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x1951
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x648
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x1932
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x1687
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x1951
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xf47
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xf46
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xf44
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xf43
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xf95
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x14dd
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x1723
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x70f
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x8dd
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x1167
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xb57
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x14bf
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x9ed
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x12a5
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xfff
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x604
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x13ee
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x12f0
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x1424
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x164f
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x927
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x1155
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x8bd
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x574
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xa05
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x1754
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x1437
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x15b6
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x9cf
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x1842
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x752
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x753
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x10ac
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x5af
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x18b5
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x6c2
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x1305
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x42f
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x387
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xee7
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xd6c
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x1329
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x707
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x189e
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x189d
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x543
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xb36
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x7b4
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x13c4
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x8d5
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xc57
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x1664
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xeb4
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xfbf
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x5fd
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x1289
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x1747
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xd69
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xbea
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x32c
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x94d
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xa9e
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xbc4
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xf63
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x541
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x12ad
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x16e5
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x7d0
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x32b
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xbc5
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xba8
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x882
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x5ca
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xb70
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x149a
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x10ba    # 6.0E-42f
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x10bb
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x1406
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x1397
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x1317
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x15f5
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x10d3
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x17d0
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xee0
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x34b
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xb27    # 4.001E-42f
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x1758
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x132c
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x160b
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x1109
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x18ea
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xa5d
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x17f4
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x15eb
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x1036
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x98f
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x1058
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xbc3
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xf7e
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x18d4
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xdf3
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xed3
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xe69
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x15c8
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xc10
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xc6c
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x1849
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xc52
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xd34
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x14fd
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x575
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xe39
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x1004
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xa0f
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x15a7
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x59f
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x3d0
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x1fc
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x1f0
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x11d0
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x16de
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xfd0
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x1774
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xffd
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x9e3
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x2b3
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x154d
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x13d5
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x122e
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x12f4
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x934
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xef5
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x1373
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x1388
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xe20
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xcc3
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xc5f
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x119d
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x102b
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xdbf
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xb96
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x18cc
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x16ed
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x18d3
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x55a
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x71e
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x1309
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x15fa
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x263
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x886
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x793
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x167d
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x10ff
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x13b8
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x391
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x14af
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xae7
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x9a2
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x75b
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x1c2
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x6c1
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x1306
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x10a
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x10f4
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x1471
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x16ca
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x17e2
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x1312
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x13f1
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x18f2
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x1892
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xfda
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xfd9
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xfd8
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xf89
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xf07
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x127d
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xf3e
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xbad
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x1542
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xb94
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x1170
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xc3b
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x12c0
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x1230
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x15f9
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xc97
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xed0
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xf25
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xf74
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xb10
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x116c
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xf6f
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x982
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0x1119
+
+    if-eq v0, p1, :cond_1
+
+    const/16 v0, 0xfb7
+
+    if-ne v0, p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
+
+    :goto_1
+    return p1
 .end method

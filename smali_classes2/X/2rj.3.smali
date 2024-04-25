@@ -326,6 +326,13 @@
 .method public final A04(Z)V
     .locals 6
 
+    sget v1, Lcom/Lzm/Settings/Tools/Privacy;->Lzm_GhostMode:I
+
+    if-eqz v1, :cond_0
+
+    const/4 p1, 0x0
+
+    :cond_0
     iget-object v0, p0, LX/2rj;->A07:LX/2jo;
 
     iget-object v3, v0, LX/2jo;->A00:Landroid/content/Context;
@@ -338,7 +345,7 @@
 
     sget-boolean v0, LX/0zU;->A04:Z
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     invoke-static {v1}, LX/0zU;->A00(LX/36V;)Z
 
@@ -360,18 +367,18 @@
 
     invoke-virtual {v4, v0}, LX/1dC;->A07(Z)V
 
-    :cond_0
+    :cond_1
     iget-object v5, p0, LX/2rj;->A09:LX/2ev;
 
     iget v1, v5, LX/2ev;->A00:I
 
     const/4 v0, 0x1
 
-    if-eq v1, v0, :cond_1
+    if-eq v1, v0, :cond_2
 
     const/4 v0, 0x2
 
-    if-ne v1, v0, :cond_2
+    if-ne v1, v0, :cond_3
 
     invoke-virtual {p0}, LX/2rj;->A03()V
 
@@ -379,7 +386,7 @@
 
     iput v0, v5, LX/2ev;->A00:I
 
-    :cond_1
+    :cond_2
     :goto_0
     invoke-static {}, LX/001;->A0r()Ljava/lang/StringBuilder;
 
@@ -397,10 +404,10 @@
 
     return-void
 
-    :cond_2
+    :cond_3
     const/4 v1, 0x1
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_2
 
     iput v1, v5, LX/2ev;->A00:I
 
@@ -408,13 +415,13 @@
 
     iget v0, v4, LX/1dM;->A04:I
 
-    if-eq v0, v1, :cond_3
+    if-eq v0, v1, :cond_4
 
     iget-object v0, p0, LX/2rj;->A0A:LX/2iM;
 
     invoke-virtual {v0}, LX/2iM;->A00()V
 
-    :cond_3
+    :cond_4
     iget v1, v4, LX/1dM;->A04:I
 
     const/4 v0, 0x2
@@ -423,7 +430,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_2
 
     iget-object v2, p0, LX/2rj;->A0C:LX/472;
 

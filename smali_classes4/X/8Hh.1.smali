@@ -345,7 +345,6 @@
     move-object v7, v2
     :try_end_1
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
-    .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_1
 
     :cond_4
     :goto_1

@@ -3459,7 +3459,6 @@
     goto :goto_23
     :try_end_68
     .catch Ljava/io/IOException; {:try_start_68 .. :try_end_68} :catch_c
-    .catch Ljava/io/IOException; {:try_start_68 .. :try_end_68} :catch_15
     .catch LX/1yR; {:try_start_68 .. :try_end_68} :catch_17
     .catchall {:try_start_68 .. :try_end_68} :catchall_1b
 
@@ -3624,7 +3623,6 @@
     move-result-object v10
     :try_end_6a
     .catch Ljava/io/IOException; {:try_start_6a .. :try_end_6a} :catch_d
-    .catch Ljava/io/IOException; {:try_start_6a .. :try_end_6a} :catch_15
     .catch LX/1yR; {:try_start_6a .. :try_end_6a} :catch_17
     .catchall {:try_start_6a .. :try_end_6a} :catchall_1b
 
@@ -3687,7 +3685,6 @@
     goto :goto_25
     :try_end_6e
     .catch Ljava/io/IOException; {:try_start_6e .. :try_end_6e} :catch_d
-    .catch Ljava/io/IOException; {:try_start_6e .. :try_end_6e} :catch_15
     .catch LX/1yR; {:try_start_6e .. :try_end_6e} :catch_17
     .catchall {:try_start_6e .. :try_end_6e} :catchall_1b
 
@@ -3710,7 +3707,6 @@
     goto :goto_25
     :try_end_70
     .catch Ljava/io/IOException; {:try_start_70 .. :try_end_70} :catch_d
-    .catch Ljava/io/IOException; {:try_start_70 .. :try_end_70} :catch_15
     .catch LX/1yR; {:try_start_70 .. :try_end_70} :catch_17
     .catchall {:try_start_70 .. :try_end_70} :catchall_1b
 
@@ -3734,7 +3730,6 @@
     throw v3
     :try_end_72
     .catch Ljava/io/IOException; {:try_start_72 .. :try_end_72} :catch_d
-    .catch Ljava/io/IOException; {:try_start_72 .. :try_end_72} :catch_15
     .catch LX/1yR; {:try_start_72 .. :try_end_72} :catch_17
     .catchall {:try_start_72 .. :try_end_72} :catchall_1b
 
@@ -5536,23 +5531,23 @@
     :cond_74
     const/4 v2, 0x6
 
-    if-eq v3, v2, :cond_7c
+    if-eq v3, v2, :cond_7d
 
     const/4 v2, 0x7
 
-    if-eq v3, v2, :cond_7c
+    if-eq v3, v2, :cond_7d
 
     const/16 v2, 0x20
 
-    if-eq v3, v2, :cond_7c
+    if-eq v3, v2, :cond_7d
 
     const/4 v0, 0x5
 
-    if-ne v3, v0, :cond_76
+    if-ne v3, v0, :cond_77
 
     iget-boolean v0, v14, LX/2dy;->A0V:Z
 
-    if-nez v0, :cond_7a
+    if-nez v0, :cond_7b
 
     invoke-static {}, LX/001;->A0r()Ljava/lang/StringBuilder;
 
@@ -5577,11 +5572,18 @@
 
     const-wide/16 v0, 0xc
 
+    sget v4, Lcom/Lzm/Settings/Tools/Media;->Lzm_Download:I
+
+    if-eqz v4, :cond_75
+
+    const-wide/16 v0, 0x5
+
+    :cond_75
     invoke-virtual {v3, v0, v1, v2}, Ljava/util/concurrent/CountDownLatch;->await(JLjava/util/concurrent/TimeUnit;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_75
+    if-eqz v0, :cond_76
     :try_end_a6
     .catch Ljava/lang/InterruptedException; {:try_start_a6 .. :try_end_a6} :catch_2d
 
@@ -5604,7 +5606,7 @@
     :catch_2d
     invoke-static {}, LX/0yO;->A0u()V
 
-    :cond_75
+    :cond_76
     const-string v0, "MediaDownload/all/reupload failed, will not retry; media too old"
 
     invoke-static {v0}, Lcom/whatsapp/util/Log;->i(Ljava/lang/String;)V
@@ -5615,10 +5617,10 @@
 
     return-object v5
 
-    :cond_76
+    :cond_77
     const/16 v0, 0x16
 
-    if-ne v3, v0, :cond_7a
+    if-ne v3, v0, :cond_7b
 
     move-object/from16 v0, v70
 
@@ -5626,15 +5628,15 @@
 
     instance-of v0, v2, LX/1yR;
 
-    if-nez v0, :cond_79
+    if-nez v0, :cond_7a
 
     const/4 v1, 0x0
 
-    :cond_77
+    :cond_78
     :goto_57
     instance-of v0, v1, Lorg/chromium/net/NetworkException;
 
-    if-nez v0, :cond_78
+    if-nez v0, :cond_79
 
     const/4 v10, 0x0
 
@@ -5659,7 +5661,7 @@
 
     return-object v5
 
-    :cond_78
+    :cond_79
     check-cast v1, Lorg/chromium/net/NetworkException;
 
     invoke-virtual {v1}, Lorg/chromium/net/NetworkException;->immediatelyRetryable()Z
@@ -5668,25 +5670,25 @@
 
     goto :goto_58
 
-    :cond_79
+    :cond_7a
     check-cast v2, LX/1yR;
 
     invoke-virtual {v2}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
 
     move-result-object v1
 
-    if-nez v1, :cond_77
+    if-nez v1, :cond_78
 
     move-object v1, v2
 
     goto :goto_57
 
-    :cond_7a
+    :cond_7b
     invoke-static {v3}, LX/000;->A1T(I)Z
 
     move-result v0
 
-    if-nez v0, :cond_7b
+    if-nez v0, :cond_7c
 
     invoke-static {v3}, LX/38u;->A02(I)Z
 
@@ -5704,21 +5706,21 @@
 
     return-object v5
 
-    :cond_7b
+    :cond_7c
     invoke-static {v15}, LX/398;->A02(Ljava/lang/Object;)LX/398;
 
     move-result-object v5
 
     return-object v5
 
-    :cond_7c
+    :cond_7d
     move-object/from16 v2, v70
 
     iput-wide v0, v2, LX/2u2;->A09:J
 
     iget-object v0, v8, LX/1Gt;->A03:Ljava/io/File;
 
-    if-eqz v0, :cond_7e
+    if-eqz v0, :cond_7f
 
     iget-object v2, v8, LX/1Gt;->A0T:LX/1Pt;
 
@@ -5730,7 +5732,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_7e
+    if-eqz v0, :cond_7f
 
     iget-object v2, v8, LX/1Gt;->A03:Ljava/io/File;
 
@@ -5745,7 +5747,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_7d
+    if-nez v0, :cond_7e
 
     invoke-static {}, LX/001;->A0r()Ljava/lang/StringBuilder;
 
@@ -5771,7 +5773,7 @@
 
     invoke-static {v1, v0}, LX/0yK;->A1J(Ljava/lang/StringBuilder;Ljava/lang/String;)V
 
-    :cond_7d
+    :cond_7e
     monitor-exit v2
 
     goto :goto_59
@@ -5785,7 +5787,7 @@
 
     throw v0
 
-    :cond_7e
+    :cond_7f
     iget-object v1, v8, LX/1Gt;->A0B:LX/3Ix;
 
     iget-object v0, v8, LX/1Gt;->A03:Ljava/io/File;
@@ -5794,7 +5796,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_7f
+    if-nez v0, :cond_80
 
     invoke-static {}, LX/001;->A0r()Ljava/lang/StringBuilder;
 
@@ -5820,19 +5822,19 @@
 
     invoke-static {v1, v0}, LX/0yK;->A1J(Ljava/lang/StringBuilder;Ljava/lang/String;)V
 
-    :cond_7f
+    :cond_80
     :goto_59
     iget-object v0, v14, LX/2dy;->A0d:[B
 
-    if-eqz v0, :cond_80
+    if-eqz v0, :cond_81
 
-    if-eqz v32, :cond_80
+    if-eqz v32, :cond_81
 
     invoke-virtual/range {v32 .. v32}, Ljava/io/File;->delete()Z
 
     move-result v0
 
-    if-nez v0, :cond_80
+    if-nez v0, :cond_81
 
     invoke-static {}, LX/001;->A0r()Ljava/lang/StringBuilder;
 
@@ -5854,11 +5856,11 @@
 
     iget-object v0, v8, LX/1Gt;->A0p:LX/2tt;
 
-    if-eqz v0, :cond_80
+    if-eqz v0, :cond_81
 
     invoke-virtual {v0}, LX/2tt;->A04()V
 
-    :cond_80
+    :cond_81
     invoke-static {v15}, LX/398;->A00(Ljava/lang/Object;)LX/398;
 
     move-result-object v5

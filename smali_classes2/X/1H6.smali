@@ -283,7 +283,6 @@
     goto :goto_1
     :try_end_6
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_0
-    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_2
     .catchall {:try_start_6 .. :try_end_6} :catchall_4
 
     :catch_0

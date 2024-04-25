@@ -1361,6 +1361,8 @@
 .method public static doLogToLogcat(ILjava/lang/String;)V
     .locals 2
 
+    return-void
+
     const-string v1, "WhatsApp"
 
     if-eqz p0, :cond_3
@@ -2424,6 +2426,8 @@
 
 .method public static logToLogcat(ILjava/lang/String;)V
     .locals 8
+
+    return-void
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 

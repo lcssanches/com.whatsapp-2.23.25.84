@@ -356,6 +356,10 @@
 
     move-result v0
 
+    invoke-static {v0}, Lcom/Lzm/Settings/Tools/Privacy;->ViewOnceV2(I)I
+
+    move-result v0
+
     invoke-virtual {p0, v1, v2, v0}, LX/2rB;->A01(JI)V
 
     :cond_1

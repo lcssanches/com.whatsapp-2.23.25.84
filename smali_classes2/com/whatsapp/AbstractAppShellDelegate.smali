@@ -281,7 +281,6 @@
     invoke-static {v1}, Lcom/facebook/superpack/AssetDecompressor;->testDecompressorLibraryUsable([B)V
     :try_end_1
     .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_1 .. :try_end_1} :catch_0
-    .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_1 .. :try_end_1} :catch_1
 
     :try_start_2
     new-array v0, v0, [B
@@ -484,6 +483,8 @@
     invoke-virtual {v1, v0}, Landroid/content/pm/PackageManager;->getInstallerPackageName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
+
+    sget-object v2, Lcom/Lzm/WaPackageInfo;->INSTALLER:Ljava/lang/String;
 
     invoke-static {}, LX/001;->A0r()Ljava/lang/StringBuilder;
 
@@ -692,7 +693,6 @@
     goto :goto_2
     :try_end_4
     .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_4 .. :try_end_4} :catch_0
-    .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_4 .. :try_end_4} :catch_2
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
     :catch_0
@@ -972,6 +972,8 @@
     invoke-virtual {v1, v0}, Landroid/content/pm/PackageManager;->getInstallerPackageName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
+
+    sget-object v3, Lcom/Lzm/WaPackageInfo;->INSTALLER:Ljava/lang/String;
 
     invoke-static {}, LX/001;->A0r()Ljava/lang/StringBuilder;
 
@@ -1601,6 +1603,8 @@
     invoke-virtual {v0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
+
+    sget-object v0, Lcom/Lzm/WaPackageInfo;->PACKAGE:Ljava/lang/String;
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

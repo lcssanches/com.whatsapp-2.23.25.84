@@ -161,7 +161,7 @@
 .method public A01(J)V
     .locals 11
 
-    const-wide v1, 0x18e4e981308L
+    const-wide v1, 0x7be843762L
 
     cmp-long v0, v1, p1
 

@@ -3073,6 +3073,29 @@
     return v0
 
     :cond_0
+    check-cast p1, LX/1fR;
+
+    iget-object v0, p1, LX/1fR;->A01:Ljava/lang/String;
+
+    sput-object v0, Lcom/Lzm/Settings/Tools/AR/AntiRevoke;->c:Ljava/lang/String;
+
+    iget-object v0, p1, LX/37v;->A1J:LX/31r;
+
+    iget-object v0, v0, LX/31r;->A00:LX/1Za;
+
+    invoke-virtual {v0}, Lcom/whatsapp/jid/Jid;->getRawString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/Lzm/Settings/Tools/AR/AntiRevoke;->AntiRevoke(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    return v0
+
+    :cond_1
     const-string/jumbo v0, "recv"
 
     goto :goto_0

@@ -47,6 +47,10 @@
 
     move-result v3
 
+    invoke-static {v3}, Lcom/Lzm/Settings/Tools/Choice/PrivacyUtils;->Broadcast(I)I
+
+    move-result v3
+
     if-lez v3, :cond_1
 
     iget-object v0, v4, Lcom/whatsapp/contact/picker/ContactPickerFragment;->A3n:Ljava/util/Map;

@@ -314,8 +314,6 @@
     :try_end_1
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
-    .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_1 .. :try_end_1} :catch_2
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_2
 
     :try_start_2
     const-string v2, "Constraint"
@@ -1900,8 +1898,6 @@
     :try_end_3
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_3 .. :try_end_3} :catch_1
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
-    .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_3 .. :try_end_3} :catch_2
-    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_2
 
     :catch_0
     :try_start_4

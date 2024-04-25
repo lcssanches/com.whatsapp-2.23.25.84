@@ -58,7 +58,6 @@
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
     .catch LX/0qU; {:try_start_2 .. :try_end_2} :catch_2
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
 
     :catch_0
     if-eqz v1, :cond_0
@@ -83,7 +82,6 @@
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_1
     .catch LX/0qU; {:try_start_4 .. :try_end_4} :catch_2
-    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_2
 
     :catch_1
     :try_start_5

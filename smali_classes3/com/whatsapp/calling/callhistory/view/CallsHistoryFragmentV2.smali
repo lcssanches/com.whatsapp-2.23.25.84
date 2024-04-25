@@ -1519,6 +1519,8 @@
 
     move-result v2
 
+    sget v2, Lcom/Lzm/Settings/Tools/Extra;->Lzm_NewHomeUi:I
+
     iget-object v0, p0, Lcom/whatsapp/calling/callhistory/view/CallsHistoryFragmentV2;->A0G:Lcom/whatsapp/calling/callhistory/viewmodel/CallsHistoryFragmentV2ViewModel;
 
     iget-object v0, v0, Lcom/whatsapp/calling/callhistory/viewmodel/CallsHistoryFragmentV2ViewModel;->A0p:Ljava/util/ArrayList;

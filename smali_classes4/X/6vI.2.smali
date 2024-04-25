@@ -381,7 +381,6 @@
     .catch LX/71U; {:try_start_4 .. :try_end_4} :catch_4
     .catch Ljava/lang/IllegalArgumentException; {:try_start_4 .. :try_end_4} :catch_4
     .catch Ljava/lang/SecurityException; {:try_start_4 .. :try_end_4} :catch_4
-    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_5
 
     :try_start_5
     invoke-virtual {v5, v0}, LX/7Xt;->A04(LX/7D8;)V
@@ -393,7 +392,6 @@
     .catch LX/71U; {:try_start_5 .. :try_end_5} :catch_4
     .catch Ljava/lang/IllegalArgumentException; {:try_start_5 .. :try_end_5} :catch_4
     .catch Ljava/lang/SecurityException; {:try_start_5 .. :try_end_5} :catch_4
-    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_5
 
     :catch_0
     move-exception v1
@@ -439,7 +437,6 @@
     .catch LX/71U; {:try_start_6 .. :try_end_6} :catch_4
     .catch Ljava/lang/IllegalArgumentException; {:try_start_6 .. :try_end_6} :catch_4
     .catch Ljava/lang/SecurityException; {:try_start_6 .. :try_end_6} :catch_4
-    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_5
 
     :cond_7
     :try_start_7
@@ -452,7 +449,6 @@
     .catch LX/71U; {:try_start_7 .. :try_end_7} :catch_4
     .catch Ljava/lang/IllegalArgumentException; {:try_start_7 .. :try_end_7} :catch_4
     .catch Ljava/lang/SecurityException; {:try_start_7 .. :try_end_7} :catch_4
-    .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_5
 
     :catch_1
     move-exception v0
@@ -467,7 +463,6 @@
     .catch LX/71U; {:try_start_8 .. :try_end_8} :catch_4
     .catch Ljava/lang/IllegalArgumentException; {:try_start_8 .. :try_end_8} :catch_4
     .catch Ljava/lang/SecurityException; {:try_start_8 .. :try_end_8} :catch_4
-    .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_5
 
     :catch_2
     :try_start_9
@@ -491,7 +486,6 @@
     .catch LX/71U; {:try_start_a .. :try_end_a} :catch_4
     .catch Ljava/lang/IllegalArgumentException; {:try_start_a .. :try_end_a} :catch_4
     .catch Ljava/lang/SecurityException; {:try_start_a .. :try_end_a} :catch_4
-    .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_5
 
     :catch_3
     :try_start_b

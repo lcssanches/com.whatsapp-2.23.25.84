@@ -1171,7 +1171,6 @@
     aget-object v2, v0, p2
     :try_end_0
     .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_1
 
     :try_start_1
@@ -1408,7 +1407,6 @@
     aget-object v2, v0, v3
     :try_end_4
     .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_4 .. :try_end_4} :catch_3
-    .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_4 .. :try_end_4} :catch_4
     .catch Ljava/lang/NullPointerException; {:try_start_4 .. :try_end_4} :catch_4
 
     :try_start_5

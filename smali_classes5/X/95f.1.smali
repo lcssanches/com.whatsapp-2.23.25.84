@@ -704,7 +704,6 @@
     invoke-virtual {v2, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
     :try_end_1
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_1
-    .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_2
 
     :cond_8
     :try_start_2
@@ -759,8 +758,6 @@
     goto :goto_0
     :try_end_2
     .catch Lorg/json/JSONException; {:try_start_2 .. :try_end_2} :catch_0
-    .catch Lorg/json/JSONException; {:try_start_2 .. :try_end_2} :catch_1
-    .catch Lorg/json/JSONException; {:try_start_2 .. :try_end_2} :catch_2
 
     :catch_0
     :try_start_3
@@ -777,7 +774,6 @@
     goto :goto_0
     :try_end_3
     .catch Lorg/json/JSONException; {:try_start_3 .. :try_end_3} :catch_1
-    .catch Lorg/json/JSONException; {:try_start_3 .. :try_end_3} :catch_2
 
     :catch_1
     :try_start_4

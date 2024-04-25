@@ -175,6 +175,13 @@
 .method public A02(LX/5qv;)V
     .locals 7
 
+    sget v0, Lcom/Lzm/Settings/Tools/Media;->Lzm_DisableAudioHeads:I
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
     invoke-virtual {p1}, LX/5qv;->A0I()Z
 
     move-result v3
@@ -183,7 +190,7 @@
 
     const/4 v6, 0x0
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_2
 
     iget-object v0, p0, LX/5Wh;->A0E:LX/2jo;
 
@@ -223,15 +230,15 @@
 
     invoke-virtual {p0, v5, v3}, LX/5Wh;->A01(Landroid/widget/RemoteViews;Z)V
 
-    :cond_0
+    :cond_1
     return-void
 
-    :cond_1
+    :cond_2
     iget-boolean v0, p0, LX/5Wh;->A05:Z
 
-    if-eqz v3, :cond_2
+    if-eqz v3, :cond_3
 
-    if-nez v0, :cond_3
+    if-nez v0, :cond_4
 
     :goto_0
     iget-object v0, p0, LX/5Wh;->A0E:LX/2jo;
@@ -254,15 +261,15 @@
 
     return-void
 
-    :cond_2
-    if-eqz v0, :cond_3
+    :cond_3
+    if-eqz v0, :cond_4
 
     goto :goto_0
 
-    :cond_3
+    :cond_4
     iget-boolean v0, p0, LX/5Wh;->A06:Z
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     goto :goto_0
 .end method

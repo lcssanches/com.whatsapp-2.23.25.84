@@ -23,7 +23,7 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/util/List;Z)V
     .locals 4
 
-    const/16 v3, 0x64
+    const/16 v3, 0x1
 
     const/4 v2, 0x0
 
@@ -33,7 +33,11 @@
 
     iput-object p2, p0, Lorg/whispersystems/jobqueue/JobParameters;->requirements:Ljava/util/List;
 
+    const/4 p3, 0x0
+
     iput-boolean p3, p0, Lorg/whispersystems/jobqueue/JobParameters;->isPersistent:Z
+
+    const-string p1, ""
 
     iput-object p1, p0, Lorg/whispersystems/jobqueue/JobParameters;->groupId:Ljava/lang/String;
 

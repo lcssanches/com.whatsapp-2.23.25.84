@@ -1820,7 +1820,6 @@
     invoke-static {v5, v3}, LX/907;->A1D(LX/36Y;Ljava/lang/Object;)V
     :try_end_a
     .catch Lorg/json/JSONException; {:try_start_a .. :try_end_a} :catch_4
-    .catch Lorg/json/JSONException; {:try_start_a .. :try_end_a} :catch_5
 
     :cond_16
     :try_start_b

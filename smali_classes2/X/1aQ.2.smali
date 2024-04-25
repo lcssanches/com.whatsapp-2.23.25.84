@@ -456,7 +456,6 @@
     .catch LX/1yB; {:try_start_4 .. :try_end_4} :catch_f
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_e
     .catch Ljava/lang/OutOfMemoryError; {:try_start_4 .. :try_end_4} :catch_d
-    .catch Ljava/lang/SecurityException; {:try_start_4 .. :try_end_4} :catch_c
     .catchall {:try_start_4 .. :try_end_4} :catchall_b
 
     :try_start_5
@@ -479,9 +478,7 @@
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_2
     .catch Ljava/lang/SecurityException; {:try_start_5 .. :try_end_5} :catch_b
     .catch LX/1yB; {:try_start_5 .. :try_end_5} :catch_f
-    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_e
     .catch Ljava/lang/OutOfMemoryError; {:try_start_5 .. :try_end_5} :catch_d
-    .catch Ljava/lang/SecurityException; {:try_start_5 .. :try_end_5} :catch_c
     .catchall {:try_start_5 .. :try_end_5} :catchall_b
 
     :try_start_6
@@ -520,9 +517,7 @@
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_1
     .catch Ljava/lang/SecurityException; {:try_start_7 .. :try_end_7} :catch_b
     .catch LX/1yB; {:try_start_7 .. :try_end_7} :catch_f
-    .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_e
     .catch Ljava/lang/OutOfMemoryError; {:try_start_7 .. :try_end_7} :catch_d
-    .catch Ljava/lang/SecurityException; {:try_start_7 .. :try_end_7} :catch_c
     .catchall {:try_start_7 .. :try_end_7} :catchall_b
 
     :catch_1
@@ -552,9 +547,7 @@
     .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_2
     .catch Ljava/lang/SecurityException; {:try_start_9 .. :try_end_9} :catch_b
     .catch LX/1yB; {:try_start_9 .. :try_end_9} :catch_f
-    .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_e
     .catch Ljava/lang/OutOfMemoryError; {:try_start_9 .. :try_end_9} :catch_d
-    .catch Ljava/lang/SecurityException; {:try_start_9 .. :try_end_9} :catch_c
     .catchall {:try_start_9 .. :try_end_9} :catchall_b
 
     :catch_2
@@ -670,7 +663,6 @@
     .catch LX/1yB; {:try_start_a .. :try_end_a} :catch_f
     .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_e
     .catch Ljava/lang/OutOfMemoryError; {:try_start_a .. :try_end_a} :catch_d
-    .catch Ljava/lang/SecurityException; {:try_start_a .. :try_end_a} :catch_c
     .catchall {:try_start_a .. :try_end_a} :catchall_b
 
     :try_start_b
@@ -1230,7 +1222,6 @@
     .catch LX/1yB; {:try_start_12 .. :try_end_12} :catch_f
     .catch Ljava/io/IOException; {:try_start_12 .. :try_end_12} :catch_e
     .catch Ljava/lang/OutOfMemoryError; {:try_start_12 .. :try_end_12} :catch_d
-    .catch Ljava/lang/SecurityException; {:try_start_12 .. :try_end_12} :catch_c
     .catchall {:try_start_12 .. :try_end_12} :catchall_b
 
     :catchall_2
@@ -1286,7 +1277,6 @@
     .catch LX/1yB; {:try_start_16 .. :try_end_16} :catch_f
     .catch Ljava/io/IOException; {:try_start_16 .. :try_end_16} :catch_e
     .catch Ljava/lang/OutOfMemoryError; {:try_start_16 .. :try_end_16} :catch_d
-    .catch Ljava/lang/SecurityException; {:try_start_16 .. :try_end_16} :catch_c
     .catchall {:try_start_16 .. :try_end_16} :catchall_b
 
     :try_start_17
@@ -1304,8 +1294,6 @@
     .catch Ljava/lang/SecurityException; {:try_start_17 .. :try_end_17} :catch_b
     .catch LX/1yB; {:try_start_17 .. :try_end_17} :catch_f
     .catch Ljava/io/IOException; {:try_start_17 .. :try_end_17} :catch_e
-    .catch Ljava/lang/OutOfMemoryError; {:try_start_17 .. :try_end_17} :catch_d
-    .catch Ljava/lang/SecurityException; {:try_start_17 .. :try_end_17} :catch_c
     .catchall {:try_start_17 .. :try_end_17} :catchall_b
 
     :try_start_18
@@ -1354,8 +1342,6 @@
     .catch Ljava/lang/SecurityException; {:try_start_19 .. :try_end_19} :catch_b
     .catch LX/1yB; {:try_start_19 .. :try_end_19} :catch_f
     .catch Ljava/io/IOException; {:try_start_19 .. :try_end_19} :catch_e
-    .catch Ljava/lang/OutOfMemoryError; {:try_start_19 .. :try_end_19} :catch_d
-    .catch Ljava/lang/SecurityException; {:try_start_19 .. :try_end_19} :catch_c
     .catchall {:try_start_19 .. :try_end_19} :catchall_b
 
     :cond_22
@@ -1391,8 +1377,6 @@
     .catch Ljava/lang/SecurityException; {:try_start_1c .. :try_end_1c} :catch_b
     .catch LX/1yB; {:try_start_1c .. :try_end_1c} :catch_f
     .catch Ljava/io/IOException; {:try_start_1c .. :try_end_1c} :catch_e
-    .catch Ljava/lang/OutOfMemoryError; {:try_start_1c .. :try_end_1c} :catch_d
-    .catch Ljava/lang/SecurityException; {:try_start_1c .. :try_end_1c} :catch_c
     .catchall {:try_start_1c .. :try_end_1c} :catchall_b
 
     :catch_6
@@ -1454,7 +1438,6 @@
     .catch LX/1yB; {:try_start_1d .. :try_end_1d} :catch_f
     .catch Ljava/io/IOException; {:try_start_1d .. :try_end_1d} :catch_e
     .catch Ljava/lang/OutOfMemoryError; {:try_start_1d .. :try_end_1d} :catch_d
-    .catch Ljava/lang/SecurityException; {:try_start_1d .. :try_end_1d} :catch_c
     .catchall {:try_start_1d .. :try_end_1d} :catchall_b
 
     :try_start_1e
@@ -1504,7 +1487,6 @@
     .catch LX/1yB; {:try_start_1f .. :try_end_1f} :catch_f
     .catch Ljava/io/IOException; {:try_start_1f .. :try_end_1f} :catch_e
     .catch Ljava/lang/OutOfMemoryError; {:try_start_1f .. :try_end_1f} :catch_d
-    .catch Ljava/lang/SecurityException; {:try_start_1f .. :try_end_1f} :catch_c
     .catchall {:try_start_1f .. :try_end_1f} :catchall_b
 
     :try_start_20
@@ -1584,7 +1566,6 @@
     .catch Ljava/lang/OutOfMemoryError; {:try_start_21 .. :try_end_21} :catch_7
     .catch LX/1yB; {:try_start_21 .. :try_end_21} :catch_f
     .catch Ljava/io/IOException; {:try_start_21 .. :try_end_21} :catch_e
-    .catch Ljava/lang/OutOfMemoryError; {:try_start_21 .. :try_end_21} :catch_d
     .catch Ljava/lang/SecurityException; {:try_start_21 .. :try_end_21} :catch_c
     .catchall {:try_start_21 .. :try_end_21} :catchall_b
 
@@ -2453,7 +2434,6 @@
     .catch LX/1yB; {:try_start_2c .. :try_end_2c} :catch_f
     .catch Ljava/io/IOException; {:try_start_2c .. :try_end_2c} :catch_e
     .catch Ljava/lang/OutOfMemoryError; {:try_start_2c .. :try_end_2c} :catch_d
-    .catch Ljava/lang/SecurityException; {:try_start_2c .. :try_end_2c} :catch_c
     .catchall {:try_start_2c .. :try_end_2c} :catchall_b
 
     :catch_b

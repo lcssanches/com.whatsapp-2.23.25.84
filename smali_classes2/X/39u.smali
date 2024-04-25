@@ -566,7 +566,16 @@
     :cond_1
     instance-of v0, p0, LX/42B;
 
+    sget v0, Lcom/Lzm/Settings/Tools/Privacy;->Lzm_HideReceipt:I
+
     if-eqz v0, :cond_2
+
+    const-string v6, "inactive"
+
+    goto :goto_0
+
+    :cond_2
+    if-eqz v0, :cond_3
 
     move-object v0, p0
 
@@ -578,7 +587,7 @@
 
     goto :goto_0
 
-    :cond_2
+    :cond_3
     const/4 v6, 0x0
 
     goto :goto_0

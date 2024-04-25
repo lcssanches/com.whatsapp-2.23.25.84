@@ -552,6 +552,8 @@
 
     if-eqz v0, :cond_0
 
+    sput-object v0, Lcom/Lzm/Settings/Tools/ViewOnce;->setViewOncePath:Ljava/io/File;
+
     invoke-virtual {v0}, Ljava/io/File;->canRead()Z
 
     move-result v1

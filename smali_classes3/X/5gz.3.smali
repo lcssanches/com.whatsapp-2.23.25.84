@@ -338,6 +338,10 @@
 
     move-result v0
 
+    invoke-static {v0}, Lcom/Lzm/Settings/Tools/Media;->ImageComposerQuality(I)I
+
+    move-result v0
+
     iput v0, v6, LX/5SH;->A03:I
 
     iget-object v1, v2, Lcom/whatsapp/mediacomposer/MediaComposerFragment;->A00:Landroid/net/Uri;

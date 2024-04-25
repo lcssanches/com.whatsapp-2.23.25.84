@@ -356,7 +356,6 @@
     .catch Ljava/security/NoSuchAlgorithmException; {:try_start_5 .. :try_end_5} :catch_2
     .catch Ljava/security/spec/InvalidKeySpecException; {:try_start_5 .. :try_end_5} :catch_2
     .catch Ljava/lang/IllegalArgumentException; {:try_start_5 .. :try_end_5} :catch_2
-    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_2
     .catch LX/1xq; {:try_start_5 .. :try_end_5} :catch_5
 
     :try_start_6
@@ -384,7 +383,6 @@
     .catch Ljava/security/NoSuchAlgorithmException; {:try_start_6 .. :try_end_6} :catch_2
     .catch Ljava/security/spec/InvalidKeySpecException; {:try_start_6 .. :try_end_6} :catch_2
     .catch Ljava/lang/IllegalArgumentException; {:try_start_6 .. :try_end_6} :catch_2
-    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_2
     .catch LX/1xq; {:try_start_6 .. :try_end_6} :catch_5
 
     :try_start_7
@@ -502,6 +500,8 @@
 
     invoke-virtual {v7, v10}, Ljava/security/Signature;->verify([B)Z
 
+    invoke-static {}, Lcom/Lzm/WaPackageInfo;->BooleanTrue()Z
+
     move-result v0
 
     if-eqz v0, :cond_8
@@ -511,7 +511,6 @@
     .catch Ljava/security/NoSuchAlgorithmException; {:try_start_7 .. :try_end_7} :catch_2
     .catch Ljava/security/spec/InvalidKeySpecException; {:try_start_7 .. :try_end_7} :catch_2
     .catch Ljava/lang/IllegalArgumentException; {:try_start_7 .. :try_end_7} :catch_2
-    .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_2
     .catch LX/1xq; {:try_start_7 .. :try_end_7} :catch_5
 
     :try_start_8
@@ -568,7 +567,6 @@
     .catch Ljava/security/NoSuchAlgorithmException; {:try_start_9 .. :try_end_9} :catch_2
     .catch Ljava/security/spec/InvalidKeySpecException; {:try_start_9 .. :try_end_9} :catch_2
     .catch Ljava/lang/IllegalArgumentException; {:try_start_9 .. :try_end_9} :catch_2
-    .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_2
     .catch LX/1xq; {:try_start_9 .. :try_end_9} :catch_5
 
     :catch_1

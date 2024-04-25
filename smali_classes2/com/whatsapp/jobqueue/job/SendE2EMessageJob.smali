@@ -565,6 +565,8 @@
 
     iput v0, v6, Lcom/whatsapp/jobqueue/job/SendE2EMessageJob;->originationFlags:I
 
+    const/4 v2, 0x1
+
     iput v2, v6, Lcom/whatsapp/jobqueue/job/SendE2EMessageJob;->editVersion:I
 
     iput-object v5, v6, Lcom/whatsapp/jobqueue/job/SendE2EMessageJob;->liveLocationDuration:Ljava/lang/Integer;

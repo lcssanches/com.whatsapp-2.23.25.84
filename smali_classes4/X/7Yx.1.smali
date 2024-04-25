@@ -91,7 +91,6 @@
     goto :goto_0
     :try_end_2
     .catch LX/1z3; {:try_start_2 .. :try_end_2} :catch_0
-    .catch LX/1z3; {:try_start_2 .. :try_end_2} :catch_1
 
     :catch_0
     :try_start_3
@@ -206,7 +205,6 @@
     if-eqz v0, :cond_0
     :try_end_1
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_2
-    .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_3
 
     :try_start_2
     const-string v0, "challenge_id"
@@ -228,8 +226,6 @@
     goto :goto_1
     :try_end_2
     .catch Lorg/json/JSONException; {:try_start_2 .. :try_end_2} :catch_0
-    .catch Lorg/json/JSONException; {:try_start_2 .. :try_end_2} :catch_2
-    .catch Lorg/json/JSONException; {:try_start_2 .. :try_end_2} :catch_3
 
     :catch_0
     :try_start_3
@@ -251,7 +247,6 @@
     if-eqz v0, :cond_1
     :try_end_3
     .catch Lorg/json/JSONException; {:try_start_3 .. :try_end_3} :catch_2
-    .catch Lorg/json/JSONException; {:try_start_3 .. :try_end_3} :catch_3
 
     :try_start_4
     const-string v0, "challenge_id"
@@ -267,8 +262,6 @@
     goto :goto_1
     :try_end_4
     .catch Lorg/json/JSONException; {:try_start_4 .. :try_end_4} :catch_1
-    .catch Lorg/json/JSONException; {:try_start_4 .. :try_end_4} :catch_2
-    .catch Lorg/json/JSONException; {:try_start_4 .. :try_end_4} :catch_3
 
     :catch_1
     :try_start_5
@@ -281,7 +274,6 @@
     goto :goto_0
     :try_end_5
     .catch Lorg/json/JSONException; {:try_start_5 .. :try_end_5} :catch_2
-    .catch Lorg/json/JSONException; {:try_start_5 .. :try_end_5} :catch_3
 
     :catch_2
     :try_start_6

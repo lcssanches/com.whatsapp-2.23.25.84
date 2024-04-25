@@ -431,49 +431,49 @@
 
     iget v10, v2, Landroid/os/Message;->arg1:I
 
-    if-eqz v10, :cond_87
+    if-eqz v10, :cond_88
 
     const/4 v1, 0x3
 
-    if-eq v10, v1, :cond_85
+    if-eq v10, v1, :cond_86
 
     const/4 v1, 0x6
 
-    if-eq v10, v1, :cond_84
+    if-eq v10, v1, :cond_85
 
     const/16 v1, 0x8
 
-    if-eq v10, v1, :cond_31
+    if-eq v10, v1, :cond_32
 
     const/16 v1, 0x9
 
-    if-eq v10, v1, :cond_30
+    if-eq v10, v1, :cond_31
 
     const/16 v1, 0x17
 
-    if-eq v10, v1, :cond_2f
+    if-eq v10, v1, :cond_30
 
     const/16 v1, 0x18
 
-    if-eq v10, v1, :cond_2e
+    if-eq v10, v1, :cond_2f
 
     const/16 v1, 0x2a
 
     const-string/jumbo v12, "stanzaKey"
 
-    if-eq v10, v1, :cond_2c
+    if-eq v10, v1, :cond_2d
 
     const/16 v1, 0x2b
 
-    if-eq v10, v1, :cond_2b
+    if-eq v10, v1, :cond_2c
 
     const/16 v1, 0x4c
 
-    if-eq v10, v1, :cond_2a
+    if-eq v10, v1, :cond_2b
 
     const/16 v1, 0x4d
 
-    if-eq v10, v1, :cond_28
+    if-eq v10, v1, :cond_29
 
     const-string/jumbo v5, "remoteResource"
 
@@ -2869,7 +2869,6 @@
     :try_end_6
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_1
     .catch LX/1tm; {:try_start_6 .. :try_end_6} :catch_3
-    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_2
 
     :try_start_7
     new-instance v0, Ljava/util/zip/DeflaterOutputStream;
@@ -2901,7 +2900,6 @@
     :try_end_a
     .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_1
     .catch LX/1tm; {:try_start_a .. :try_end_a} :catch_3
-    .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_2
 
     :try_start_b
     iget-object v1, v9, LX/39A;->A03:LX/2Yy;
@@ -2971,7 +2969,6 @@
     :try_end_f
     .catch Ljava/io/IOException; {:try_start_f .. :try_end_f} :catch_1
     .catch LX/1tm; {:try_start_f .. :try_end_f} :catch_3
-    .catch Ljava/io/IOException; {:try_start_f .. :try_end_f} :catch_2
 
     :sswitch_16
     :try_start_10
@@ -3156,6 +3153,13 @@
     move-result-object v4
 
     :cond_27
+    sget v0, Lcom/Lzm/Settings/Tools/Privacy;->Lzm_HideRead:I
+
+    if-eqz v0, :cond_28
+
+    return-void
+
+    :cond_28
     const-string/jumbo v0, "receipt"
 
     invoke-static {v0, v1, v4}, LX/39Z;->A0K(Ljava/lang/String;[LX/3DX;[LX/39Z;)LX/39Z;
@@ -3176,7 +3180,7 @@
 
     goto/16 :goto_46
 
-    :cond_28
+    :cond_29
     iget-object v7, v2, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v7, LX/2R4;
@@ -3209,7 +3213,7 @@
 
     const-string/jumbo v10, "receipt"
 
-    if-eqz v9, :cond_29
+    if-eqz v9, :cond_2a
 
     const/4 v0, 0x2
 
@@ -3270,14 +3274,14 @@
 
     goto/16 :goto_46
 
-    :cond_29
+    :cond_2a
     invoke-static {v10, v12}, LX/39Z;->A0J(Ljava/lang/String;[LX/3DX;)LX/39Z;
 
     move-result-object v0
 
     goto :goto_1f
 
-    :cond_2a
+    :cond_2b
     iget-object v3, v2, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v3, LX/3DU;
@@ -3298,7 +3302,7 @@
 
     return-void
 
-    :cond_2b
+    :cond_2c
     iget-object v1, v2, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, LX/2mQ;
@@ -3311,7 +3315,7 @@
 
     return-void
 
-    :cond_2c
+    :cond_2d
     invoke-virtual {v3, v12}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object v10
@@ -3336,7 +3340,7 @@
 
     iget-object v7, v0, LX/10V;->A00:LX/32m;
 
-    if-eqz v9, :cond_2d
+    if-eqz v9, :cond_2e
 
     const-string v3, "in"
 
@@ -3385,12 +3389,12 @@
 
     goto/16 :goto_46
 
-    :cond_2d
+    :cond_2e
     const-string/jumbo v3, "out"
 
     goto :goto_22
 
-    :cond_2e
+    :cond_2f
     iget-object v0, v0, LX/2pR;->A00:LX/10V;
 
     iget-object v0, v0, LX/10V;->A00:LX/32m;
@@ -3401,7 +3405,7 @@
 
     goto/16 :goto_47
 
-    :cond_2f
+    :cond_30
     iget-object v0, v0, LX/2pR;->A00:LX/10V;
 
     iget-object v3, v0, LX/10V;->A00:LX/32m;
@@ -3420,7 +3424,7 @@
 
     goto/16 :goto_47
 
-    :cond_30
+    :cond_31
     iget-object v1, v2, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, LX/37v;
@@ -3447,7 +3451,7 @@
 
     return-void
 
-    :cond_31
+    :cond_32
     iget-object v8, v2, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     invoke-static {v8}, LX/3A6;->A07(Ljava/lang/Object;)V
@@ -3608,22 +3612,22 @@
 
     move-object/from16 v51, v1
 
-    if-nez v4, :cond_33
+    if-nez v4, :cond_34
 
-    if-eqz v19, :cond_32
+    if-eqz v19, :cond_33
 
     invoke-interface/range {v19 .. v19}, Ljava/util/Map;->isEmpty()Z
 
     move-result v1
 
-    if-eqz v1, :cond_33
+    if-eqz v1, :cond_34
 
-    :cond_32
+    :cond_33
     invoke-interface/range {v56 .. v56}, Ljava/util/Map;->isEmpty()Z
 
     move-result v1
 
-    if-eqz v1, :cond_33
+    if-eqz v1, :cond_34
 
     iget-object v1, v7, LX/39D;->A02:LX/2rr;
 
@@ -3645,7 +3649,7 @@
 
     invoke-virtual {v15, v13, v3, v14}, LX/2rr;->A0C(Ljava/lang/String;ZLjava/lang/String;)V
 
-    :cond_33
+    :cond_34
     invoke-static {}, LX/001;->A0w()Ljava/util/ArrayList;
 
     move-result-object v3
@@ -3654,41 +3658,41 @@
 
     const/4 v1, 0x0
 
-    if-eqz v13, :cond_34
+    if-eqz v13, :cond_35
 
     const-string/jumbo v13, "multicast"
 
     invoke-static {v13, v3, v1}, LX/39Z;->A0R(Ljava/lang/String;Ljava/util/AbstractCollection;[LX/3DX;)V
 
-    :cond_34
+    :cond_35
     and-int/lit8 v13, v12, 0x4
 
-    if-eqz v13, :cond_35
+    if-eqz v13, :cond_36
 
     const-string/jumbo v13, "url_number"
 
     invoke-static {v13, v3, v1}, LX/39Z;->A0R(Ljava/lang/String;Ljava/util/AbstractCollection;[LX/3DX;)V
 
-    :cond_35
+    :cond_36
     and-int/lit8 v13, v12, 0x2
 
-    if-eqz v13, :cond_36
+    if-eqz v13, :cond_37
 
     const-string/jumbo v13, "url_text"
 
     invoke-static {v13, v3, v1}, LX/39Z;->A0R(Ljava/lang/String;Ljava/util/AbstractCollection;[LX/3DX;)V
 
-    :cond_36
+    :cond_37
     and-int/lit16 v12, v12, 0x80
 
-    if-eqz v12, :cond_37
+    if-eqz v12, :cond_38
 
     const-string v12, "automated"
 
     invoke-static {v12, v3, v1}, LX/39Z;->A0R(Ljava/lang/String;Ljava/util/AbstractCollection;[LX/3DX;)V
 
-    :cond_37
-    if-eqz v32, :cond_3c
+    :cond_38
+    if-eqz v32, :cond_3d
 
     iget-object v12, v6, LX/31r;->A00:LX/1Za;
 
@@ -3702,13 +3706,13 @@
 
     const-string/jumbo v23, "meta"
 
-    if-eqz v10, :cond_3b
+    if-eqz v10, :cond_3c
 
     invoke-interface {v10}, Ljava/util/List;->isEmpty()Z
 
     move-result v12
 
-    if-nez v12, :cond_3b
+    if-nez v12, :cond_3c
 
     invoke-interface {v10}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -3721,7 +3725,7 @@
 
     move-result v10
 
-    if-eqz v10, :cond_3a
+    if-eqz v10, :cond_3b
 
     invoke-static/range {v22 .. v22}, LX/0yQ;->A0b(Ljava/util/Iterator;)LX/39Z;
 
@@ -3735,13 +3739,13 @@
 
     move-result v10
 
-    if-nez v10, :cond_38
+    if-nez v10, :cond_39
 
     invoke-virtual {v3, v14}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
 
     goto :goto_23
 
-    :cond_38
+    :cond_39
     invoke-static {}, LX/001;->A0w()Ljava/util/ArrayList;
 
     move-result-object v13
@@ -3750,7 +3754,7 @@
 
     move-result-object v10
 
-    if-eqz v10, :cond_39
+    if-eqz v10, :cond_3a
 
     invoke-static {v10}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
@@ -3758,7 +3762,7 @@
 
     invoke-virtual {v13, v10}, Ljava/util/AbstractCollection;->addAll(Ljava/util/Collection;)Z
 
-    :cond_39
+    :cond_3a
     move-object/from16 v12, v27
 
     move-object/from16 v10, v32
@@ -3795,10 +3799,10 @@
 
     goto :goto_23
 
-    :cond_3a
-    if-nez v13, :cond_3d
-
     :cond_3b
+    if-nez v13, :cond_3e
+
+    :cond_3c
     invoke-static {}, LX/0yU;->A1I()[LX/3DX;
 
     move-result-object v14
@@ -3817,23 +3821,23 @@
 
     goto :goto_24
 
-    :cond_3c
-    if-eqz v10, :cond_3d
+    :cond_3d
+    if-eqz v10, :cond_3e
 
     invoke-virtual {v3, v10}, Ljava/util/AbstractCollection;->addAll(Ljava/util/Collection;)Z
 
-    :cond_3d
+    :cond_3e
     :goto_24
-    if-lez v20, :cond_3e
+    if-lez v20, :cond_3f
 
     const/16 v34, 0x1
 
-    if-nez v36, :cond_3f
-
-    :cond_3e
-    const/16 v34, 0x0
+    if-nez v36, :cond_40
 
     :cond_3f
+    const/16 v34, 0x0
+
+    :cond_40
     iget-object v10, v7, LX/39D;->A00:LX/5sK;
 
     move-object/from16 v50, v10
@@ -3842,7 +3846,7 @@
 
     move-result v32
 
-    if-eqz v32, :cond_41
+    if-eqz v32, :cond_42
 
     invoke-virtual/range {v50 .. v50}, LX/5sK;->A04()Ljava/lang/Object;
 
@@ -3850,7 +3854,7 @@
 
     move/from16 v10, v61
 
-    if-ne v10, v12, :cond_41
+    if-ne v10, v12, :cond_42
 
     invoke-static {v5}, LX/34x;->A01(Lcom/whatsapp/jid/Jid;)LX/1Za;
 
@@ -3860,24 +3864,24 @@
 
     move-result v10
 
-    if-nez v10, :cond_41
+    if-nez v10, :cond_42
 
     instance-of v10, v5, Lcom/whatsapp/jid/UserJid;
 
-    if-nez v10, :cond_40
+    if-nez v10, :cond_41
 
     invoke-static {v5}, LX/3AB;->A0I(Lcom/whatsapp/jid/Jid;)Z
 
     move-result v10
 
-    if-eqz v10, :cond_41
+    if-eqz v10, :cond_42
 
-    :cond_40
+    :cond_41
     const/16 v27, 0x1
 
     goto :goto_25
 
-    :cond_41
+    :cond_42
     const/16 v27, 0x0
 
     :goto_25
@@ -3889,23 +3893,23 @@
 
     move/from16 v10, v61
 
-    if-ne v10, v13, :cond_42
+    if-ne v10, v13, :cond_43
 
     invoke-static {v5}, LX/34x;->A01(Lcom/whatsapp/jid/Jid;)LX/1Za;
 
     move-result-object v10
 
-    if-eqz v10, :cond_42
+    if-eqz v10, :cond_43
 
     invoke-virtual {v12, v10}, LX/2tE;->A00(LX/1Za;)I
 
     move-result v12
 
-    if-eqz v12, :cond_43
+    if-eqz v12, :cond_44
 
     goto :goto_26
 
-    :cond_42
+    :cond_43
     const/16 v23, 0x0
 
     goto :goto_28
@@ -3913,46 +3917,46 @@
     :goto_26
     const/4 v10, 0x1
 
-    if-eq v12, v10, :cond_45
+    if-eq v12, v10, :cond_46
 
     const/4 v10, 0x2
 
-    if-eq v12, v10, :cond_45
+    if-eq v12, v10, :cond_46
 
-    :cond_43
+    :cond_44
     :goto_27
     move/from16 v23, v14
 
     :goto_28
-    if-nez v34, :cond_44
+    if-nez v34, :cond_45
 
-    if-nez v27, :cond_44
+    if-nez v27, :cond_45
 
     const/4 v15, 0x0
 
-    if-eqz v14, :cond_46
+    if-eqz v14, :cond_47
 
-    :cond_44
+    :cond_45
     const/4 v15, 0x1
 
     goto :goto_29
 
-    :cond_45
+    :cond_46
     const/4 v14, 0x1
 
     goto :goto_27
 
-    :cond_46
+    :cond_47
     :goto_29
     invoke-interface/range {v56 .. v56}, Ljava/util/Map;->isEmpty()Z
 
     move-result v10
 
-    if-eqz v10, :cond_48
+    if-eqz v10, :cond_49
 
-    if-nez v15, :cond_4b
+    if-nez v15, :cond_4c
 
-    if-eqz v4, :cond_47
+    if-eqz v4, :cond_48
 
     move-object/from16 v39, v4
 
@@ -3972,7 +3976,7 @@
 
     instance-of v10, v5, Lcom/whatsapp/jid/UserJid;
 
-    if-eqz v10, :cond_4b
+    if-eqz v10, :cond_4c
 
     move-object/from16 v10, v53
 
@@ -3986,13 +3990,13 @@
 
     move-result-object v10
 
-    if-eqz v10, :cond_4b
+    if-eqz v10, :cond_4c
 
     invoke-virtual {v3, v10}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
 
     goto :goto_2a
 
-    :cond_47
+    :cond_48
     const-string/jumbo v40, "none"
 
     const/16 v43, 0x2
@@ -4023,24 +4027,24 @@
 
     goto :goto_2b
 
-    :cond_48
-    if-nez v15, :cond_4b
+    :cond_49
+    if-nez v15, :cond_4c
 
-    if-nez v19, :cond_49
+    if-nez v19, :cond_4a
 
     const/4 v12, 0x1
 
-    if-eqz v18, :cond_4a
-
-    :cond_49
-    const/4 v12, 0x0
+    if-eqz v18, :cond_4b
 
     :cond_4a
+    const/4 v12, 0x0
+
+    :cond_4b
     const-string v10, "Message fanout is only supported for 1:1 chat"
 
     invoke-static {v12, v10}, LX/3A6;->A0G(ZLjava/lang/String;)V
 
-    :cond_4b
+    :cond_4c
     :goto_2a
     const/16 v46, 0x0
 
@@ -4050,14 +4054,14 @@
     const/16 v46, 0x1
 
     :goto_2c
-    if-eqz v38, :cond_4c
+    if-eqz v38, :cond_4d
 
     move-object/from16 v10, v38
 
     invoke-virtual {v3, v10}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
 
-    :cond_4c
-    if-eqz v11, :cond_50
+    :cond_4d
+    if-eqz v11, :cond_51
 
     iget-object v12, v7, LX/39D;->A06:LX/9QS;
 
@@ -4069,7 +4073,7 @@
 
     const/4 v10, 0x0
 
-    if-eqz v13, :cond_4f
+    if-eqz v13, :cond_50
 
     iget-object v12, v11, LX/37u;->A0I:Ljava/lang/String;
 
@@ -4080,13 +4084,13 @@
     :goto_2d
     sget-object v12, LX/39D;->A08:[LX/3DX;
 
-    if-eqz v14, :cond_4e
+    if-eqz v14, :cond_4f
 
     invoke-interface {v14, v11, v6}, LX/9kY;->B9S(LX/37u;LX/31r;)Ljava/util/List;
 
     move-result-object v13
 
-    if-eqz v13, :cond_4d
+    if-eqz v13, :cond_4e
 
     invoke-interface {v13, v12}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
@@ -4094,18 +4098,18 @@
 
     check-cast v12, [LX/3DX;
 
-    :cond_4d
+    :cond_4e
     invoke-interface {v14, v11, v6}, LX/9kY;->B9R(LX/37u;LX/31r;)Ljava/util/List;
 
     move-result-object v11
 
-    if-eqz v11, :cond_4e
+    if-eqz v11, :cond_4f
 
     invoke-interface {v11}, Ljava/util/List;->isEmpty()Z
 
     move-result v13
 
-    if-nez v13, :cond_4e
+    if-nez v13, :cond_4f
 
     const/4 v10, 0x0
 
@@ -4117,21 +4121,21 @@
 
     check-cast v10, [LX/39Z;
 
-    :cond_4e
+    :cond_4f
     const-string/jumbo v11, "pay"
 
     invoke-static {v11, v3, v12, v10}, LX/39Z;->A0S(Ljava/lang/String;Ljava/util/AbstractCollection;[LX/3DX;[LX/39Z;)V
 
     goto :goto_2e
 
-    :cond_4f
+    :cond_50
     move-object v14, v1
 
     goto :goto_2d
 
-    :cond_50
+    :cond_51
     :goto_2e
-    if-eqz v37, :cond_51
+    if-eqz v37, :cond_52
 
     invoke-static {}, LX/001;->A0w()Ljava/util/ArrayList;
 
@@ -4185,8 +4189,8 @@
 
     invoke-static {v10, v3, v11}, LX/39Z;->A0R(Ljava/lang/String;Ljava/util/AbstractCollection;[LX/3DX;)V
 
-    :cond_51
-    if-eqz v35, :cond_52
+    :cond_52
+    if-eqz v35, :cond_53
 
     invoke-static {}, LX/001;->A0w()Ljava/util/ArrayList;
 
@@ -4224,12 +4228,12 @@
 
     invoke-static {v10, v3, v11}, LX/39Z;->A0R(Ljava/lang/String;Ljava/util/AbstractCollection;[LX/3DX;)V
 
-    :cond_52
+    :cond_53
     invoke-static {v5}, LX/3AB;->A0I(Lcom/whatsapp/jid/Jid;)Z
 
     move-result v48
 
-    if-eqz v15, :cond_53
+    if-eqz v15, :cond_54
 
     invoke-static {}, LX/001;->A0w()Ljava/util/ArrayList;
 
@@ -4242,33 +4246,33 @@
 
     move-result v11
 
-    if-nez v11, :cond_57
+    if-nez v11, :cond_58
 
     invoke-static/range {v59 .. v59}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v11
 
-    if-eqz v11, :cond_56
+    if-eqz v11, :cond_57
 
     goto :goto_30
 
-    :cond_53
-    if-eqz v4, :cond_54
+    :cond_54
+    if-eqz v4, :cond_55
 
     iget v11, v4, LX/2Zt;->A00:I
 
     const/4 v10, 0x2
 
-    if-ne v11, v10, :cond_54
+    if-ne v11, v10, :cond_55
 
     const/16 v49, 0x1
 
-    if-eqz v29, :cond_55
-
-    :cond_54
-    const/16 v49, 0x0
+    if-eqz v29, :cond_56
 
     :cond_55
+    const/16 v49, 0x0
+
+    :cond_56
     const/4 v10, 0x1
 
     move-object/from16 v37, v53
@@ -4300,7 +4304,7 @@
 
     goto :goto_31
 
-    :cond_56
+    :cond_57
     new-array v1, v10, [LX/3DX;
 
     const-string/jumbo v12, "name"
@@ -4328,30 +4332,30 @@
 
     move-result v1
 
-    if-lez v1, :cond_57
-
-    move-object/from16 v1, v53
-
-    invoke-static {v1, v9, v3}, LX/39D;->A03(LX/2gY;Ljava/lang/String;Ljava/util/List;)V
-
-    :cond_57
-    if-eqz v48, :cond_58
-
-    if-eqz v4, :cond_58
-
-    iget v11, v4, LX/2Zt;->A00:I
-
-    const/4 v1, 0x2
-
-    if-ne v11, v1, :cond_58
-
-    if-nez v29, :cond_58
+    if-lez v1, :cond_58
 
     move-object/from16 v1, v53
 
     invoke-static {v1, v9, v3}, LX/39D;->A03(LX/2gY;Ljava/lang/String;Ljava/util/List;)V
 
     :cond_58
+    if-eqz v48, :cond_59
+
+    if-eqz v4, :cond_59
+
+    iget v11, v4, LX/2Zt;->A00:I
+
+    const/4 v1, 0x2
+
+    if-ne v11, v1, :cond_59
+
+    if-nez v29, :cond_59
+
+    move-object/from16 v1, v53
+
+    invoke-static {v1, v9, v3}, LX/39D;->A03(LX/2gY;Ljava/lang/String;Ljava/util/List;)V
+
+    :cond_59
     invoke-static {}, LX/001;->A0z()Ljava/util/HashSet;
 
     move-result-object v12
@@ -4360,7 +4364,7 @@
 
     move-result-object v11
 
-    if-eqz v36, :cond_5a
+    if-eqz v36, :cond_5b
 
     move-object/from16 v1, v36
 
@@ -4390,13 +4394,13 @@
 
     move-result-object v13
 
-    if-eqz v23, :cond_59
+    if-eqz v23, :cond_5a
 
     invoke-virtual {v3, v13}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
 
     goto :goto_32
 
-    :cond_59
+    :cond_5a
     invoke-virtual {v15}, Lcom/whatsapp/jid/UserJid;->getPrimaryDevice()Lcom/whatsapp/jid/DeviceJid;
 
     move-result-object v1
@@ -4429,16 +4433,16 @@
 
     goto :goto_33
 
-    :cond_5a
+    :cond_5b
     :goto_32
     const/4 v13, 0x0
 
     :goto_33
-    if-eqz v32, :cond_5b
+    if-eqz v32, :cond_5c
 
     goto :goto_34
 
-    :cond_5b
+    :cond_5c
     const/4 v10, 0x0
 
     goto :goto_35
@@ -4456,7 +4460,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_5b
+    if-eqz v1, :cond_5c
 
     :goto_35
     invoke-static/range {v51 .. v51}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -4465,47 +4469,34 @@
 
     const-string/jumbo v14, "type"
 
-    if-nez v1, :cond_5c
+    if-nez v1, :cond_5d
 
     move-object/from16 v1, v51
 
     invoke-static {v14, v1, v12}, LX/3DX;->A05(Ljava/lang/String;Ljava/lang/String;Ljava/util/AbstractCollection;)V
 
-    :cond_5c
+    :cond_5d
     const/4 v15, 0x1
 
     move/from16 v1, v52
 
-    if-eq v1, v15, :cond_5d
+    if-eq v1, v15, :cond_5e
 
     const/4 v15, 0x2
 
-    if-ne v1, v15, :cond_5e
+    if-ne v1, v15, :cond_5f
 
     const-string v15, "3p_full"
 
     goto :goto_36
 
-    :cond_5d
+    :cond_5e
     const-string v15, "1p_partial"
 
     :goto_36
     const-string/jumbo v1, "local_automated_type"
 
     invoke-static {v1, v15, v12}, LX/3DX;->A05(Ljava/lang/String;Ljava/lang/String;Ljava/util/AbstractCollection;)V
-
-    :cond_5e
-    invoke-virtual {v12}, Ljava/util/AbstractCollection;->isEmpty()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_5f
-
-    invoke-virtual {v11}, Ljava/util/AbstractCollection;->isEmpty()Z
-
-    move-result v1
-
-    if-nez v1, :cond_62
 
     :cond_5f
     invoke-virtual {v12}, Ljava/util/AbstractCollection;->isEmpty()Z
@@ -4514,13 +4505,26 @@
 
     if-eqz v1, :cond_60
 
+    invoke-virtual {v11}, Ljava/util/AbstractCollection;->isEmpty()Z
+
+    move-result v1
+
+    if-nez v1, :cond_63
+
+    :cond_60
+    invoke-virtual {v12}, Ljava/util/AbstractCollection;->isEmpty()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_61
+
     move-object v12, v13
 
     const/4 v1, 0x0
 
     goto :goto_37
 
-    :cond_60
+    :cond_61
     const/4 v1, 0x0
 
     invoke-static {v12, v1}, LX/0yP;->A1a(Ljava/util/AbstractCollection;I)[LX/3DX;
@@ -4532,18 +4536,18 @@
 
     move-result v15
 
-    if-nez v15, :cond_61
+    if-nez v15, :cond_62
 
     invoke-static {v11, v1}, LX/0yN;->A1b(Ljava/util/AbstractCollection;I)[LX/39Z;
 
     move-result-object v13
 
-    :cond_61
+    :cond_62
     const-string v1, "bot"
 
     invoke-static {v1, v3, v12, v13}, LX/39Z;->A0S(Ljava/lang/String;Ljava/util/AbstractCollection;[LX/3DX;[LX/39Z;)V
 
-    :cond_62
+    :cond_63
     iget-object v12, v7, LX/39D;->A04:LX/2GY;
 
     iget-object v1, v12, LX/2GY;->A00:LX/2uE;
@@ -4552,29 +4556,29 @@
 
     move-result v1
 
-    if-eqz v1, :cond_68
+    if-eqz v1, :cond_69
 
     const/4 v11, 0x1
 
-    if-eqz v4, :cond_63
+    if-eqz v4, :cond_64
 
     iget v1, v4, LX/2Zt;->A00:I
 
-    if-eq v1, v11, :cond_67
+    if-eq v1, v11, :cond_68
 
-    :cond_63
-    if-eqz v19, :cond_65
+    :cond_64
+    if-eqz v19, :cond_66
 
     invoke-static/range {v19 .. v19}, LX/001;->A13(Ljava/util/Map;)Ljava/util/Iterator;
 
     move-result-object v4
 
-    :cond_64
+    :cond_65
     invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
 
-    if-eqz v1, :cond_65
+    if-eqz v1, :cond_66
 
     invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -4584,21 +4588,21 @@
 
     iget v1, v1, LX/2Zt;->A00:I
 
-    if-ne v1, v11, :cond_64
+    if-ne v1, v11, :cond_65
 
     goto :goto_38
 
-    :cond_65
+    :cond_66
     invoke-static/range {v56 .. v56}, LX/001;->A13(Ljava/util/Map;)Ljava/util/Iterator;
 
     move-result-object v4
 
-    :cond_66
+    :cond_67
     invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
 
-    if-eqz v1, :cond_69
+    if-eqz v1, :cond_6a
 
     invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -4608,9 +4612,9 @@
 
     iget v1, v1, LX/2Zt;->A00:I
 
-    if-ne v1, v11, :cond_66
+    if-ne v1, v11, :cond_67
 
-    :cond_67
+    :cond_68
     :goto_38
     iget-object v1, v12, LX/2GY;->A01:LX/2r9;
 
@@ -4626,7 +4630,7 @@
 
     invoke-static {v4, v3, v11, v1}, LX/39Z;->A0Q(Ljava/lang/String;Ljava/util/AbstractCollection;[B[LX/3DX;)V
 
-    :cond_68
+    :cond_69
     invoke-static {}, LX/001;->A0w()Ljava/util/ArrayList;
 
     move-result-object v12
@@ -4635,12 +4639,12 @@
 
     cmp-long v1, v16, v22
 
-    if-eqz v1, :cond_6a
+    if-eqz v1, :cond_6b
 
     goto :goto_39
 
-    :cond_69
-    if-eqz v36, :cond_68
+    :cond_6a
+    if-eqz v36, :cond_69
 
     move-object/from16 v1, v36
 
@@ -4648,12 +4652,12 @@
 
     iget v1, v1, LX/2Zt;->A00:I
 
-    if-ne v1, v11, :cond_68
+    if-ne v1, v11, :cond_69
 
     goto :goto_38
 
     :goto_39
-    if-nez v34, :cond_6a
+    if-nez v34, :cond_6b
 
     invoke-static/range {v16 .. v17}, LX/0yO;->A06(J)J
 
@@ -4667,35 +4671,35 @@
 
     invoke-static {v1, v4, v12}, LX/3DX;->A05(Ljava/lang/String;Ljava/lang/String;Ljava/util/AbstractCollection;)V
 
-    :cond_6a
+    :cond_6b
     iget-object v11, v6, LX/31r;->A00:LX/1Za;
 
     invoke-static {v11}, LX/3AB;->A0I(Lcom/whatsapp/jid/Jid;)Z
 
     move-result v1
 
-    if-nez v1, :cond_6b
+    if-nez v1, :cond_6c
 
-    if-eqz v34, :cond_6b
+    if-eqz v34, :cond_6c
 
     move-object/from16 v5, v28
 
-    :cond_6b
+    :cond_6c
     const/4 v4, 0x0
 
     iget-boolean v1, v6, LX/31r;->A02:Z
 
-    if-nez v1, :cond_6c
+    if-nez v1, :cond_6d
 
     const/16 v13, 0x8
 
     move/from16 v1, v21
 
-    if-eq v1, v13, :cond_6c
+    if-eq v1, v13, :cond_6d
 
     goto :goto_3a
 
-    :cond_6c
+    :cond_6d
     const-string/jumbo v1, "to"
 
     goto :goto_3b
@@ -4720,9 +4724,9 @@
 
     invoke-static {v5, v1, v12}, LX/3DX;->A05(Ljava/lang/String;Ljava/lang/String;Ljava/util/AbstractCollection;)V
 
-    if-eqz v33, :cond_6d
+    if-eqz v33, :cond_6e
 
-    if-nez v27, :cond_6d
+    if-nez v27, :cond_6e
 
     const-string/jumbo v5, "phash"
 
@@ -4730,8 +4734,8 @@
 
     invoke-static {v5, v1, v12}, LX/3DX;->A05(Ljava/lang/String;Ljava/lang/String;Ljava/util/AbstractCollection;)V
 
-    :cond_6d
-    if-eqz v31, :cond_6e
+    :cond_6e
+    if-eqz v31, :cond_6f
 
     const-string v5, "addressing_mode"
 
@@ -4739,10 +4743,10 @@
 
     invoke-static {v5, v1, v12}, LX/3DX;->A05(Ljava/lang/String;Ljava/lang/String;Ljava/util/AbstractCollection;)V
 
-    :cond_6e
-    if-eqz v29, :cond_6f
+    :cond_6f
+    if-eqz v29, :cond_70
 
-    if-nez v34, :cond_6f
+    if-nez v34, :cond_70
 
     const-string/jumbo v5, "participant"
 
@@ -4750,10 +4754,10 @@
 
     invoke-static {v1, v5, v12}, LX/3DX;->A02(Lcom/whatsapp/jid/Jid;Ljava/lang/String;Ljava/util/AbstractCollection;)V
 
-    :cond_6f
-    if-eqz v28, :cond_70
+    :cond_70
+    if-eqz v28, :cond_71
 
-    if-nez v34, :cond_70
+    if-nez v34, :cond_71
 
     const-string/jumbo v5, "recipient"
 
@@ -4761,10 +4765,10 @@
 
     invoke-static {v1, v5, v12}, LX/3DX;->A02(Lcom/whatsapp/jid/Jid;Ljava/lang/String;Ljava/util/AbstractCollection;)V
 
-    :cond_70
-    if-eqz v26, :cond_71
+    :cond_71
+    if-eqz v26, :cond_72
 
-    if-nez v34, :cond_71
+    if-nez v34, :cond_72
 
     const-string/jumbo v5, "recipient_pn"
 
@@ -4772,10 +4776,10 @@
 
     invoke-static {v1, v5, v12}, LX/3DX;->A02(Lcom/whatsapp/jid/Jid;Ljava/lang/String;Ljava/util/AbstractCollection;)V
 
-    :cond_71
-    if-eqz v25, :cond_72
+    :cond_72
+    if-eqz v25, :cond_73
 
-    if-nez v34, :cond_72
+    if-nez v34, :cond_73
 
     const-string/jumbo v5, "recipient_username"
 
@@ -4783,8 +4787,8 @@
 
     invoke-static {v5, v1, v12}, LX/3DX;->A05(Ljava/lang/String;Ljava/lang/String;Ljava/util/AbstractCollection;)V
 
-    :cond_72
-    if-eqz v21, :cond_73
+    :cond_73
+    if-eqz v21, :cond_74
 
     const-string v5, "edit"
 
@@ -4794,26 +4798,26 @@
 
     invoke-static {v5, v1, v12}, LX/3DX;->A05(Ljava/lang/String;Ljava/lang/String;Ljava/util/AbstractCollection;)V
 
-    :cond_73
-    if-eqz v30, :cond_74
+    :cond_74
+    if-eqz v30, :cond_75
 
     invoke-virtual/range {v30 .. v30}, Ljava/lang/Number;->intValue()I
 
     move-result v13
 
-    if-lez v13, :cond_74
+    if-lez v13, :cond_75
 
-    if-nez v20, :cond_74
+    if-nez v20, :cond_75
 
     const/16 v5, 0x8
 
     move/from16 v1, v21
 
-    if-eq v1, v5, :cond_74
+    if-eq v1, v5, :cond_75
 
     const/4 v5, 0x7
 
-    if-eq v1, v5, :cond_74
+    if-eq v1, v5, :cond_75
 
     invoke-static {v13}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
@@ -4823,12 +4827,12 @@
 
     invoke-static {v1, v5, v12}, LX/3DX;->A05(Ljava/lang/String;Ljava/lang/String;Ljava/util/AbstractCollection;)V
 
-    :cond_74
+    :cond_75
     invoke-static/range {v55 .. v55}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
-    if-nez v1, :cond_75
+    if-nez v1, :cond_76
 
     const-string v5, "category"
 
@@ -4836,12 +4840,12 @@
 
     invoke-static {v5, v1, v12}, LX/3DX;->A05(Ljava/lang/String;Ljava/lang/String;Ljava/util/AbstractCollection;)V
 
-    :cond_75
+    :cond_76
     invoke-static/range {v54 .. v54}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
-    if-nez v1, :cond_76
+    if-nez v1, :cond_77
 
     const-string/jumbo v5, "push_priority"
 
@@ -4849,19 +4853,19 @@
 
     invoke-static {v5, v1, v12}, LX/3DX;->A05(Ljava/lang/String;Ljava/lang/String;Ljava/util/AbstractCollection;)V
 
-    :cond_76
-    if-nez v24, :cond_77
-
-    if-eqz v10, :cond_78
-
     :cond_77
+    if-nez v24, :cond_78
+
+    if-eqz v10, :cond_79
+
+    :cond_78
     const-string v5, "device_fanout"
 
     const-string v1, "false"
 
     invoke-static {v5, v1, v12}, LX/3DX;->A05(Ljava/lang/String;Ljava/lang/String;Ljava/util/AbstractCollection;)V
 
-    :cond_78
+    :cond_79
     sget-object v1, LX/39D;->A08:[LX/3DX;
 
     invoke-virtual {v12, v1}, Ljava/util/AbstractCollection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
@@ -4886,7 +4890,7 @@
 
     invoke-virtual {v1, v3}, LX/39A;->A06(LX/39Z;)V
 
-    if-eqz v9, :cond_79
+    if-eqz v9, :cond_7a
 
     invoke-virtual {v9}, Ljava/lang/String;->hashCode()I
 
@@ -5049,23 +5053,23 @@
     const/16 v4, 0x14
 
     :goto_3c
-    if-nez v1, :cond_79
+    if-nez v1, :cond_7a
 
     :goto_3d
     const/4 v4, -0x1
 
-    :cond_79
-    if-nez v20, :cond_80
+    :cond_7a
+    if-nez v20, :cond_81
 
     const/16 v3, 0x8
 
     move/from16 v1, v21
 
-    if-eq v1, v3, :cond_7f
+    if-eq v1, v3, :cond_80
 
     const/4 v3, 0x7
 
-    if-eq v1, v3, :cond_7f
+    if-eq v1, v3, :cond_80
 
     iget-object v12, v7, LX/39D;->A03:LX/2tO;
 
@@ -5077,25 +5081,24 @@
 
     instance-of v9, v11, LX/1ZQ;
 
-    if-eqz v9, :cond_7a
+    if-eqz v9, :cond_7b
 
     const/4 v5, 0x3
 
     goto :goto_3e
 
-    :cond_7a
+    :cond_7b
     const/4 v5, 0x2
 
-    if-nez v4, :cond_7b
+    if-nez v4, :cond_7c
 
     const/4 v5, 0x1
 
-    :cond_7b
+    :cond_7c
     :goto_3e
     iget-object v3, v12, LX/2tO;->A00:LX/10O;
     :try_end_11
     .catch LX/1tm; {:try_start_11 .. :try_end_11} :catch_0
-    .catch LX/1tm; {:try_start_11 .. :try_end_11} :catch_3
     .catch Ljava/io/IOException; {:try_start_11 .. :try_end_11} :catch_2
 
     invoke-static {v3}, LX/000;->A1W(Ljava/lang/Object;)Z
@@ -5115,17 +5118,17 @@
 
     invoke-virtual {v12}, LX/2tO;->A02()V
 
-    if-nez v9, :cond_80
+    if-nez v9, :cond_81
 
     instance-of v1, v11, LX/1Zh;
 
-    if-eqz v1, :cond_7e
+    if-eqz v1, :cond_7f
 
     invoke-static {}, LX/0yU;->A0x()Ljava/util/LinkedHashSet;
 
     move-result-object v9
 
-    if-eqz v19, :cond_7c
+    if-eqz v19, :cond_7d
 
     iget-object v5, v7, LX/39D;->A02:LX/2rr;
 
@@ -5145,8 +5148,8 @@
 
     invoke-virtual {v9, v1}, Ljava/util/AbstractCollection;->addAll(Ljava/util/Collection;)Z
 
-    :cond_7c
-    if-eqz v18, :cond_7d
+    :cond_7d
+    if-eqz v18, :cond_7e
 
     iget-object v4, v7, LX/39D;->A02:LX/2rr;
 
@@ -5160,7 +5163,7 @@
 
     invoke-virtual {v9, v3}, Ljava/util/AbstractCollection;->addAll(Ljava/util/Collection;)Z
 
-    :cond_7d
+    :cond_7e
     iget-object v1, v7, LX/39D;->A05:LX/1cY;
 
     invoke-static {v9}, LX/002;->A07(Ljava/util/Collection;)Ljava/util/ArrayList;
@@ -5176,7 +5179,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_80
+    if-eqz v1, :cond_81
 
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -5188,7 +5191,7 @@
 
     goto :goto_3f
 
-    :cond_7e
+    :cond_7f
     iget-object v1, v7, LX/39D;->A05:LX/1cY;
 
     invoke-static {v11}, LX/3A6;->A07(Ljava/lang/Object;)V
@@ -5202,7 +5205,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_80
+    if-eqz v1, :cond_81
 
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -5214,14 +5217,14 @@
 
     goto :goto_40
 
-    :cond_7f
+    :cond_80
     instance-of v1, v11, LX/1ZQ;
 
-    if-nez v1, :cond_80
+    if-nez v1, :cond_81
 
     instance-of v1, v11, LX/1Zh;
 
-    if-nez v1, :cond_80
+    if-nez v1, :cond_81
 
     iget-object v1, v7, LX/39D;->A05:LX/1cY;
 
@@ -5236,7 +5239,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_80
+    if-eqz v1, :cond_81
 
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -5248,7 +5251,7 @@
 
     goto :goto_41
 
-    :cond_80
+    :cond_81
     invoke-static {}, LX/001;->A0r()Ljava/lang/StringBuilder;
 
     move-result-object v3
@@ -5258,7 +5261,6 @@
     invoke-static {v3, v1, v8}, LX/0yK;->A1Q(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/Object;)V
     :try_end_12
     .catch LX/1tm; {:try_start_12 .. :try_end_12} :catch_0
-    .catch LX/1tm; {:try_start_12 .. :try_end_12} :catch_3
     .catch Ljava/io/IOException; {:try_start_12 .. :try_end_12} :catch_2
 
     :try_start_13
@@ -5319,7 +5321,7 @@
 
     monitor-exit v1
 
-    if-eqz v3, :cond_81
+    if-eqz v3, :cond_82
     :try_end_14
     .catchall {:try_start_14 .. :try_end_14} :catchall_6
 
@@ -5332,7 +5334,7 @@
 
     invoke-interface {v3, v0}, LX/44u;->BPk(Ljava/lang/Exception;)V
 
-    :cond_81
+    :cond_82
     iget-object v1, v7, LX/3DU;->A05:Ljava/lang/String;
 
     const-string/jumbo v0, "message"
@@ -5341,7 +5343,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_82
+    if-nez v0, :cond_83
 
     const-string/jumbo v0, "receipt"
 
@@ -5349,14 +5351,14 @@
 
     move-result v0
 
-    if-eqz v0, :cond_83
+    if-eqz v0, :cond_84
 
-    :cond_82
+    :cond_83
     iget-object v0, v5, LX/2iW;->A04:LX/3X1;
 
     invoke-virtual {v0}, LX/3X1;->A03()V
 
-    :cond_83
+    :cond_84
     throw v4
     :try_end_15
     .catch LX/1tm; {:try_start_15 .. :try_end_15} :catch_3
@@ -5383,7 +5385,7 @@
     :goto_42
     throw v0
 
-    :cond_84
+    :cond_85
     :sswitch_26
     invoke-static {v2}, LX/22M;->A00(Landroid/os/Message;)I
 
@@ -5536,7 +5538,7 @@
 
     goto/16 :goto_47
 
-    :cond_85
+    :cond_86
     iget-object v1, v2, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Ljava/lang/String;
@@ -5553,7 +5555,7 @@
 
     move-result-object v3
 
-    if-eqz v1, :cond_86
+    if-eqz v1, :cond_87
 
     const/4 v0, 0x1
 
@@ -5561,13 +5563,13 @@
 
     move-result v0
 
-    if-eqz v0, :cond_86
+    if-eqz v0, :cond_87
 
     const-string/jumbo v0, "name"
 
     invoke-static {v3, v0, v1}, LX/2se;->A0C(LX/2se;Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_86
+    :cond_87
     const-string/jumbo v1, "type"
 
     sget-object v0, LX/1rB;->A00:Ljava/util/ArrayList;
@@ -5586,7 +5588,7 @@
 
     goto/16 :goto_47
 
-    :cond_87
+    :cond_88
     iget-object v0, v0, LX/2pR;->A00:LX/10V;
 
     iget-object v4, v0, LX/10V;->A00:LX/32m;
@@ -5782,13 +5784,13 @@
 
     move-result-object v2
 
-    if-eqz v2, :cond_88
+    if-eqz v2, :cond_89
 
     const/4 v0, 0x4
 
     invoke-virtual {v3, v0, v2}, Landroid/os/Handler;->removeMessages(ILjava/lang/Object;)V
 
-    :cond_88
+    :cond_89
     const/4 v0, 0x5
 
     invoke-static {v3, v1, v0}, LX/0yN;->A0w(Landroid/os/Handler;Ljava/lang/Object;I)V
@@ -5805,8 +5807,6 @@
     .catchall {:try_start_18 .. :try_end_18} :catchall_7
 
     throw v0
-
-    nop
 
     :sswitch_data_0
     .sparse-switch

@@ -625,16 +625,13 @@
 .method public static final A02()Z
     .locals 5
 
+    const-string v4, "2.23.25.84"
+
     const/4 v0, 0x3
 
     new-array v1, v0, [B
 
-    const/4 v4, 0x0
-
-    :try_start_0
-    invoke-static {v1}, Lcom/whatsapp/nativelibloader/WhatsAppLibLoader;->testLibraryUsable([B)V
-    :try_end_0
-    .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_0 .. :try_end_0} :catch_1
+    const/4 v3, 0x0
 
     new-array v0, v0, [B
 
@@ -646,53 +643,36 @@
 
     if-nez v0, :cond_0
 
-    const-string/jumbo v0, "whatsapplibloader/usable test array does not match"
-
-    invoke-static {v0}, Lcom/whatsapp/util/Log;->w(Ljava/lang/String;)V
-
-    return v4
-
     :cond_0
-    :try_start_1
     invoke-static {}, Lcom/whatsapp/nativelibloader/WhatsAppLibLoader;->getJNICodeVersion()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-static {}, LX/001;->A0r()Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string/jumbo v0, "whatsapplibloader/usable jniVersion: "
-
-    invoke-static {v1, v0, v3}, LX/0yK;->A1T(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v2, "2.23.25.84"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    invoke-static {}, LX/001;->A0r()Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string/jumbo v0, "whatsapplibloader/usable version does not match. JAVA version: "
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v0, ", JNI version: "
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    invoke-static {v1, v0, v3}, LX/0yK;->A1U(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object v0
 
-    return v4
-    :try_end_1
-    .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_1 .. :try_end_1} :catch_0
+    invoke-static {v0}, Lcom/whatsapp/util/Log;->i(Ljava/lang/String;)V
+
+    invoke-virtual {v4, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
 
     :cond_1
+    invoke-static {}, Lcom/whatsapp/voipcalling/Voip;->getCallInfo()Lcom/whatsapp/voipcalling/CallInfo;
+
     const-string/jumbo v0, "whatsapplibloader/usable isLibraryUsable: True"
 
     invoke-static {v0}, Lcom/whatsapp/util/Log;->i(Ljava/lang/String;)V
@@ -700,23 +680,6 @@
     const/4 v0, 0x1
 
     return v0
-
-    :catch_0
-    move-exception v1
-
-    const-string/jumbo v0, "whatsapplibloader/usable error while testing library usability getJNICodeVersion"
-
-    goto :goto_0
-
-    :catch_1
-    move-exception v1
-
-    const-string/jumbo v0, "whatsapplibloader/usable error while testing library usability testLibraryUsable"
-
-    :goto_0
-    invoke-static {v0, v1}, Lcom/whatsapp/util/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return v4
 
     nop
 

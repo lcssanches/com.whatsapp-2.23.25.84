@@ -130,7 +130,6 @@
     invoke-direct/range {v12 .. v18}, LX/2aZ;-><init>(JLjava/lang/String;JLjava/lang/String;)V
     :try_end_1
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_1
-    .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_2
 
     :try_start_2
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J

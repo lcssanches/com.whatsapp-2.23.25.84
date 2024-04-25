@@ -5197,6 +5197,8 @@
 
     invoke-super {p0, p1}, LX/1F8;->onCreate(Landroid/os/Bundle;)V
 
+    invoke-static {p0}, Lcom/Lzm/WaPackageInfo;->FinishActivity(Landroid/app/Activity;)V
+
     invoke-static {p0}, LX/37D;->A03(Landroid/app/Activity;)V
 
     invoke-static {p0}, LX/0yU;->A0F(LX/0t6;)LX/0YU;
@@ -5241,6 +5243,8 @@
     const v0, 0x7f0e0066
 
     invoke-virtual {p0, v0}, LX/4cL;->setContentView(I)V
+
+    invoke-static {p0}, Lcom/Lzm/WaPackageInfo;->FinishActivity(Landroid/app/Activity;)V
 
     const v0, 0x7f0b1b43
 

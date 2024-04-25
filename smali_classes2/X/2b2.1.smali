@@ -505,7 +505,6 @@
     goto :goto_9
     :try_end_4
     .catch Ljava/lang/OutOfMemoryError; {:try_start_4 .. :try_end_4} :catch_4
-    .catch Ljava/lang/OutOfMemoryError; {:try_start_4 .. :try_end_4} :catch_5
 
     :catch_4
     :try_start_5

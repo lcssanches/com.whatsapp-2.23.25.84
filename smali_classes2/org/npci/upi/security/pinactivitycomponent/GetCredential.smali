@@ -420,8 +420,6 @@
 
     const/16 v0, 0x2000
 
-    invoke-virtual {v1, v0, v0}, Landroid/view/Window;->setFlags(II)V
-
     move-object/from16 v0, p1
 
     invoke-super {v13, v0}, LX/03u;->onCreate(Landroid/os/Bundle;)V
@@ -493,7 +491,6 @@
     .catch LX/1yv; {:try_start_1 .. :try_end_1} :catch_e
     .catch LX/1yu; {:try_start_1 .. :try_end_1} :catch_17
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_e
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_19
 
     :try_start_2
     invoke-static {}, LX/0yU;->A19()Lorg/json/JSONArray;
@@ -551,8 +548,6 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_c
     .catch LX/1yv; {:try_start_2 .. :try_end_2} :catch_e
     .catch LX/1yu; {:try_start_2 .. :try_end_2} :catch_17
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_e
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_19
 
     :try_start_3
     const-string v1, "keyCode"
@@ -573,10 +568,7 @@
     :try_end_3
     .catch LX/1yv; {:try_start_3 .. :try_end_3} :catch_b
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_a
-    .catch LX/1yv; {:try_start_3 .. :try_end_3} :catch_e
     .catch LX/1yu; {:try_start_3 .. :try_end_3} :catch_17
-    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_e
-    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_19
 
     :try_start_4
     const-string v1, "keyXmlPayload"
@@ -602,10 +594,6 @@
     .catch LX/1yu; {:try_start_4 .. :try_end_4} :catch_9
     .catch LX/1yv; {:try_start_4 .. :try_end_4} :catch_b
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_8
-    .catch LX/1yv; {:try_start_4 .. :try_end_4} :catch_e
-    .catch LX/1yu; {:try_start_4 .. :try_end_4} :catch_17
-    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_e
-    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_19
 
     :try_start_5
     const-string v1, "controls"
@@ -704,10 +692,7 @@
     :try_end_5
     .catch LX/1yv; {:try_start_5 .. :try_end_5} :catch_b
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_7
-    .catch LX/1yv; {:try_start_5 .. :try_end_5} :catch_e
     .catch LX/1yu; {:try_start_5 .. :try_end_5} :catch_17
-    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_e
-    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_19
 
     :goto_0
     :try_start_6
@@ -734,8 +719,6 @@
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_6
     .catch LX/1yv; {:try_start_6 .. :try_end_6} :catch_e
     .catch LX/1yu; {:try_start_6 .. :try_end_6} :catch_17
-    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_e
-    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_19
 
     :cond_2
     :try_start_7
@@ -763,10 +746,7 @@
     :try_end_7
     .catch LX/1yv; {:try_start_7 .. :try_end_7} :catch_b
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_5
-    .catch LX/1yv; {:try_start_7 .. :try_end_7} :catch_e
     .catch LX/1yu; {:try_start_7 .. :try_end_7} :catch_17
-    .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_e
-    .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_19
 
     :try_start_8
     const-string/jumbo v14, "l24.message"
@@ -778,7 +758,6 @@
     .catch LX/1yv; {:try_start_8 .. :try_end_8} :catch_e
     .catch LX/1yu; {:try_start_8 .. :try_end_8} :catch_17
     .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_e
-    .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_19
 
     :try_start_9
     invoke-virtual {v7, v0}, Lorg/json/JSONObject;->get(Ljava/lang/String;)Ljava/lang/Object;
@@ -789,10 +768,7 @@
     :try_end_9
     .catch LX/1yv; {:try_start_9 .. :try_end_9} :catch_b
     .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_5
-    .catch LX/1yv; {:try_start_9 .. :try_end_9} :catch_e
     .catch LX/1yu; {:try_start_9 .. :try_end_9} :catch_17
-    .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_e
-    .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_19
 
     :try_start_a
     const-string/jumbo v6, "l27.message"
@@ -804,7 +780,6 @@
     .catch LX/1yv; {:try_start_a .. :try_end_a} :catch_e
     .catch LX/1yu; {:try_start_a .. :try_end_a} :catch_17
     .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_e
-    .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_19
 
     :try_start_b
     invoke-virtual {v7, v0}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
@@ -1085,10 +1060,7 @@
     :try_end_b
     .catch LX/1yv; {:try_start_b .. :try_end_b} :catch_b
     .catch Ljava/lang/Exception; {:try_start_b .. :try_end_b} :catch_5
-    .catch LX/1yv; {:try_start_b .. :try_end_b} :catch_e
     .catch LX/1yu; {:try_start_b .. :try_end_b} :catch_17
-    .catch Ljava/lang/Exception; {:try_start_b .. :try_end_b} :catch_e
-    .catch Ljava/lang/Exception; {:try_start_b .. :try_end_b} :catch_19
 
     :try_start_c
     const-string/jumbo v0, "trust"
@@ -1203,10 +1175,6 @@
     .catch LX/1yv; {:try_start_c .. :try_end_c} :catch_b
     .catch LX/1yu; {:try_start_c .. :try_end_c} :catch_b
     .catch Ljava/lang/Exception; {:try_start_c .. :try_end_c} :catch_4
-    .catch LX/1yv; {:try_start_c .. :try_end_c} :catch_e
-    .catch LX/1yu; {:try_start_c .. :try_end_c} :catch_17
-    .catch Ljava/lang/Exception; {:try_start_c .. :try_end_c} :catch_e
-    .catch Ljava/lang/Exception; {:try_start_c .. :try_end_c} :catch_19
 
     :try_start_d
     const/16 v0, 0x96
@@ -1218,11 +1186,6 @@
     .catch Ljava/lang/Exception; {:try_start_d .. :try_end_d} :catch_3
     .catch LX/1yv; {:try_start_d .. :try_end_d} :catch_b
     .catch LX/1yu; {:try_start_d .. :try_end_d} :catch_b
-    .catch Ljava/lang/Exception; {:try_start_d .. :try_end_d} :catch_4
-    .catch LX/1yv; {:try_start_d .. :try_end_d} :catch_e
-    .catch LX/1yu; {:try_start_d .. :try_end_d} :catch_17
-    .catch Ljava/lang/Exception; {:try_start_d .. :try_end_d} :catch_e
-    .catch Ljava/lang/Exception; {:try_start_d .. :try_end_d} :catch_19
 
     :try_start_e
     const-string/jumbo v0, "|"
@@ -1232,10 +1195,6 @@
     .catch LX/1yv; {:try_start_e .. :try_end_e} :catch_b
     .catch LX/1yu; {:try_start_e .. :try_end_e} :catch_b
     .catch Ljava/lang/Exception; {:try_start_e .. :try_end_e} :catch_4
-    .catch LX/1yv; {:try_start_e .. :try_end_e} :catch_e
-    .catch LX/1yu; {:try_start_e .. :try_end_e} :catch_17
-    .catch Ljava/lang/Exception; {:try_start_e .. :try_end_e} :catch_e
-    .catch Ljava/lang/Exception; {:try_start_e .. :try_end_e} :catch_19
 
     :try_start_f
     invoke-static {v7, v14}, LX/0yM;->A1K(Ljava/lang/StringBuilder;Ljava/lang/String;)V
@@ -1316,11 +1275,6 @@
     .catch Ljava/lang/Exception; {:try_start_f .. :try_end_f} :catch_3
     .catch LX/1yv; {:try_start_f .. :try_end_f} :catch_b
     .catch LX/1yu; {:try_start_f .. :try_end_f} :catch_b
-    .catch Ljava/lang/Exception; {:try_start_f .. :try_end_f} :catch_4
-    .catch LX/1yv; {:try_start_f .. :try_end_f} :catch_e
-    .catch LX/1yu; {:try_start_f .. :try_end_f} :catch_17
-    .catch Ljava/lang/Exception; {:try_start_f .. :try_end_f} :catch_e
-    .catch Ljava/lang/Exception; {:try_start_f .. :try_end_f} :catch_19
 
     :try_start_10
     new-instance v0, LX/37I;
@@ -1420,14 +1374,8 @@
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_10 .. :try_end_10} :catch_1
     .catch Ljava/security/InvalidAlgorithmParameterException; {:try_start_10 .. :try_end_10} :catch_1
     .catch Ljava/lang/Exception; {:try_start_10 .. :try_end_10} :catch_0
-    .catch Ljava/lang/Exception; {:try_start_10 .. :try_end_10} :catch_3
     .catch LX/1yv; {:try_start_10 .. :try_end_10} :catch_b
     .catch LX/1yu; {:try_start_10 .. :try_end_10} :catch_b
-    .catch Ljava/lang/Exception; {:try_start_10 .. :try_end_10} :catch_4
-    .catch LX/1yv; {:try_start_10 .. :try_end_10} :catch_e
-    .catch LX/1yu; {:try_start_10 .. :try_end_10} :catch_17
-    .catch Ljava/lang/Exception; {:try_start_10 .. :try_end_10} :catch_e
-    .catch Ljava/lang/Exception; {:try_start_10 .. :try_end_10} :catch_19
 
     :catch_0
     :try_start_11
@@ -1452,11 +1400,6 @@
     .catch Ljava/lang/Exception; {:try_start_11 .. :try_end_11} :catch_3
     .catch LX/1yv; {:try_start_11 .. :try_end_11} :catch_b
     .catch LX/1yu; {:try_start_11 .. :try_end_11} :catch_b
-    .catch Ljava/lang/Exception; {:try_start_11 .. :try_end_11} :catch_4
-    .catch LX/1yv; {:try_start_11 .. :try_end_11} :catch_e
-    .catch LX/1yu; {:try_start_11 .. :try_end_11} :catch_17
-    .catch Ljava/lang/Exception; {:try_start_11 .. :try_end_11} :catch_e
-    .catch Ljava/lang/Exception; {:try_start_11 .. :try_end_11} :catch_19
 
     :cond_18
     :try_start_12
@@ -1483,8 +1426,6 @@
     .catch Ljava/lang/Exception; {:try_start_12 .. :try_end_12} :catch_d
     .catch LX/1yv; {:try_start_12 .. :try_end_12} :catch_e
     .catch LX/1yu; {:try_start_12 .. :try_end_12} :catch_17
-    .catch Ljava/lang/Exception; {:try_start_12 .. :try_end_12} :catch_e
-    .catch Ljava/lang/Exception; {:try_start_12 .. :try_end_12} :catch_19
 
     :cond_19
     :try_start_13
@@ -1519,8 +1460,6 @@
     .catch Ljava/lang/Exception; {:try_start_13 .. :try_end_13} :catch_2
     .catch LX/1yv; {:try_start_13 .. :try_end_13} :catch_e
     .catch LX/1yu; {:try_start_13 .. :try_end_13} :catch_17
-    .catch Ljava/lang/Exception; {:try_start_13 .. :try_end_13} :catch_e
-    .catch Ljava/lang/Exception; {:try_start_13 .. :try_end_13} :catch_19
 
     :catch_2
     :try_start_14
@@ -1537,7 +1476,6 @@
     .catch LX/1yv; {:try_start_14 .. :try_end_14} :catch_e
     .catch LX/1yu; {:try_start_14 .. :try_end_14} :catch_17
     .catch Ljava/lang/Exception; {:try_start_14 .. :try_end_14} :catch_e
-    .catch Ljava/lang/Exception; {:try_start_14 .. :try_end_14} :catch_19
 
     :cond_1b
     :try_start_15
@@ -1564,10 +1502,6 @@
     .catch LX/1yv; {:try_start_15 .. :try_end_15} :catch_b
     .catch LX/1yu; {:try_start_15 .. :try_end_15} :catch_b
     .catch Ljava/lang/Exception; {:try_start_15 .. :try_end_15} :catch_4
-    .catch LX/1yv; {:try_start_15 .. :try_end_15} :catch_e
-    .catch LX/1yu; {:try_start_15 .. :try_end_15} :catch_17
-    .catch Ljava/lang/Exception; {:try_start_15 .. :try_end_15} :catch_e
-    .catch Ljava/lang/Exception; {:try_start_15 .. :try_end_15} :catch_19
 
     :catch_4
     move-exception v1
@@ -1584,7 +1518,6 @@
     .catch LX/1yv; {:try_start_16 .. :try_end_16} :catch_e
     .catch LX/1yu; {:try_start_16 .. :try_end_16} :catch_17
     .catch Ljava/lang/Exception; {:try_start_16 .. :try_end_16} :catch_e
-    .catch Ljava/lang/Exception; {:try_start_16 .. :try_end_16} :catch_19
 
     :cond_1c
     :try_start_17
@@ -1669,10 +1602,7 @@
     :try_end_17
     .catch LX/1yv; {:try_start_17 .. :try_end_17} :catch_b
     .catch Ljava/lang/Exception; {:try_start_17 .. :try_end_17} :catch_5
-    .catch LX/1yv; {:try_start_17 .. :try_end_17} :catch_e
     .catch LX/1yu; {:try_start_17 .. :try_end_17} :catch_17
-    .catch Ljava/lang/Exception; {:try_start_17 .. :try_end_17} :catch_e
-    .catch Ljava/lang/Exception; {:try_start_17 .. :try_end_17} :catch_19
 
     :catch_5
     :try_start_18
@@ -1717,7 +1647,6 @@
     .catch LX/1yv; {:try_start_18 .. :try_end_18} :catch_e
     .catch LX/1yu; {:try_start_18 .. :try_end_18} :catch_17
     .catch Ljava/lang/Exception; {:try_start_18 .. :try_end_18} :catch_e
-    .catch Ljava/lang/Exception; {:try_start_18 .. :try_end_18} :catch_19
 
     :cond_25
     :try_start_19
@@ -1734,10 +1663,6 @@
     .catch LX/1yu; {:try_start_19 .. :try_end_19} :catch_9
     .catch LX/1yv; {:try_start_19 .. :try_end_19} :catch_b
     .catch Ljava/lang/Exception; {:try_start_19 .. :try_end_19} :catch_8
-    .catch LX/1yv; {:try_start_19 .. :try_end_19} :catch_e
-    .catch LX/1yu; {:try_start_19 .. :try_end_19} :catch_17
-    .catch Ljava/lang/Exception; {:try_start_19 .. :try_end_19} :catch_e
-    .catch Ljava/lang/Exception; {:try_start_19 .. :try_end_19} :catch_19
 
     :catch_8
     move-exception v1
@@ -1769,7 +1694,6 @@
     .catch LX/1yv; {:try_start_1a .. :try_end_1a} :catch_e
     .catch LX/1yu; {:try_start_1a .. :try_end_1a} :catch_17
     .catch Ljava/lang/Exception; {:try_start_1a .. :try_end_1a} :catch_e
-    .catch Ljava/lang/Exception; {:try_start_1a .. :try_end_1a} :catch_19
 
     :cond_26
     :try_start_1b
@@ -1785,10 +1709,7 @@
     :try_end_1b
     .catch LX/1yv; {:try_start_1b .. :try_end_1b} :catch_b
     .catch Ljava/lang/Exception; {:try_start_1b .. :try_end_1b} :catch_a
-    .catch LX/1yv; {:try_start_1b .. :try_end_1b} :catch_e
     .catch LX/1yu; {:try_start_1b .. :try_end_1b} :catch_17
-    .catch Ljava/lang/Exception; {:try_start_1b .. :try_end_1b} :catch_e
-    .catch Ljava/lang/Exception; {:try_start_1b .. :try_end_1b} :catch_19
 
     :catch_a
     :try_start_1c
@@ -1829,7 +1750,6 @@
     .catch LX/1yv; {:try_start_1c .. :try_end_1c} :catch_e
     .catch LX/1yu; {:try_start_1c .. :try_end_1c} :catch_17
     .catch Ljava/lang/Exception; {:try_start_1c .. :try_end_1c} :catch_e
-    .catch Ljava/lang/Exception; {:try_start_1c .. :try_end_1c} :catch_19
 
     :catch_e
     :goto_c

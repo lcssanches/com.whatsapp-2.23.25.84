@@ -64,6 +64,13 @@
 .method public A00()V
     .locals 6
 
+    sget v0, Lcom/Lzm/Settings/Tools/Media;->Lzm_VideoQuality:I
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
     iget-wide v2, p0, LX/31w;->A00:J
 
     const-wide/16 v4, 0x0
@@ -116,6 +123,13 @@
 .method public A01()V
     .locals 6
 
+    sget v0, Lcom/Lzm/Settings/Tools/Media;->Lzm_VideoQuality:I
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
     iget-wide v2, p0, LX/31w;->A00:J
 
     const-wide/16 v4, 0x0

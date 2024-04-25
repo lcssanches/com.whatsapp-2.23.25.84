@@ -52,7 +52,7 @@
 
     move-object/from16 v2, p1
 
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_4
 
     iget-wide v5, v2, LX/37v;->A1M:J
 
@@ -62,7 +62,7 @@
 
     cmp-long v0, v5, v3
 
-    if-gtz v0, :cond_3
+    if-gtz v0, :cond_4
 
     move-object/from16 v6, p0
 
@@ -72,7 +72,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
     add-int/lit8 v1, p4, 0x1
 
@@ -84,7 +84,7 @@
 
     const/4 v5, 0x0
 
-    if-ge v1, v0, :cond_6
+    if-ge v1, v0, :cond_7
 
     invoke-static {v3, v1}, LX/0yT;->A0c(Ljava/util/List;I)LX/37v;
 
@@ -136,15 +136,20 @@
 
     const/4 v10, 0x0
 
-    if-nez v11, :cond_2
+    if-nez v11, :cond_3
 
     :cond_1
     const/4 v10, 0x1
 
     iget-object v0, v6, LX/2d2;->A06:LX/36J;
 
+    sget v9, Lcom/Lzm/Settings/Tools/Privacy;->Lzm_HideStatus:I
+
+    if-nez v9, :cond_2
+
     invoke-virtual {v0, v2, v10}, LX/36J;->A0D(LX/37v;Z)Z
 
+    :cond_2
     invoke-static {}, LX/001;->A0r()Ljava/lang/StringBuilder;
 
     move-result-object v1
@@ -181,19 +186,19 @@
 
     invoke-static {v4, v1, v3}, LX/0yK;->A0x(Ljava/lang/String;Ljava/lang/StringBuilder;I)V
 
-    if-eqz v13, :cond_5
+    if-eqz v13, :cond_6
 
-    if-eqz v11, :cond_5
+    if-eqz v11, :cond_6
 
-    :cond_2
+    :cond_3
     invoke-virtual {v7}, LX/36R;->A05()LX/37p;
 
     move-result-object v7
 
     :goto_1
-    if-nez v7, :cond_4
+    if-nez v7, :cond_5
 
-    if-eqz v10, :cond_3
+    if-eqz v10, :cond_4
 
     invoke-static {}, LX/001;->A0r()Ljava/lang/StringBuilder;
 
@@ -210,10 +215,10 @@
     :goto_2
     invoke-static {v0}, Lcom/whatsapp/util/Log;->w(Ljava/lang/String;)V
 
-    :cond_3
+    :cond_4
     return-void
 
-    :cond_4
+    :cond_5
     monitor-enter v7
 
     :try_start_0
@@ -223,7 +228,7 @@
 
     cmp-long v10, v3, v0
 
-    if-gtz v10, :cond_7
+    if-gtz v10, :cond_8
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_8
 
@@ -233,7 +238,7 @@
 
     goto :goto_2
 
-    :cond_5
+    :cond_6
     invoke-virtual {v2}, LX/37v;->A0n()Lcom/whatsapp/jid/UserJid;
 
     move-result-object v0
@@ -244,52 +249,52 @@
 
     goto :goto_1
 
-    :cond_6
+    :cond_7
     move-object v8, v5
 
     goto/16 :goto_0
 
-    :cond_7
-    if-eqz v9, :cond_8
+    :cond_8
+    if-eqz v9, :cond_9
 
     :try_start_1
     iget-wide v0, v2, LX/37v;->A1M:J
 
     iput-wide v0, v7, LX/37p;->A07:J
 
-    :cond_8
+    :cond_9
     iget-wide v0, v2, LX/37v;->A1M:J
 
     iput-wide v0, v7, LX/37p;->A06:J
 
     iget v0, v7, LX/37p;->A01:I
 
-    if-lez v0, :cond_9
+    if-lez v0, :cond_a
 
     add-int/lit8 v0, v0, -0x1
 
     iput v0, v7, LX/37p;->A01:I
 
-    :cond_9
+    :cond_a
     const-wide/high16 v3, -0x8000000000000000L
 
-    if-nez v8, :cond_a
+    if-nez v8, :cond_b
 
     const-wide/high16 v0, -0x8000000000000000L
 
     goto :goto_3
 
-    :cond_a
+    :cond_b
     iget-wide v0, v8, LX/37v;->A1M:J
 
     :goto_3
     iput-wide v0, v7, LX/37p;->A03:J
 
-    if-eqz v5, :cond_b
+    if-eqz v5, :cond_c
 
     iget-wide v3, v5, LX/37v;->A1M:J
 
-    :cond_b
+    :cond_c
     iput-wide v3, v7, LX/37p;->A02:J
 
     invoke-static {v2}, LX/37p;->A00(LX/37v;)Ljava/lang/String;
@@ -390,13 +395,13 @@
 
     move-result-object v8
 
-    if-eqz v9, :cond_c
+    if-eqz v9, :cond_d
 
     const-string/jumbo v9, "last_read_receipt_sent_message_table_id"
 
     invoke-static {v8, v9, v6, v7}, LX/0yL;->A0n(Landroid/content/ContentValues;Ljava/lang/String;J)V
 
-    :cond_c
+    :cond_d
     const-string/jumbo v9, "last_read_message_table_id"
 
     invoke-static {v8, v9, v6, v7}, LX/0yL;->A0n(Landroid/content/ContentValues;Ljava/lang/String;J)V
@@ -441,7 +446,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_d
+    if-nez v0, :cond_e
 
     invoke-static {}, LX/001;->A0r()Ljava/lang/StringBuilder;
 
@@ -459,7 +464,7 @@
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_1
 
-    :cond_d
+    :cond_e
     :try_start_9
     invoke-virtual {v12}, LX/3fv;->close()V
 
@@ -469,7 +474,7 @@
 
     instance-of v0, v0, LX/1Zm;
 
-    if-eqz v0, :cond_f
+    if-eqz v0, :cond_10
 
     iget-object v9, v3, LX/2pE;->A0F:LX/2sh;
 
@@ -489,7 +494,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_e
+    if-nez v0, :cond_f
 
     iget-wide v6, v1, LX/35x;->A01:J
 
@@ -497,7 +502,7 @@
 
     cmp-long v0, v6, v4
 
-    if-nez v0, :cond_f
+    if-nez v0, :cond_10
 
     iget-object v1, v1, LX/35x;->A04:Ljava/lang/String;
 
@@ -563,13 +568,13 @@
     :try_end_c
     .catchall {:try_start_c .. :try_end_c} :catchall_2
 
-    :cond_e
+    :cond_f
     :try_start_d
     iget-wide v0, v2, LX/37v;->A0K:J
 
     cmp-long v4, v0, v5
 
-    if-ltz v4, :cond_f
+    if-ltz v4, :cond_10
 
     const-wide/16 v4, 0x2710
 
@@ -591,7 +596,7 @@
 
     invoke-virtual {v9, v0, v4, v5}, LX/2sh;->A04(Ljava/lang/String;J)V
 
-    :cond_f
+    :cond_10
     :goto_4
     invoke-virtual/range {v16 .. v16}, LX/3fu;->A00()V
     :try_end_d

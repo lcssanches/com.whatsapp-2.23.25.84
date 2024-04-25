@@ -149,40 +149,6 @@
 
     const/4 v4, 0x0
 
-    :goto_1
-    if-ge v4, v6, :cond_2
-
-    aget-byte v2, p0, v4
-
-    const-string v0, "(byte)0x"
-
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    sget-object v1, LX/26H;->A00:[C
-
-    shr-int/lit8 v0, v2, 0x4
-
-    and-int/lit8 v0, v0, 0xf
-
-    aget-char v0, v1, v0
-
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
-
-    and-int/lit8 v0, v2, 0xf
-
-    aget-char v0, v1, v0
-
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
-
-    const-string v0, ", "
-
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_1
-
-    :cond_2
     invoke-virtual {v5}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0

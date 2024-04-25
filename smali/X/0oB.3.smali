@@ -1,68 +1,53 @@
-.class public final LX/0oB;
-.super LX/8SO;
+.class public final synthetic LX/0ob;
+.super LX/8Sh;
 
-
-# annotations
-.annotation runtime Lkotlin/coroutines/jvm/internal/DebugMetadata;
-    c = "androidx.lifecycle.CoroutineLiveData"
-    f = "CoroutineLiveData.kt"
-    i = {
-        0x0
-    }
-    l = {
-        0xec
-    }
-    m = "clearSource$lifecycle_livedata_ktx_release"
-    n = {
-        "this"
-    }
-    s = {
-        "L$0"
-    }
-.end annotation
-
-
-# instance fields
-.field public L$0:Ljava/lang/Object;
-
-.field public label:I
-
-.field public synthetic result:Ljava/lang/Object;
-
-.field public final synthetic this$0:Landroidx/lifecycle/CoroutineLiveData;
+# interfaces
+.implements LX/8wE;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/lifecycle/CoroutineLiveData;LX/8qC;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/Object;)V
+    .locals 7
 
-    iput-object p1, p0, LX/0oB;->this$0:Landroidx/lifecycle/CoroutineLiveData;
+    const/4 v1, 0x0
 
-    invoke-direct {p0, p2}, LX/8SO;-><init>(LX/8qC;)V
+    const-class v3, LX/0Ee;
+
+    const-string v4, "logMuteClick"
+
+    const-string v5, "logMuteClick()V"
+
+    move-object v0, p0
+
+    move-object v2, p1
+
+    move v6, v1
+
+    invoke-direct/range {v0 .. v6}, LX/8Sh;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final A05(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final A00()V
+    .locals 1
 
-    iput-object p1, p0, LX/0oB;->result:Ljava/lang/Object;
+    iget-object v0, p0, LX/8Gy;->receiver:Ljava/lang/Object;
 
-    iget v1, p0, LX/0oB;->label:I
+    check-cast v0, LX/0Ee;
 
-    const/high16 v0, -0x80000000
+    invoke-static {v0}, LX/0Ee;->A03(LX/0Ee;)V
 
-    or-int/2addr v1, v0
+    return-void
+.end method
 
-    iput v1, p0, LX/0oB;->label:I
+.method public bridge synthetic invoke()Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, LX/0oB;->this$0:Landroidx/lifecycle/CoroutineLiveData;
+    invoke-virtual {p0}, LX/0ob;->A00()V
 
-    invoke-virtual {v0, p0}, Landroidx/lifecycle/CoroutineLiveData;->A0J(LX/8qC;)Ljava/lang/Object;
-
-    move-result-object v0
+    sget-object v0, LX/2yF;->A00:LX/2yF;
 
     return-object v0
 .end method

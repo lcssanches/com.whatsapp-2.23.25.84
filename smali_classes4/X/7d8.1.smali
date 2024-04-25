@@ -280,7 +280,6 @@
     invoke-interface {v0, v1, v2}, LX/8qJ;->B0A(Ljava/io/OutputStream;Ljava/lang/String;)I
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
     :try_start_2
     invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B

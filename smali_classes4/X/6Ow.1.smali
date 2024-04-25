@@ -1207,7 +1207,6 @@
     move-result-wide v18
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_2
     .catch LX/72W; {:try_start_4 .. :try_end_4} :catch_3
 
     :try_start_5
@@ -3180,7 +3179,6 @@
     goto :goto_2
     :try_end_1
     .catch Ljava/lang/IllegalStateException; {:try_start_1 .. :try_end_1} :catch_1
-    .catch Ljava/lang/IllegalStateException; {:try_start_1 .. :try_end_1} :catch_3
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     :cond_5
@@ -3665,7 +3663,6 @@
     goto :goto_e
     :try_end_5
     .catch Ljava/lang/IllegalStateException; {:try_start_5 .. :try_end_5} :catch_1
-    .catch Ljava/lang/IllegalStateException; {:try_start_5 .. :try_end_5} :catch_3
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
     :cond_18

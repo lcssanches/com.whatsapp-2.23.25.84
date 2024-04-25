@@ -174,11 +174,11 @@
 
     iget-boolean v1, v0, LX/31r;->A02:Z
 
-    const v0, 0x7f080141
+    const v0, 0x7f080e35
 
     if-eqz v1, :cond_1
 
-    const v0, 0x7f08014e
+    const v0, 0x7f080e36
 
     :cond_1
     invoke-static {v2, v0}, LX/0yT;->A0F(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;

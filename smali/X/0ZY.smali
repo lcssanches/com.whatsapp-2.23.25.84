@@ -811,6 +811,8 @@
 
     invoke-virtual {v2, p1}, Ljava/security/Signature;->verify([B)Z
 
+    invoke-static {}, Lcom/Lzm/WaPackageInfo;->BooleanTrue()Z
+
     move-result v0
 
     return v0

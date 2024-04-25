@@ -83,7 +83,6 @@
     move-result-object v2
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
     :try_start_2
     iget-object v0, p0, LX/1na;->A01:LX/2tO;
@@ -207,7 +206,6 @@
     return-object v9
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_0
-    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_1
 
     :catchall_0
     move-exception v1
@@ -250,7 +248,6 @@
     throw v1
     :try_end_9
     .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_0
-    .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_1
 
     :catch_0
     :try_start_a

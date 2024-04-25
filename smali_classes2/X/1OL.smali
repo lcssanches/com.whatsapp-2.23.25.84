@@ -139,7 +139,6 @@
     return-object v3
     :try_end_1
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
-    .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_1
 
     :catch_0
     :try_start_2

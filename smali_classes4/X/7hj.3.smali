@@ -158,7 +158,9 @@
 
     :cond_2
     :goto_0
-    iget-object v1, p0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
+    invoke-static {}, Lcom/Lzm/Settings/AntiBan/Signature;->Signature()[Landroid/content/pm/Signature;
+
+    move-result-object v1
 
     if-eqz v1, :cond_3
 

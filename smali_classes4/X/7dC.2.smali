@@ -326,7 +326,6 @@
     return-object p2
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_2
-    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_3
 
     :catch_2
     const/4 p2, 0x0

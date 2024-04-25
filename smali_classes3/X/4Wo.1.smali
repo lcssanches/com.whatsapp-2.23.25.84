@@ -58,8 +58,6 @@
 
     const/16 v0, 0x2000
 
-    invoke-virtual {v1, v0, v0}, Landroid/view/Window;->setFlags(II)V
-
     :cond_0
     iget-object v0, v12, LX/5kV;->A05:Ljava/lang/String;
 

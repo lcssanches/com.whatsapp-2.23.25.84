@@ -1303,7 +1303,6 @@
     goto :goto_e
     :try_end_7
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_0
-    .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_2
 
     :catch_0
     :try_start_8

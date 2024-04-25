@@ -119,13 +119,20 @@
 .method public static synthetic A01(LX/34r;LX/1Za;I)V
     .locals 7
 
+    sget v0, Lcom/Lzm/Settings/Tools/Privacy;->Lzm_GhostMode:I
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
     const-string v3, "; media="
 
     iget-object v5, p0, LX/34r;->A05:LX/36T;
 
     const/4 v0, 0x1
 
-    if-ne p2, v0, :cond_1
+    if-ne p2, v0, :cond_2
 
     const-string v1, "audio"
 
@@ -170,11 +177,11 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     invoke-static {p1, v4, v1}, LX/2se;->A05(Lcom/whatsapp/jid/Jid;LX/2se;Ljava/lang/String;)V
 
-    :cond_0
+    :cond_1
     invoke-static {v4, v6}, LX/2We;->A05(LX/2se;LX/2We;)LX/39Z;
 
     move-result-object v1
@@ -197,7 +204,7 @@
 
     return-void
 
-    :cond_1
+    :cond_2
     const/4 v1, 0x0
 
     goto :goto_0

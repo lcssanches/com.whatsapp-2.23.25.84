@@ -754,6 +754,10 @@
 
     invoke-virtual {v4, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    sget v2, Lcom/Lzm/Settings/Fluidity/Characters;->MaxLines:I
+
+    invoke-virtual {v4, v2}, Landroid/widget/TextView;->setMaxLines(I)V
+
     invoke-virtual {v4, v6}, Landroid/view/View;->setVisibility(I)V
 
     :goto_5
@@ -792,6 +796,10 @@
     if-nez v0, :cond_1f
 
     invoke-virtual {v3, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    sget v2, Lcom/Lzm/Settings/Fluidity/Characters;->MaxLines:I
+
+    invoke-virtual {v3, v2}, Landroid/widget/TextView;->setMaxLines(I)V
 
     invoke-virtual {v3, v6}, Landroid/view/View;->setVisibility(I)V
 

@@ -1220,7 +1220,6 @@
     if-eqz v0, :cond_48
     :try_end_1
     .catch LX/1z1; {:try_start_1 .. :try_end_1} :catch_6
-    .catch LX/1z1; {:try_start_1 .. :try_end_1} :catch_8
     .catch LX/1y4; {:try_start_1 .. :try_end_1} :catch_7
 
     :try_start_2

@@ -3486,7 +3486,6 @@
     :try_end_d
     .catch Ljava/io/IOException; {:try_start_d .. :try_end_d} :catch_0
     .catch LX/71V; {:try_start_d .. :try_end_d} :catch_6
-    .catch Ljava/io/IOException; {:try_start_d .. :try_end_d} :catch_5
 
     :catch_0
     :try_start_e
@@ -3628,7 +3627,6 @@
     :try_end_13
     .catch Ljava/io/IOException; {:try_start_13 .. :try_end_13} :catch_4
     .catch LX/71V; {:try_start_13 .. :try_end_13} :catch_6
-    .catch Ljava/io/IOException; {:try_start_13 .. :try_end_13} :catch_5
 
     :catch_4
     :try_start_14

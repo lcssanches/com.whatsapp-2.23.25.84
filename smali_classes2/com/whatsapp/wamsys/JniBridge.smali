@@ -4779,7 +4779,6 @@
     return-object p0
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
     :catch_0
     :try_start_1

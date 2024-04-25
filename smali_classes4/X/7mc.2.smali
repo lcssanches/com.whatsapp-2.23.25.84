@@ -31,6 +31,8 @@
 .method public onLowMemory()V
     .locals 1
 
+    invoke-static {}, Lcom/Lzm/Settings/Fluidity/intelligence;->OutOfMemory()V
+
     iget-object v0, p0, LX/7mc;->A00:LX/6N6;
 
     invoke-virtual {v0}, LX/6N6;->A05()V

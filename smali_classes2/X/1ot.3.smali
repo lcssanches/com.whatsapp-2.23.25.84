@@ -37,6 +37,8 @@
 
     invoke-direct {p0, p9}, LX/399;-><init>(LX/1NN;)V
 
+    sput-object p0, Lcom/DroidzinModder/SpamMessage;->A00:LX/1ot;
+
     invoke-static {}, LX/001;->A0k()Ljava/lang/Object;
 
     move-result-object v0

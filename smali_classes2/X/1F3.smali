@@ -1898,7 +1898,6 @@
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
     .catch Ljava/lang/NumberFormatException; {:try_start_2 .. :try_end_2} :catch_1
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
 
     :try_start_3
     invoke-virtual {v6}, Ljava/lang/String;->isEmpty()Z

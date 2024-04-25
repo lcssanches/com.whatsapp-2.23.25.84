@@ -7520,6 +7520,31 @@
     goto :goto_0
 .end method
 
+.method public HideArchived(Landroid/view/View;)V
+    .locals 2
+
+    sget p1, Lcom/Lzm/Settings/Tools/Settings;->Lzm_HideArchived:I
+
+    if-eqz p1, :cond_0
+
+    new-instance p1, Landroid/content/Intent;
+
+    invoke-direct {p1}, Landroid/content/Intent;-><init>()V
+
+    invoke-static {}, Lcom/Lzm/WaPackageInfo;->package()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "com.whatsapp.conversationslist.ArchivedConversationsActivity"
+
+    invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    invoke-virtual {p0, p1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    :cond_0
+    return-void
+.end method
+
 .method public dispatchTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 2
 
