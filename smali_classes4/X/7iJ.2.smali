@@ -800,7 +800,6 @@
     invoke-static {v3, v4}, LX/7jD;->A00(Ljava/lang/String;Ljava/text/BreakIterator;)V
     :try_end_2
     .catch Ljava/lang/IllegalArgumentException; {:try_start_2 .. :try_end_2} :catch_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_2 .. :try_end_2} :catch_2
     .catch LX/72R; {:try_start_2 .. :try_end_2} :catch_3
 
     :cond_1f
@@ -1191,7 +1190,6 @@
     invoke-static {v7, v4}, LX/7jD;->A00(Ljava/lang/String;Ljava/text/BreakIterator;)V
     :try_end_b
     .catch Ljava/lang/IllegalArgumentException; {:try_start_b .. :try_end_b} :catch_4
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_b .. :try_end_b} :catch_9
 
     :cond_2c
     :try_start_c
@@ -1382,7 +1380,6 @@
     goto :goto_d
     :try_end_e
     .catch Ljava/lang/IllegalArgumentException; {:try_start_e .. :try_end_e} :catch_5
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_e .. :try_end_e} :catch_6
 
     :goto_e
     :try_start_f
@@ -1571,7 +1568,6 @@
     goto :goto_11
     :try_end_11
     .catch Ljava/lang/IllegalArgumentException; {:try_start_11 .. :try_end_11} :catch_7
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_11 .. :try_end_11} :catch_8
 
     :goto_12
     :try_start_12

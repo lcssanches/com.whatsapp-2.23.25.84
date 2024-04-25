@@ -82,14 +82,12 @@
     invoke-virtual {p0}, Ljava/io/InputStream;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_4
 
     :catch_0
     :try_start_3
     invoke-virtual {v5}, Ljava/io/OutputStream;->close()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_1
-    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_4
 
     :catch_1
     :try_start_4
@@ -120,7 +118,6 @@
     invoke-virtual {p0}, Ljava/io/InputStream;->close()V
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_2
-    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_4
 
     :catch_2
     :cond_1
@@ -128,7 +125,6 @@
     invoke-virtual {v5}, Ljava/io/OutputStream;->close()V
     :try_end_6
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_3
-    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_4
 
     :catch_3
     :try_start_7

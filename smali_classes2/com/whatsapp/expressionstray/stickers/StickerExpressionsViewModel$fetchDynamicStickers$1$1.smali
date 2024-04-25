@@ -515,7 +515,6 @@
     move-result-object v3
     :try_end_e
     .catch Ljava/lang/Exception; {:try_start_e .. :try_end_e} :catch_3
-    .catch Ljava/lang/Exception; {:try_start_e .. :try_end_e} :catch_4
 
     :try_start_f
     iget-object v0, v1, LX/2gq;->A02:LX/2t8;
@@ -620,7 +619,6 @@
     iput v9, v1, LX/3DM;->A01:I
     :try_end_f
     .catch Ljava/lang/Exception; {:try_start_f .. :try_end_f} :catch_2
-    .catch Ljava/lang/Exception; {:try_start_f .. :try_end_f} :catch_4
 
     :cond_d
     :try_start_10

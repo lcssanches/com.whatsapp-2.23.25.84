@@ -1024,10 +1024,7 @@
     .catch LX/1yM; {:try_start_a .. :try_end_a} :catch_5
     .catch Ljava/lang/IllegalStateException; {:try_start_a .. :try_end_a} :catch_16
     .catch Ljava/lang/IllegalArgumentException; {:try_start_a .. :try_end_a} :catch_14
-    .catch LX/6vA; {:try_start_a .. :try_end_a} :catch_12
     .catch Ljava/io/FileNotFoundException; {:try_start_a .. :try_end_a} :catch_10
-    .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_e
-    .catch LX/1yM; {:try_start_a .. :try_end_a} :catch_c
     .catchall {:try_start_a .. :try_end_a} :catchall_0
 
     :catch_5

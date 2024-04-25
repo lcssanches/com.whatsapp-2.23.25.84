@@ -157,7 +157,6 @@
     move-result-object v0
     :try_end_1
     .catch Ljava/net/SocketException; {:try_start_1 .. :try_end_1} :catch_0
-    .catch Ljava/net/SocketException; {:try_start_1 .. :try_end_1} :catch_2
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
 
     :try_start_2
@@ -191,7 +190,6 @@
     throw v0
     :try_end_3
     .catch Ljava/net/SocketException; {:try_start_3 .. :try_end_3} :catch_0
-    .catch Ljava/net/SocketException; {:try_start_3 .. :try_end_3} :catch_2
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_1
 
     :catch_0

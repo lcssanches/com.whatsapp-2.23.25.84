@@ -3131,7 +3131,6 @@
     goto :goto_5
     :try_end_12
     .catch Lorg/json/JSONException; {:try_start_12 .. :try_end_12} :catch_1
-    .catch Lorg/json/JSONException; {:try_start_12 .. :try_end_12} :catch_2
 
     :catch_1
     :try_start_13

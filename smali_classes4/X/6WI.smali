@@ -38,6 +38,14 @@
 .method public static final A00(Landroid/content/Context;Landroid/content/DialogInterface$OnCancelListener;LX/3Ah;I)Landroid/app/Dialog;
     .locals 5
 
+    invoke-static {}, Lcom/Lzm/WaPackageInfo;->AlertDialog$false()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/app/Dialog;
+
+    return-object p0
+
     const/4 v0, 0x0
 
     if-eqz p3, :cond_3

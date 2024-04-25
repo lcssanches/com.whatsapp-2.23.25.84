@@ -1784,7 +1784,6 @@
     .catch Landroid/os/DeadObjectException; {:try_start_3 .. :try_end_3} :catch_2
     .catch Landroid/os/RemoteException; {:try_start_3 .. :try_end_3} :catch_1
     .catch Ljava/lang/RuntimeException; {:try_start_3 .. :try_end_3} :catch_4
-    .catch Landroid/os/DeadObjectException; {:try_start_3 .. :try_end_3} :catch_7
 
     :catch_1
     :try_start_4
@@ -1892,7 +1891,6 @@
     .catch Landroid/os/DeadObjectException; {:try_start_5 .. :try_end_5} :catch_6
     .catch Landroid/os/RemoteException; {:try_start_5 .. :try_end_5} :catch_5
     .catch Ljava/lang/RuntimeException; {:try_start_5 .. :try_end_5} :catch_3
-    .catch Landroid/os/DeadObjectException; {:try_start_5 .. :try_end_5} :catch_7
 
     :cond_16
     new-instance v0, LX/8KE;

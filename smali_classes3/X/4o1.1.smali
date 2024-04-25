@@ -223,6 +223,10 @@
 
     const v0, 0x7f0e02d3
 
+    invoke-static {v0}, Lcom/Lzm/Settings/Tools/Customizations/BalloonR;->right_img(I)I
+
+    move-result v0
+
     return v0
 .end method
 

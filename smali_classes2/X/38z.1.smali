@@ -781,7 +781,6 @@
 
     const/4 v4, 0x0
 
-    :try_start_0
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
     move-result v0
@@ -799,11 +798,8 @@
     invoke-static {v2, v1, v0}, Landroid/database/sqlite/SQLiteDatabase;->openDatabase(Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v3
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    :try_start_1
+    :try_start_0
     const-string v0, "PRAGMA integrity_check"
 
     invoke-static {v3, v0, v1}, Landroid/database/DatabaseUtils;->stringForQuery(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/String;
@@ -825,14 +821,10 @@
     move-result v0
 
     if-eqz v3, :cond_0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    :try_start_2
     invoke-virtual {v3}, Landroid/database/sqlite/SQLiteClosable;->close()V
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
-    .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
     :cond_0
     invoke-virtual {v5}, LX/365;->A06()J
@@ -844,47 +836,22 @@
 
     if-eqz v3, :cond_1
 
-    :try_start_3
     invoke-virtual {v3}, Landroid/database/sqlite/SQLiteClosable;->close()V
 
     goto :goto_0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    :catchall_1
     move-exception v0
 
-    :try_start_4
     invoke-virtual {v1, v0}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
 
     :cond_1
     :goto_0
     throw v1
-    :try_end_4
-    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
-    .catchall {:try_start_4 .. :try_end_4} :catchall_2
-
-    :catch_0
-    move-exception v1
-
-    :try_start_5
-    const-string/jumbo v0, "msgstore/fieldstat/isdatabaseintegrityok/error "
-
-    invoke-static {v0, v1}, Lcom/whatsapp/util/Log;->e(Ljava/lang/String;Ljava/lang/Throwable;)V
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
     :cond_2
     invoke-virtual {v5}, LX/365;->A06()J
 
     return v4
-
-    :catchall_2
-    move-exception v0
-
-    invoke-virtual {v5}, LX/365;->A06()J
-
-    throw v0
 .end method
 
 .method public static final A08(Ljava/io/File;Ljava/lang/String;)Z
@@ -2260,7 +2227,6 @@
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_1a .. :try_end_1a} :catch_d
     .catch Ljava/security/InvalidAlgorithmParameterException; {:try_start_1a .. :try_end_1a} :catch_d
     .catch Ljava/security/InvalidKeyException; {:try_start_1a .. :try_end_1a} :catch_d
-    .catch Ljava/io/IOException; {:try_start_1a .. :try_end_1a} :catch_c
     .catchall {:try_start_1a .. :try_end_1a} :catchall_9
 
     :catch_4

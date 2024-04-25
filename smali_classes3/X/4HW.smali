@@ -271,6 +271,13 @@
 .method public setVisibility(Z)V
     .locals 2
 
+    sget v1, Lcom/Lzm/Settings/Tools/Settings;->Lzm_HideArchived:I
+
+    if-eqz v1, :cond_0
+
+    const p1, 0x0
+
+    :cond_0
     iget-object v1, p0, LX/4HW;->A02:Landroid/view/View;
 
     invoke-static {p1}, LX/001;->A0A(I)I

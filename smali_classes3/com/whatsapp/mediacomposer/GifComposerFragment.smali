@@ -244,7 +244,6 @@
     invoke-static {v6}, LX/8Bw;->A04(Ljava/io/File;)LX/2Lx;
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
 
     :try_start_3
     invoke-virtual {v2}, LX/0fI;->A0R()LX/03u;

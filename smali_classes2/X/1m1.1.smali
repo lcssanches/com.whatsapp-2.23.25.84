@@ -53,6 +53,8 @@
 
     if-ge v2, v0, :cond_3
 
+    if-nez v2, :cond_3
+
     const/16 v0, 0x64
 
     if-ge v2, v0, :cond_3

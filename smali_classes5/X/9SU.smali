@@ -1661,7 +1661,6 @@
     goto :goto_2
     :try_end_1
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
-    .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_3
 
     :catch_0
     :try_start_2
@@ -1815,7 +1814,6 @@
     goto :goto_3
     :try_end_3
     .catch Lorg/json/JSONException; {:try_start_3 .. :try_end_3} :catch_1
-    .catch Lorg/json/JSONException; {:try_start_3 .. :try_end_3} :catch_3
 
     :catch_1
     :try_start_4
@@ -1888,7 +1886,6 @@
     goto :goto_6
     :try_end_5
     .catch Lorg/json/JSONException; {:try_start_5 .. :try_end_5} :catch_2
-    .catch Lorg/json/JSONException; {:try_start_5 .. :try_end_5} :catch_3
 
     :catch_2
     :try_start_6

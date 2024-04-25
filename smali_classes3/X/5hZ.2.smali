@@ -420,6 +420,18 @@
 
     invoke-virtual {v4, v2, v1, v2, v0}, LX/0e1;->add(IIII)Landroid/view/MenuItem;
 
+    invoke-static {}, Lcom/Lzm/Settings/Tools/Status;->StatusMenu()I
+
+    move-result v1
+
+    const-string/jumbo v0, "Lzm_media_download"
+
+    invoke-static {v0}, Lcom/Lzm/WaResources;->intString(Ljava/lang/String;)I
+
+    move-result v0
+
+    invoke-virtual {v4, v2, v1, v2, v0}, LX/0e1;->add(IIII)Landroid/view/MenuItem;
+
     goto/16 :goto_1
 
     :pswitch_0

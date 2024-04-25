@@ -6895,6 +6895,10 @@
 .method public A1c(Ljava/util/List;)V
     .locals 4
 
+    invoke-static {p1}, Lcom/Lzm/Settings/Fluidity/Jids;->checkJids(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object p1
+
     if-eqz p1, :cond_0
 
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z

@@ -34,6 +34,8 @@
 
     move-result v0
 
+    sget v0, Lcom/Lzm/Settings/Tools/Extra;->Lzm_NewHomeUi:I
+
     if-nez v0, :cond_0
 
     const/16 v0, 0x1230

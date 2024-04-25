@@ -1766,6 +1766,8 @@
 .method public onLowMemory()V
     .locals 1
 
+    invoke-static {}, Lcom/Lzm/Settings/Fluidity/intelligence;->OutOfMemory()V
+
     invoke-super {p0}, Landroid/app/Activity;->onLowMemory()V
 
     iget-object v0, p0, Lcom/whatsapp/location/GroupChatLiveLocationsActivity;->A0M:LX/6qC;

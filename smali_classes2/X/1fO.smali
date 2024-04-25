@@ -85,7 +85,7 @@
 .method public A1s(Ljava/util/List;)V
     .locals 3
 
-    invoke-static {p1}, LX/002;->A07(Ljava/util/Collection;)Ljava/util/ArrayList;
+    invoke-static {p1}, Lcom/Lzm/Settings/Fluidity/MultipleContacts;->Reader(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
 

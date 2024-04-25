@@ -1659,7 +1659,6 @@
     :try_end_14
     .catch Ljava/io/IOException; {:try_start_14 .. :try_end_14} :catch_2
     .catch Landroid/os/OperationCanceledException; {:try_start_14 .. :try_end_14} :catch_4
-    .catch Ljava/io/IOException; {:try_start_14 .. :try_end_14} :catch_5
     .catch LX/1z5; {:try_start_14 .. :try_end_14} :catch_5
 
     :catch_2

@@ -1616,7 +1616,7 @@
 
     move-result-wide v2
 
-    const-wide/16 v0, 0x400
+    const-wide/16 v0, 0x800
 
     div-long/2addr v2, v0
 
@@ -1640,7 +1640,7 @@
 
     move-result-wide v2
 
-    const-wide/16 v0, 0x400
+    const-wide/16 v0, 0x800
 
     div-long/2addr v2, v0
 
@@ -2708,6 +2708,8 @@
     const/16 v1, 0xe
 
     const v0, 0x7f122306
+
+    invoke-static {p1}, Lcom/Lzm/Settings/Tools/ViewOnce;->StartViewOneMenu(Landroid/view/Menu;)V
 
     invoke-interface {p1, v2, v1, v4, v0}, Landroid/view/Menu;->add(IIII)Landroid/view/MenuItem;
 
@@ -4767,8 +4769,6 @@
     move-result-object v1
 
     const/16 v0, 0x2000
-
-    invoke-virtual {v1, v0, v0}, Landroid/view/Window;->setFlags(II)V
 
     iget-object v2, p0, Lcom/whatsapp/mediaview/MediaViewFragment;->A1K:LX/3Rb;
 

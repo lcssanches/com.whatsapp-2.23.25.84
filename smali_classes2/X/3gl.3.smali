@@ -327,7 +327,6 @@
     if-eqz v15, :cond_3
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
     :try_start_2
     invoke-interface {v15}, Landroid/database/Cursor;->getCount()I
@@ -425,7 +424,6 @@
     goto/16 :goto_0
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
 
     :catchall_0
     move-exception v1
@@ -447,7 +445,6 @@
     throw v1
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_0
 
     :catch_1
     :try_start_6

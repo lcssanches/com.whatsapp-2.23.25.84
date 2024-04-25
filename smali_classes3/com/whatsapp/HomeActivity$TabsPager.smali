@@ -158,6 +158,8 @@
 
     move-result v0
 
+    sget v0, Lcom/Lzm/Settings/Tools/Extra;->Lzm_NewHomeUi:I
+
     const/4 v3, 0x0
 
     if-eqz v0, :cond_0

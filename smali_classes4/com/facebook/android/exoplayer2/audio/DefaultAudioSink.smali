@@ -3120,7 +3120,6 @@
     goto :goto_2
     :try_end_3
     .catch LX/72B; {:try_start_3 .. :try_end_3} :catch_0
-    .catch LX/72B; {:try_start_3 .. :try_end_3} :catch_2
 
     :catch_0
     :try_start_4
@@ -3186,7 +3185,6 @@
     goto :goto_2
     :try_end_5
     .catch LX/72B; {:try_start_5 .. :try_end_5} :catch_1
-    .catch LX/72B; {:try_start_5 .. :try_end_5} :catch_2
 
     :catch_1
     :try_start_6

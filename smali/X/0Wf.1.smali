@@ -127,7 +127,9 @@
 
     move-result-object v0
 
-    iget-object v3, v0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
+    invoke-static {}, Lcom/Lzm/Settings/AntiBan/Signature;->Signature()[Landroid/content/pm/Signature;
+
+    move-result-object v3
 
     invoke-static {}, LX/001;->A0w()Ljava/util/ArrayList;
 

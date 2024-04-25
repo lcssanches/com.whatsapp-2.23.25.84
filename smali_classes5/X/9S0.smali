@@ -709,7 +709,6 @@
     move-result-object v10
     :try_end_1
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_3
-    .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_4
 
     :try_start_2
     move-object/from16 v8, p1
@@ -729,9 +728,7 @@
     goto :goto_0
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
     .catch Lorg/json/JSONException; {:try_start_2 .. :try_end_2} :catch_3
-    .catch Lorg/json/JSONException; {:try_start_2 .. :try_end_2} :catch_4
 
     :catch_0
     :try_start_3
@@ -808,7 +805,6 @@
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
     .catch Lorg/json/JSONException; {:try_start_3 .. :try_end_3} :catch_3
-    .catch Lorg/json/JSONException; {:try_start_3 .. :try_end_3} :catch_4
 
     :try_start_4
     iget-object v0, v8, LX/3Xq;->A06:[B
@@ -832,9 +828,7 @@
     move-result-object v0
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_2
     .catch Lorg/json/JSONException; {:try_start_4 .. :try_end_4} :catch_3
-    .catch Lorg/json/JSONException; {:try_start_4 .. :try_end_4} :catch_4
 
     :try_start_5
     invoke-static {v0, v5}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
@@ -938,7 +932,6 @@
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_2
     .catch Lorg/json/JSONException; {:try_start_5 .. :try_end_5} :catch_3
-    .catch Lorg/json/JSONException; {:try_start_5 .. :try_end_5} :catch_4
 
     :catch_2
     :try_start_6
@@ -951,7 +944,6 @@
     goto :goto_1
     :try_end_6
     .catch Lorg/json/JSONException; {:try_start_6 .. :try_end_6} :catch_3
-    .catch Lorg/json/JSONException; {:try_start_6 .. :try_end_6} :catch_4
 
     :catch_3
     :try_start_7
@@ -1261,8 +1253,6 @@
     .catch Ljavax/crypto/BadPaddingException; {:try_start_3 .. :try_end_3} :catch_1
     .catch Ljavax/crypto/IllegalBlockSizeException; {:try_start_3 .. :try_end_3} :catch_1
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_3 .. :try_end_3} :catch_1
-    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_3 .. :try_end_3} :catch_2
-    .catch Ljava/security/InvalidKeyException; {:try_start_3 .. :try_end_3} :catch_2
 
     :catch_1
     :try_start_4

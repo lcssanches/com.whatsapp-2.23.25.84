@@ -1753,7 +1753,6 @@
     move-result-object v6
     :try_end_a
     .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_3
     .catchall {:try_start_a .. :try_end_a} :catchall_d
 
     :try_start_b
@@ -1800,7 +1799,6 @@
     goto :goto_7
     :try_end_e
     .catch Ljava/lang/Exception; {:try_start_e .. :try_end_e} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_e .. :try_end_e} :catch_3
     .catchall {:try_start_e .. :try_end_e} :catchall_d
 
     :catchall_4
@@ -1847,7 +1845,6 @@
     throw v1
     :try_end_12
     .catch Ljava/lang/Exception; {:try_start_12 .. :try_end_12} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_12 .. :try_end_12} :catch_3
     .catchall {:try_start_12 .. :try_end_12} :catchall_d
 
     :catch_1
@@ -2407,7 +2404,6 @@
     invoke-virtual {v14}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$WriteLock;->lock()V
     :try_end_14
     .catch Ljava/lang/Exception; {:try_start_14 .. :try_end_14} :catch_2
-    .catch Ljava/lang/Exception; {:try_start_14 .. :try_end_14} :catch_3
     .catchall {:try_start_14 .. :try_end_14} :catchall_d
 
     :try_start_15
@@ -2451,7 +2447,6 @@
     goto :goto_12
     :try_end_1a
     .catch Ljava/lang/Exception; {:try_start_1a .. :try_end_1a} :catch_2
-    .catch Ljava/lang/Exception; {:try_start_1a .. :try_end_1a} :catch_3
     .catchall {:try_start_1a .. :try_end_1a} :catchall_d
 
     :catchall_8
@@ -2505,7 +2500,6 @@
     throw v0
     :try_end_1f
     .catch Ljava/lang/Exception; {:try_start_1f .. :try_end_1f} :catch_2
-    .catch Ljava/lang/Exception; {:try_start_1f .. :try_end_1f} :catch_3
     .catchall {:try_start_1f .. :try_end_1f} :catchall_d
 
     :catch_2

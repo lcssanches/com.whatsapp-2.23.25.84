@@ -679,7 +679,6 @@
     :try_end_7
     .catch Ljava/io/FileNotFoundException; {:try_start_7 .. :try_end_7} :catch_4
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_3
-    .catch Ljava/io/FileNotFoundException; {:try_start_7 .. :try_end_7} :catch_6
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_5
 
     :try_start_8
@@ -800,7 +799,6 @@
     :try_end_b
     .catch Ljava/io/FileNotFoundException; {:try_start_b .. :try_end_b} :catch_4
     .catch Ljava/io/IOException; {:try_start_b .. :try_end_b} :catch_3
-    .catch Ljava/io/FileNotFoundException; {:try_start_b .. :try_end_b} :catch_6
     .catch Ljava/lang/Exception; {:try_start_b .. :try_end_b} :catch_5
 
     :try_start_c
@@ -823,7 +821,6 @@
     .catch Ljava/security/GeneralSecurityException; {:try_start_c .. :try_end_c} :catch_2
     .catch Ljava/io/FileNotFoundException; {:try_start_c .. :try_end_c} :catch_4
     .catch Ljava/io/IOException; {:try_start_c .. :try_end_c} :catch_3
-    .catch Ljava/io/FileNotFoundException; {:try_start_c .. :try_end_c} :catch_6
     .catch Ljava/lang/Exception; {:try_start_c .. :try_end_c} :catch_5
 
     :goto_1
@@ -847,7 +844,6 @@
     .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_d .. :try_end_d} :catch_1
     .catch Ljava/io/FileNotFoundException; {:try_start_d .. :try_end_d} :catch_4
     .catch Ljava/io/IOException; {:try_start_d .. :try_end_d} :catch_3
-    .catch Ljava/io/FileNotFoundException; {:try_start_d .. :try_end_d} :catch_6
     .catch Ljava/lang/Exception; {:try_start_d .. :try_end_d} :catch_5
 
     :catch_1
@@ -880,7 +876,6 @@
     :try_end_e
     .catch Ljava/io/FileNotFoundException; {:try_start_e .. :try_end_e} :catch_4
     .catch Ljava/io/IOException; {:try_start_e .. :try_end_e} :catch_3
-    .catch Ljava/io/FileNotFoundException; {:try_start_e .. :try_end_e} :catch_6
     .catch Ljava/lang/Exception; {:try_start_e .. :try_end_e} :catch_5
 
     :catchall_0
@@ -906,7 +901,6 @@
     :try_end_10
     .catch Ljava/io/FileNotFoundException; {:try_start_10 .. :try_end_10} :catch_4
     .catch Ljava/io/IOException; {:try_start_10 .. :try_end_10} :catch_3
-    .catch Ljava/io/FileNotFoundException; {:try_start_10 .. :try_end_10} :catch_6
     .catch Ljava/lang/Exception; {:try_start_10 .. :try_end_10} :catch_5
 
     :catch_3

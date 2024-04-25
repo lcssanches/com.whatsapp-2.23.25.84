@@ -1454,7 +1454,6 @@
     move-result-object v3
     :try_end_1
     .catch LX/1yq; {:try_start_1 .. :try_end_1} :catch_2
-    .catch LX/1yq; {:try_start_1 .. :try_end_1} :catch_3
 
     :try_start_2
     iget-object v0, p2, LX/37q;->A00:LX/1EK;

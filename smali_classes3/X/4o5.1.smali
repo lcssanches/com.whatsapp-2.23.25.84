@@ -493,6 +493,10 @@
 
     invoke-virtual {v3, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    sget v0, Lcom/Lzm/Settings/Fluidity/Characters;->MaxLines:I
+
+    invoke-virtual {v3, v0}, Landroid/widget/TextView;->setMaxLines(I)V
+
     return-void
 
     :cond_1
@@ -531,6 +535,10 @@
     move-result-object v0
 
     invoke-virtual {v2, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    sget v0, Lcom/Lzm/Settings/Fluidity/Characters;->MaxLines:I
+
+    invoke-virtual {v2, v0}, Landroid/widget/TextView;->setMaxLines(I)V
 
     return-void
 .end method

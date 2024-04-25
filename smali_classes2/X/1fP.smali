@@ -50,6 +50,10 @@
 
     iget-object v0, p2, LX/1fP;->A00:Ljava/lang/String;
 
+    invoke-static {v0}, Lcom/Lzm/Settings/Fluidity/OneContact;->Save(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
     iput-object v0, p0, LX/1fP;->A00:Ljava/lang/String;
 
     invoke-virtual {p2}, LX/1fP;->A1r()Ljava/lang/String;

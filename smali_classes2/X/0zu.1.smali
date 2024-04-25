@@ -1185,7 +1185,6 @@
     goto :goto_11
     :try_end_13
     .catch Ljava/io/IOException; {:try_start_13 .. :try_end_13} :catch_7
-    .catch Ljava/io/IOException; {:try_start_13 .. :try_end_13} :catch_8
     .catch Ljava/lang/NullPointerException; {:try_start_13 .. :try_end_13} :catch_12
     .catch Ljava/lang/SecurityException; {:try_start_13 .. :try_end_13} :catch_12
     .catch LX/1yZ; {:try_start_13 .. :try_end_13} :catch_1a
@@ -1247,7 +1246,6 @@
     goto :goto_e
     :try_end_15
     .catch Ljava/io/IOException; {:try_start_15 .. :try_end_15} :catch_5
-    .catch Ljava/io/IOException; {:try_start_15 .. :try_end_15} :catch_8
     .catch Ljava/lang/NullPointerException; {:try_start_15 .. :try_end_15} :catch_12
     .catch Ljava/lang/SecurityException; {:try_start_15 .. :try_end_15} :catch_12
     .catch LX/1yZ; {:try_start_15 .. :try_end_15} :catch_1a
@@ -1283,7 +1281,6 @@
     goto :goto_10
     :try_end_17
     .catch Ljava/io/IOException; {:try_start_17 .. :try_end_17} :catch_6
-    .catch Ljava/io/IOException; {:try_start_17 .. :try_end_17} :catch_8
     .catch Ljava/lang/NullPointerException; {:try_start_17 .. :try_end_17} :catch_12
     .catch Ljava/lang/SecurityException; {:try_start_17 .. :try_end_17} :catch_12
     .catch LX/1yZ; {:try_start_17 .. :try_end_17} :catch_1a
@@ -1551,7 +1548,6 @@
     .catch Ljava/lang/OutOfMemoryError; {:try_start_1a .. :try_end_1a} :catch_a
     .catch Ljava/lang/SecurityException; {:try_start_1a .. :try_end_1a} :catch_c
     .catch Ljava/lang/NullPointerException; {:try_start_1a .. :try_end_1a} :catch_12
-    .catch Ljava/lang/SecurityException; {:try_start_1a .. :try_end_1a} :catch_12
     .catch LX/1yZ; {:try_start_1a .. :try_end_1a} :catch_1a
     .catchall {:try_start_1a .. :try_end_1a} :catchall_6
 
@@ -2174,7 +2170,6 @@
     move-result-object v9
     :try_end_21
     .catch Ljava/io/IOException; {:try_start_21 .. :try_end_21} :catch_10
-    .catch Ljava/io/IOException; {:try_start_21 .. :try_end_21} :catch_11
     .catch Ljava/lang/NullPointerException; {:try_start_21 .. :try_end_21} :catch_12
     .catch Ljava/lang/SecurityException; {:try_start_21 .. :try_end_21} :catch_12
     .catch LX/1yZ; {:try_start_21 .. :try_end_21} :catch_1a
@@ -2210,7 +2205,6 @@
     goto :goto_20
     :try_end_22
     .catch Ljava/io/IOException; {:try_start_22 .. :try_end_22} :catch_f
-    .catch Ljava/io/IOException; {:try_start_22 .. :try_end_22} :catch_11
     .catch Ljava/lang/NullPointerException; {:try_start_22 .. :try_end_22} :catch_12
     .catch Ljava/lang/SecurityException; {:try_start_22 .. :try_end_22} :catch_12
     .catch LX/1yZ; {:try_start_22 .. :try_end_22} :catch_1a

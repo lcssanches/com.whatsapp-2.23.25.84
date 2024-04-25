@@ -492,7 +492,6 @@
     goto :goto_6
     :try_end_7
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_3
-    .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_4
     .catch Ljava/lang/OutOfMemoryError; {:try_start_7 .. :try_end_7} :catch_4
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 

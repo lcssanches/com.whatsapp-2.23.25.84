@@ -347,7 +347,7 @@
 
     iget-object v4, v0, Lcom/whatsapp/chatlock/dialogs/ChatLockQuickAddHelperBottomSheet;->A03:LX/5XP;
 
-    if-eqz v4, :cond_83
+    if-eqz v4, :cond_85
 
     iget-object v3, v0, Lcom/whatsapp/chatlock/dialogs/ChatLockQuickAddHelperBottomSheet;->A05:LX/1Za;
 
@@ -1079,7 +1079,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_84
+    if-eqz v0, :cond_86
 
     invoke-static {}, LX/001;->A0r()Ljava/lang/StringBuilder;
 
@@ -1100,6 +1100,24 @@
     return-void
 
     :pswitch_12
+    invoke-static {}, Lcom/Lzm/Settings/Tools/Privacy;->NoCalls()I
+
+    move-result v8
+
+    const v9, 0x1
+
+    if-eqz v8, :cond_13
+
+    if-ne v8, v9, :cond_12
+
+    return-void
+
+    :cond_12
+    const/4 v1, 0x1
+
+    invoke-static {v1}, Lcom/whatsapp/voipcalling/Voip;->endCall(Z)V
+
+    :cond_13
     iget-object v0, v3, LX/3jg;->A00:Ljava/lang/Object;
 
     move-object/from16 v17, v0
@@ -1124,11 +1142,11 @@
 
     const/16 v1, 0xc0
 
-    if-eq v5, v1, :cond_1b
+    if-eq v5, v1, :cond_1d
 
-    if-eq v5, v3, :cond_61
+    if-eq v5, v3, :cond_63
 
-    if-eq v5, v4, :cond_18
+    if-eq v5, v4, :cond_1a
 
     iget-object v2, v6, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -1144,23 +1162,23 @@
 
     const/16 v0, 0xf
 
-    if-eq v5, v0, :cond_17
+    if-eq v5, v0, :cond_19
 
     const/16 v0, 0x96
 
-    if-eq v5, v0, :cond_13
+    if-eq v5, v0, :cond_15
 
-    if-eq v5, v4, :cond_18
+    if-eq v5, v4, :cond_1a
 
-    if-eq v5, v1, :cond_1b
+    if-eq v5, v1, :cond_1d
 
-    if-eq v5, v3, :cond_61
+    if-eq v5, v3, :cond_63
 
     const-string v0, "decodeCallMessage/unknown_message"
 
     invoke-static {v0}, Lcom/whatsapp/util/Log;->e(Ljava/lang/String;)V
 
-    :cond_12
+    :cond_14
     :goto_6
     sget-object v0, LX/39a;->A3V:Ljava/util/concurrent/atomic/AtomicInteger;
 
@@ -1184,7 +1202,7 @@
 
     return-void
 
-    :cond_13
+    :cond_15
     const-string/jumbo v0, "stanzaKey"
 
     invoke-virtual {v2, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -1255,7 +1273,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_16
+    if-eqz v0, :cond_18
 
     iget-object v0, v9, Lcom/whatsapp/voipcalling/CallInfo;->callId:Ljava/lang/String;
 
@@ -1265,7 +1283,7 @@
 
     const/4 v2, 0x1
 
-    if-eqz v0, :cond_16
+    if-eqz v0, :cond_18
 
     const/4 v1, 0x1
 
@@ -1277,11 +1295,11 @@
 
     check-cast v0, LX/2TW;
 
-    if-eqz v0, :cond_16
+    if-eqz v0, :cond_18
 
     iget v0, v0, LX/2TW;->A02:I
 
-    if-ne v0, v2, :cond_16
+    if-ne v0, v2, :cond_18
 
     const-string v0, "enc_rekey_retry"
 
@@ -1289,13 +1307,13 @@
 
     move-result v0
 
-    if-eqz v0, :cond_15
+    if-eqz v0, :cond_17
 
-    if-gtz v4, :cond_14
+    if-gtz v4, :cond_16
 
     const/4 v1, 0x0
 
-    :cond_14
+    :cond_16
     const-string/jumbo v0, "retryCount should always be greater than 0 in enc rekey response"
 
     invoke-static {v1, v0}, LX/3A6;->A0E(ZLjava/lang/String;)V
@@ -1318,7 +1336,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_12
+    if-nez v0, :cond_14
 
     const/16 v1, 0x1e
 
@@ -1328,7 +1346,7 @@
 
     goto/16 :goto_6
 
-    :cond_15
+    :cond_17
     invoke-static {}, LX/001;->A0r()Ljava/lang/StringBuilder;
 
     move-result-object v1
@@ -1341,7 +1359,7 @@
 
     goto/16 :goto_a
 
-    :cond_16
+    :cond_18
     invoke-static {}, LX/001;->A0r()Ljava/lang/StringBuilder;
 
     move-result-object v1
@@ -1360,7 +1378,7 @@
 
     goto/16 :goto_28
 
-    :cond_17
+    :cond_19
     iget-object v0, v7, LX/2pW;->A00:LX/39a;
 
     iget-object v1, v0, LX/39a;->A0H:Landroid/os/Handler;
@@ -1371,7 +1389,7 @@
 
     goto/16 :goto_6
 
-    :cond_18
+    :cond_1a
     iget-object v6, v6, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v6, LX/2Ib;
@@ -1386,7 +1404,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_19
+    if-eqz v0, :cond_1b
 
     iget-object v3, v6, LX/2Ib;->A00:Lcom/whatsapp/jid/DeviceJid;
 
@@ -1412,7 +1430,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_1a
+    if-nez v0, :cond_1c
 
     iget-object v0, v2, LX/39a;->A2E:LX/2sw;
 
@@ -1420,7 +1438,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_1a
+    if-nez v0, :cond_1c
 
     iget-object v2, v2, LX/39a;->A2f:LX/2gM;
 
@@ -1432,7 +1450,7 @@
 
     invoke-static {v2, v0}, LX/2gM;->A02(LX/2gM;Ljava/lang/Runnable;)V
 
-    :cond_19
+    :cond_1b
     :goto_7
     iget-object v0, v6, LX/2Ib;->A00:Lcom/whatsapp/jid/DeviceJid;
 
@@ -1442,12 +1460,12 @@
 
     goto/16 :goto_26
 
-    :cond_1a
+    :cond_1c
     invoke-virtual {v1, v3, v4}, LX/36a;->A0Q(LX/2pn;LX/31r;)V
 
     goto :goto_7
 
-    :cond_1b
+    :cond_1d
     iget-object v1, v6, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, LX/1f3;
@@ -1460,13 +1478,13 @@
 
     move-result v2
 
-    if-eqz v2, :cond_1c
+    if-eqz v2, :cond_1e
 
     const-string/jumbo v0, "voip/service/onCallIncomingStanza dropping incoming call stanza (isInCompanionMode)"
 
     goto/16 :goto_28
 
-    :cond_1c
+    :cond_1e
     iget-object v2, v1, LX/2OZ;->A01:Lcom/whatsapp/protocol/VoipStanzaChildNode;
 
     move-object/from16 v43, v2
@@ -1485,7 +1503,7 @@
 
     sparse-switch v3, :sswitch_data_0
 
-    :cond_1d
+    :cond_1f
     :goto_8
     iget-object v9, v1, LX/2OZ;->A00:Lcom/whatsapp/jid/Jid;
 
@@ -1519,7 +1537,7 @@
 
     const v0, 0x11174
 
-    if-ne v2, v0, :cond_12
+    if-ne v2, v0, :cond_14
 
     iget-object v0, v1, LX/2OZ;->A02:Ljava/lang/String;
 
@@ -1532,7 +1550,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_1d
+    if-eqz v2, :cond_1f
 
     iget-object v5, v0, LX/39a;->A2t:LX/2sI;
 
@@ -1542,11 +1560,11 @@
 
     move-result-object v5
 
-    if-eqz v5, :cond_1e
+    if-eqz v5, :cond_20
 
     invoke-virtual {v5, v4}, LX/2su;->A03(I)V
 
-    :cond_1e
+    :cond_20
     new-instance v5, LX/2j1;
 
     invoke-direct {v5}, LX/2j1;-><init>()V
@@ -1587,7 +1605,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_1f
+    if-eqz v2, :cond_21
 
     iget-object v2, v3, Lcom/whatsapp/voipcalling/CallInfo;->callId:Ljava/lang/String;
 
@@ -1595,7 +1613,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_1f
+    if-eqz v2, :cond_21
 
     iget-wide v12, v3, Lcom/whatsapp/voipcalling/CallInfo;->audioDuration:J
 
@@ -1618,7 +1636,7 @@
 
     goto/16 :goto_8
 
-    :cond_1f
+    :cond_21
     const-wide/16 v12, 0x0
 
     const-wide/16 v14, 0x0
@@ -1632,7 +1650,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_1d
+    if-eqz v3, :cond_1f
 
     iget-object v3, v0, LX/39a;->A2t:LX/2sI;
 
@@ -1644,16 +1662,16 @@
 
     move-result-object v5
 
-    if-eqz v5, :cond_20
+    if-eqz v5, :cond_22
 
     invoke-virtual {v5, v4}, LX/2su;->A03(I)V
 
-    :cond_20
+    :cond_22
     iget-object v3, v1, LX/1f3;->A03:Lcom/whatsapp/jid/DeviceJid;
 
     move-object/from16 v18, v3
 
-    if-nez v3, :cond_21
+    if-nez v3, :cond_23
 
     const-string v1, "call creator can not be null in call rekey request"
 
@@ -1664,12 +1682,12 @@
 
     goto/16 :goto_6
 
-    :cond_21
+    :cond_23
     iget-object v11, v1, LX/2OZ;->A00:Lcom/whatsapp/jid/Jid;
 
     instance-of v3, v11, Lcom/whatsapp/jid/DeviceJid;
 
-    if-eqz v3, :cond_24
+    if-eqz v3, :cond_26
 
     check-cast v11, Lcom/whatsapp/jid/DeviceJid;
 
@@ -1682,11 +1700,11 @@
 
     move-result-object v10
 
-    if-eqz v5, :cond_22
+    if-eqz v5, :cond_24
 
     invoke-virtual {v5, v2}, LX/2su;->A03(I)V
 
-    :cond_22
+    :cond_24
     iget-object v3, v0, LX/39a;->A22:LX/2hB;
 
     iget-object v12, v1, LX/2OZ;->A03:Ljava/lang/String;
@@ -1701,7 +1719,7 @@
 
     iget-byte v13, v10, LX/2xv;->A00:B
 
-    if-eqz v2, :cond_23
+    if-eqz v2, :cond_25
 
     iget-object v2, v3, LX/2hB;->A01:LX/36a;
 
@@ -1802,13 +1820,13 @@
 
     invoke-virtual {v6, v3, v12}, LX/36T;->A0A(Landroid/os/Message;Ljava/lang/String;)V
 
-    if-eqz v9, :cond_55
+    if-eqz v9, :cond_57
 
-    if-eq v9, v2, :cond_63
+    if-eq v9, v2, :cond_65
 
     goto/16 :goto_6
 
-    :cond_23
+    :cond_25
     iget-object v6, v3, LX/2hB;->A03:LX/36T;
 
     iget-object v5, v3, LX/2hB;->A02:LX/1Pt;
@@ -1821,7 +1839,7 @@
 
     goto :goto_c
 
-    :cond_24
+    :cond_26
     const/4 v11, 0x0
 
     goto/16 :goto_b
@@ -1833,13 +1851,13 @@
 
     move-result v2
 
-    if-eqz v2, :cond_1d
+    if-eqz v2, :cond_1f
 
     iget-object v6, v1, LX/2OZ;->A00:Lcom/whatsapp/jid/Jid;
 
     instance-of v2, v6, Lcom/whatsapp/jid/DeviceJid;
 
-    if-eqz v2, :cond_25
+    if-eqz v2, :cond_27
 
     check-cast v6, Lcom/whatsapp/jid/DeviceJid;
 
@@ -1866,7 +1884,7 @@
 
     move-result-object v6
 
-    if-eqz v6, :cond_26
+    if-eqz v6, :cond_28
 
     invoke-virtual {v6}, Ljava/lang/Number;->longValue()J
 
@@ -1874,7 +1892,7 @@
 
     cmp-long v0, v2, v4
 
-    if-gez v0, :cond_26
+    if-gez v0, :cond_28
 
     invoke-static {}, LX/001;->A0r()Ljava/lang/StringBuilder;
 
@@ -1892,12 +1910,12 @@
 
     goto/16 :goto_6
 
-    :cond_25
+    :cond_27
     const/4 v6, 0x0
 
     goto :goto_d
 
-    :cond_26
+    :cond_28
     invoke-static {v9, v8, v2, v3}, LX/0yM;->A1G(Ljava/lang/Object;Ljava/util/Map;J)V
 
     goto/16 :goto_8
@@ -1909,7 +1927,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_1d
+    if-eqz v2, :cond_1f
 
     iget-object v12, v0, LX/39a;->A2M:LX/2jS;
 
@@ -1917,7 +1935,7 @@
 
     move-result v2
 
-    if-nez v2, :cond_27
+    if-nez v2, :cond_29
 
     iget-object v2, v1, LX/2OZ;->A02:Ljava/lang/String;
 
@@ -1931,7 +1949,7 @@
 
     cmp-long v5, v2, v8
 
-    if-nez v5, :cond_27
+    if-nez v5, :cond_29
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -1939,12 +1957,12 @@
 
     iput-wide v2, v6, LX/2SB;->A00:J
 
-    :cond_27
+    :cond_29
     invoke-virtual {v1}, LX/1f3;->A01()Z
 
     move-result v2
 
-    if-nez v2, :cond_28
+    if-nez v2, :cond_2a
 
     const-string v3, "group_info"
 
@@ -1954,7 +1972,7 @@
 
     move-result-object v2
 
-    if-nez v2, :cond_28
+    if-nez v2, :cond_2a
 
     iget-object v9, v1, LX/2OZ;->A02:Ljava/lang/String;
 
@@ -1990,7 +2008,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_52
+    if-eqz v2, :cond_54
 
     invoke-static {}, LX/001;->A0r()Ljava/lang/StringBuilder;
 
@@ -2013,7 +2031,7 @@
     :goto_e
     invoke-static {v2}, Lcom/whatsapp/util/Log;->i(Ljava/lang/String;)V
 
-    :cond_28
+    :cond_2a
     :goto_f
     iget-object v8, v0, LX/39a;->A1y:LX/2r7;
 
@@ -2031,11 +2049,11 @@
 
     move-result-object v2
 
-    if-eqz v2, :cond_29
+    if-eqz v2, :cond_2b
 
     invoke-virtual {v2, v4}, LX/2su;->A03(I)V
 
-    :cond_29
+    :cond_2b
     iget-object v15, v0, LX/39a;->A2p:LX/1Pt;
 
     const/16 v2, 0x111b
@@ -2052,7 +2070,7 @@
 
     instance-of v2, v9, Lcom/whatsapp/jid/DeviceJid;
 
-    if-eqz v2, :cond_51
+    if-eqz v2, :cond_53
 
     move-object v2, v9
 
@@ -2065,7 +2083,7 @@
 
     const/4 v6, 0x0
 
-    if-nez v22, :cond_2d
+    if-nez v22, :cond_2f
 
     invoke-static {}, LX/001;->A0r()Ljava/lang/StringBuilder;
 
@@ -2082,43 +2100,43 @@
     :goto_11
     invoke-static {v2}, Lcom/whatsapp/util/Log;->e(Ljava/lang/String;)V
 
-    :cond_2a
+    :cond_2c
     iget-boolean v0, v0, LX/39a;->A3S:Z
 
-    if-eqz v0, :cond_2b
+    if-eqz v0, :cond_2d
 
     invoke-static {v5}, LX/0yP;->A1V(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_2b
+    if-eqz v0, :cond_2d
 
     invoke-static {v6}, Lcom/whatsapp/voipcalling/Voip;->endCall(Z)V
 
-    :cond_2b
+    :cond_2d
     :goto_12
     invoke-virtual {v8, v5, v14}, LX/2r7;->A03(Ljava/lang/String;S)V
 
-    :cond_2c
+    :cond_2e
     :goto_13
-    if-eqz v23, :cond_12
+    if-eqz v23, :cond_14
 
     invoke-virtual {v7, v1}, LX/2pW;->A01(LX/1f3;)V
 
     goto/16 :goto_6
 
-    :cond_2d
+    :cond_2f
     iget-object v2, v1, LX/1f3;->A03:Lcom/whatsapp/jid/DeviceJid;
 
     move-object/from16 v21, v2
 
     move-object/from16 v46, v2
 
-    if-nez v2, :cond_2e
+    if-nez v2, :cond_30
 
     move-object/from16 v21, v22
 
-    :cond_2e
+    :cond_30
     iget-object v3, v1, LX/2OZ;->A03:Ljava/lang/String;
 
     iget-object v2, v0, LX/39a;->A1d:LX/2uE;
@@ -2127,13 +2145,13 @@
 
     move-result-object v2
 
-    if-nez v2, :cond_2f
+    if-nez v2, :cond_31
 
     const-string/jumbo v2, "voip/receive_message/call-offer ignoring call due to invalid registration"
 
     goto :goto_11
 
-    :cond_2f
+    :cond_31
     iget-object v2, v0, LX/39a;->A3L:Ljava/util/Set;
 
     invoke-interface {v2, v3}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
@@ -2186,12 +2204,12 @@
 
     invoke-static {v9, v10}, LX/0yK;->A1I(Ljava/lang/StringBuilder;Ljava/lang/String;)V
 
-    if-eqz v16, :cond_30
+    if-eqz v16, :cond_32
 
     invoke-virtual {v7, v1}, LX/2pW;->A01(LX/1f3;)V
 
-    :cond_30
-    if-nez v11, :cond_2b
+    :cond_32
+    if-nez v11, :cond_2d
 
     iget-object v2, v0, LX/39a;->A1e:LX/2tO;
 
@@ -2211,19 +2229,19 @@
 
     move-result v2
 
-    if-eqz v2, :cond_31
+    if-eqz v2, :cond_33
 
     iget-boolean v2, v0, LX/39a;->A3S:Z
 
-    if-eqz v2, :cond_32
+    if-eqz v2, :cond_34
 
     invoke-static {v5}, LX/0yP;->A1V(Ljava/lang/String;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_32
+    if-eqz v2, :cond_34
 
-    :cond_31
+    :cond_33
     invoke-static {v0}, LX/32Y;->A02(LX/39a;)V
 
     invoke-static/range {v56 .. v57}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -2244,7 +2262,7 @@
 
     iput-object v2, v0, LX/39a;->A0z:Ljava/lang/String;
 
-    :cond_32
+    :cond_34
     invoke-virtual {v0, v5}, LX/39a;->A06(Ljava/lang/String;)LX/2SB;
 
     move-result-object v9
@@ -2253,11 +2271,11 @@
 
     move/from16 v20, v2
 
-    if-nez v2, :cond_34
+    if-nez v2, :cond_36
 
     const/16 v49, 0x5
 
-    :cond_33
+    :cond_35
     :goto_14
     invoke-static/range {v49 .. v49}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -2303,7 +2321,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_35
+    if-eqz v2, :cond_37
 
     invoke-static {}, LX/001;->A0r()Ljava/lang/StringBuilder;
 
@@ -2315,20 +2333,20 @@
 
     const v3, 0x11174
 
-    if-ne v2, v3, :cond_2a
+    if-ne v2, v3, :cond_2c
 
     invoke-virtual {v7, v5}, LX/2pW;->A02(Ljava/lang/String;)V
 
     goto/16 :goto_12
 
-    :cond_34
+    :cond_36
     iget-object v3, v0, LX/39a;->A2x:LX/2MZ;
 
     iget-boolean v2, v3, LX/2MZ;->A01:Z
 
     const/16 v49, 0x1
 
-    if-eqz v2, :cond_33
+    if-eqz v2, :cond_35
 
     const/16 v49, 0x4
 
@@ -2338,7 +2356,7 @@
 
     cmp-long v11, v2, v18
 
-    if-lez v11, :cond_33
+    if-lez v11, :cond_35
 
     invoke-static {v2, v3}, LX/0yS;->A05(J)J
 
@@ -2360,13 +2378,13 @@
 
     iget-boolean v2, v9, LX/2SB;->A07:Z
 
-    if-eqz v2, :cond_33
+    if-eqz v2, :cond_35
 
     const/16 v49, 0x8
 
     goto :goto_14
 
-    :cond_35
+    :cond_37
     aget-object v2, v10, v6
 
     invoke-static {v2}, LX/3A6;->A07(Ljava/lang/Object;)V
@@ -2375,18 +2393,18 @@
 
     iget-object v3, v2, Lcom/whatsapp/voipcalling/CallOfferInfo;->callGroupInfo:Lcom/whatsapp/voipcalling/CallGroupInfo;
 
-    if-eqz v3, :cond_36
+    if-eqz v3, :cond_38
 
     iget-object v3, v3, Lcom/whatsapp/voipcalling/CallGroupInfo;->participants:[Lcom/whatsapp/voipcalling/CallParticipant;
 
     array-length v9, v3
 
-    :cond_36
+    :cond_38
     invoke-virtual {v8, v5, v9, v10, v6}, LX/2r7;->A01(Ljava/lang/String;IZZ)V
 
     iget-object v3, v2, Lcom/whatsapp/voipcalling/CallOfferInfo;->callGroupInfo:Lcom/whatsapp/voipcalling/CallGroupInfo;
 
-    if-eqz v3, :cond_38
+    if-eqz v3, :cond_3a
 
     iget v3, v3, Lcom/whatsapp/voipcalling/CallGroupInfo;->transactionId:I
 
@@ -2423,7 +2441,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_37
+    if-eqz v3, :cond_39
 
     iget-object v9, v0, LX/39a;->A36:LX/472;
 
@@ -2436,7 +2454,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_3a
+    if-eqz v3, :cond_3c
 
     iget-object v3, v0, LX/39a;->A2U:LX/2VH;
 
@@ -2450,7 +2468,7 @@
 
     move-result v3
 
-    if-nez v3, :cond_3a
+    if-nez v3, :cond_3c
 
     const/16 v3, 0xd22
 
@@ -2460,11 +2478,11 @@
 
     const/4 v3, 0x1
 
-    if-lt v9, v3, :cond_3a
+    if-lt v9, v3, :cond_3c
 
     iget v3, v2, Lcom/whatsapp/voipcalling/CallOfferInfo;->silenceReason:I
 
-    if-ne v3, v4, :cond_3a
+    if-ne v3, v4, :cond_3c
 
     iget-object v12, v0, LX/39a;->A2a:LX/36B;
 
@@ -2482,14 +2500,14 @@
 
     iget-object v3, v2, Lcom/whatsapp/voipcalling/CallOfferInfo;->callGroupInfo:Lcom/whatsapp/voipcalling/CallGroupInfo;
 
-    if-eqz v3, :cond_39
+    if-eqz v3, :cond_3b
 
     iget-object v10, v3, Lcom/whatsapp/voipcalling/CallGroupInfo;->participants:[Lcom/whatsapp/voipcalling/CallParticipant;
 
     array-length v9, v10
 
     :goto_17
-    if-ge v6, v9, :cond_39
+    if-ge v6, v9, :cond_3b
 
     aget-object v3, v10, v6
 
@@ -2501,22 +2519,22 @@
 
     goto :goto_17
 
-    :cond_37
+    :cond_39
     invoke-virtual/range {v16 .. v16}, Ljava/util/concurrent/FutureTask;->run()V
 
     goto :goto_16
 
-    :cond_38
+    :cond_3a
     const/4 v3, -0x1
 
     goto :goto_15
 
-    :cond_39
+    :cond_3b
     iget-object v10, v2, Lcom/whatsapp/voipcalling/CallOfferInfo;->callId:Ljava/lang/String;
 
     iget-boolean v3, v2, Lcom/whatsapp/voipcalling/CallOfferInfo;->isAudioChat:Z
 
-    if-eqz v3, :cond_3f
+    if-eqz v3, :cond_41
 
     sget-object v27, Lcom/whatsapp/voipcalling/CallState;->NONE:Lcom/whatsapp/voipcalling/CallState;
 
@@ -2583,20 +2601,20 @@
 
     invoke-virtual {v12, v5, v3, v6}, LX/36B;->A09(Ljava/lang/String;ILandroid/app/Notification;)V
 
-    :cond_3a
+    :cond_3c
     iget-boolean v3, v0, LX/39a;->A3S:Z
 
-    if-nez v3, :cond_3b
+    if-nez v3, :cond_3d
 
     invoke-static {v5}, LX/0yP;->A1V(Ljava/lang/String;)Z
 
     move-result v3
 
-    if-eqz v3, :cond_3b
+    if-eqz v3, :cond_3d
 
     invoke-virtual {v8, v5, v14}, LX/2r7;->A03(Ljava/lang/String;S)V
 
-    :cond_3b
+    :cond_3d
     move-object/from16 v3, v22
 
     iget-object v11, v3, Lcom/whatsapp/jid/DeviceJid;->userJid:Lcom/whatsapp/jid/UserJid;
@@ -2607,7 +2625,7 @@
 
     const/16 v38, 0x0
 
-    if-eqz v3, :cond_3e
+    if-eqz v3, :cond_40
 
     invoke-static {}, LX/001;->A0r()Ljava/lang/StringBuilder;
 
@@ -2636,7 +2654,7 @@
 
     iget v6, v12, LX/2xv;->A01:I
 
-    if-eqz v6, :cond_3d
+    if-eqz v6, :cond_3f
 
     invoke-static {}, LX/001;->A0r()Ljava/lang/StringBuilder;
 
@@ -2648,17 +2666,17 @@
 
     const/4 v3, 0x1
 
-    if-eq v6, v3, :cond_4b
+    if-eq v6, v3, :cond_4d
 
     const/4 v3, 0x2
 
-    if-eq v6, v3, :cond_4c
+    if-eq v6, v3, :cond_4e
 
     const/4 v10, 0x0
 
-    if-eq v6, v4, :cond_3c
+    if-eq v6, v4, :cond_3e
 
-    if-eq v6, v14, :cond_4c
+    if-eq v6, v14, :cond_4e
 
     :goto_1a
     const/4 v3, 0x0
@@ -2674,11 +2692,11 @@
 
     const/16 v4, 0x10
 
-    if-ne v9, v4, :cond_46
+    if-ne v9, v4, :cond_48
 
     goto :goto_1c
 
-    :cond_3c
+    :cond_3e
     iget-byte v3, v12, LX/2xv;->A00:B
 
     add-int/lit8 v3, v3, 0x1
@@ -2687,7 +2705,7 @@
 
     goto :goto_1b
 
-    :cond_3d
+    :cond_3f
     iget-object v3, v12, LX/2xv;->A03:Lcom/whatsapp/protocol/VoipStanzaChildNode;
 
     move-object/from16 v43, v3
@@ -2696,12 +2714,12 @@
 
     goto :goto_1a
 
-    :cond_3e
+    :cond_40
     const/4 v9, 0x0
 
     goto :goto_19
 
-    :cond_3f
+    :cond_41
     sget-object v27, Lcom/whatsapp/voipcalling/CallState;->RECEIVED_CALL:Lcom/whatsapp/voipcalling/CallState;
 
     goto/16 :goto_18
@@ -2722,11 +2740,11 @@
 
     iget-object v4, v2, Lcom/whatsapp/voipcalling/CallOfferInfo;->callGroupInfo:Lcom/whatsapp/voipcalling/CallGroupInfo;
 
-    if-nez v46, :cond_40
+    if-nez v46, :cond_42
 
     move-object/from16 v46, v22
 
-    :cond_40
+    :cond_42
     iget-boolean v8, v2, Lcom/whatsapp/voipcalling/CallOfferInfo;->isVideoCall:Z
 
     invoke-virtual {v2}, Lcom/whatsapp/voipcalling/CallOfferInfo;->isJoinableGroupCall()Z
@@ -2735,7 +2753,7 @@
 
     iget-object v2, v2, Lcom/whatsapp/voipcalling/CallOfferInfo;->groupPhash:Ljava/lang/String;
 
-    if-eqz v2, :cond_41
+    if-eqz v2, :cond_43
 
     invoke-virtual {v2}, Ljava/lang/String;->isEmpty()Z
 
@@ -2743,12 +2761,12 @@
 
     const/16 v42, 0x1
 
-    if-eqz v2, :cond_42
+    if-eqz v2, :cond_44
 
-    :cond_41
+    :cond_43
     const/16 v42, 0x0
 
-    :cond_42
+    :cond_44
     const/16 v32, 0x10
 
     iget-object v2, v0, LX/39a;->A2e:LX/36a;
@@ -2761,7 +2779,7 @@
 
     const-string v47, "enc"
 
-    if-eqz v4, :cond_43
+    if-eqz v4, :cond_45
 
     iget-object v2, v4, Lcom/whatsapp/voipcalling/CallGroupInfo;->participants:[Lcom/whatsapp/voipcalling/CallParticipant;
 
@@ -2769,12 +2787,12 @@
 
     const/16 v44, 0x1
 
-    if-gtz v2, :cond_44
+    if-gtz v2, :cond_46
 
-    :cond_43
+    :cond_45
     const/16 v44, 0x0
 
-    :cond_44
+    :cond_46
     move-object/from16 v43, v5
 
     move-object/from16 v45, v22
@@ -2783,17 +2801,17 @@
 
     invoke-static/range {v43 .. v49}, Lcom/whatsapp/voipcalling/Voip;->rejectCallWithoutCallContext(Ljava/lang/String;ZLcom/whatsapp/jid/DeviceJid;Lcom/whatsapp/jid/DeviceJid;Ljava/lang/String;II)V
 
-    if-le v3, v14, :cond_4f
+    if-le v3, v14, :cond_51
 
     iget-boolean v2, v0, LX/39a;->A3S:Z
 
-    if-eqz v2, :cond_45
+    if-eqz v2, :cond_47
 
     invoke-static {v5}, LX/0yP;->A1V(Ljava/lang/String;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_45
+    if-eqz v2, :cond_47
 
     invoke-static/range {v38 .. v38}, Lcom/whatsapp/voipcalling/Voip;->endCall(Z)V
 
@@ -2801,7 +2819,7 @@
 
     goto :goto_1d
 
-    :cond_45
+    :cond_47
     const/16 v43, 0x1
 
     :goto_1d
@@ -2849,13 +2867,13 @@
 
     iget-boolean v2, v0, LX/39a;->A3S:Z
 
-    if-eqz v2, :cond_4f
+    if-eqz v2, :cond_51
 
     invoke-static {v5}, LX/0yP;->A1V(Ljava/lang/String;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_4f
+    if-eqz v2, :cond_51
 
     invoke-static/range {v38 .. v38}, Lcom/whatsapp/voipcalling/Voip;->endCall(Z)V
 
@@ -2863,7 +2881,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    :cond_46
+    :cond_48
     invoke-virtual {v0, v11, v5}, LX/39a;->A0Y(Lcom/whatsapp/jid/UserJid;Ljava/lang/String;)V
 
     iget-object v2, v0, LX/39a;->A2P:LX/3KY;
@@ -2872,11 +2890,11 @@
 
     move-result-object v2
 
-    if-eqz v2, :cond_47
+    if-eqz v2, :cond_49
 
     iget-object v2, v2, LX/3gO;->A0G:LX/2ku;
 
-    if-eqz v2, :cond_47
+    if-eqz v2, :cond_49
 
     iget-object v2, v2, LX/2ku;->A01:Ljava/lang/String;
 
@@ -2886,25 +2904,25 @@
 
     const/16 v48, 0x0
 
-    if-eqz v2, :cond_48
+    if-eqz v2, :cond_4a
 
-    :cond_47
+    :cond_49
     const/16 v48, 0x1
 
-    :cond_48
+    :cond_4a
     const/16 v50, 0x0
 
-    if-eqz v9, :cond_4a
+    if-eqz v9, :cond_4c
 
     const/16 v50, 0x1
 
     const/4 v2, 0x5
 
-    if-eq v9, v2, :cond_49
+    if-eq v9, v2, :cond_4b
 
     const/16 v2, 0xf
 
-    if-ne v9, v2, :cond_4a
+    if-ne v9, v2, :cond_4c
 
     const-string/jumbo v51, "tos"
 
@@ -2927,7 +2945,7 @@
 
     move-result v4
 
-    if-eqz v4, :cond_4f
+    if-eqz v4, :cond_51
 
     invoke-static {}, LX/001;->A0r()Ljava/lang/StringBuilder;
 
@@ -2939,47 +2957,47 @@
 
     const v2, 0x11174
 
-    if-eq v4, v2, :cond_4b
+    if-eq v4, v2, :cond_4d
 
     iget-boolean v2, v0, LX/39a;->A3S:Z
 
-    if-eqz v2, :cond_4f
+    if-eqz v2, :cond_51
 
     invoke-static {v5}, LX/0yP;->A1V(Ljava/lang/String;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_4f
+    if-eqz v2, :cond_51
 
     invoke-static/range {v38 .. v38}, Lcom/whatsapp/voipcalling/Voip;->endCall(Z)V
 
     goto :goto_20
 
-    :cond_49
+    :cond_4b
     const-string v51, "busy"
 
     goto :goto_1e
 
-    :cond_4a
+    :cond_4c
     const/16 v51, 0x0
 
     goto :goto_1e
 
-    :cond_4b
+    :cond_4d
     invoke-virtual {v7, v5}, LX/2pW;->A02(Ljava/lang/String;)V
 
     goto :goto_1f
 
-    :cond_4c
+    :cond_4e
     invoke-static {v5}, LX/0yP;->A1V(Ljava/lang/String;)Z
 
     move-result v2
 
-    if-nez v2, :cond_4e
+    if-nez v2, :cond_50
 
     invoke-static {v5}, Lcom/whatsapp/voipcalling/Voip;->clearVoipParam(Ljava/lang/String;)V
 
-    :cond_4d
+    :cond_4f
     :goto_1f
     const/16 v2, 0x1f10
 
@@ -2987,17 +3005,17 @@
 
     goto :goto_20
 
-    :cond_4e
+    :cond_50
     iget-boolean v2, v0, LX/39a;->A3S:Z
 
-    if-eqz v2, :cond_4d
+    if-eqz v2, :cond_4f
 
     invoke-static/range {v38 .. v38}, Lcom/whatsapp/voipcalling/Voip;->endCall(Z)V
 
     goto :goto_1f
 
     :catchall_0
-    :cond_4f
+    :cond_51
     :goto_20
     :try_start_2
     invoke-virtual/range {v16 .. v16}, Ljava/util/concurrent/FutureTask;->get()Ljava/lang/Object;
@@ -3055,7 +3073,7 @@
 
     move-result v2
 
-    if-nez v2, :cond_50
+    if-nez v2, :cond_52
 
     const/16 v2, 0xffe
 
@@ -3063,18 +3081,18 @@
 
     move-result v2
 
-    if-eqz v2, :cond_2c
+    if-eqz v2, :cond_2e
 
-    :cond_50
+    :cond_52
     iget-object v4, v1, LX/1f3;->A05:Ljava/lang/String;
 
-    if-eqz v4, :cond_2c
+    if-eqz v4, :cond_2e
 
     invoke-virtual {v4}, Ljava/lang/String;->isEmpty()Z
 
     move-result v2
 
-    if-nez v2, :cond_2c
+    if-nez v2, :cond_2e
 
     iget-object v3, v0, LX/39a;->A2P:LX/3KY;
 
@@ -3092,7 +3110,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_2c
+    if-nez v0, :cond_2e
 
     iput-object v4, v2, LX/3gO;->A0c:Ljava/lang/String;
 
@@ -3100,12 +3118,12 @@
 
     goto/16 :goto_13
 
-    :cond_51
+    :cond_53
     const/16 v22, 0x0
 
     goto/16 :goto_10
 
-    :cond_52
+    :cond_54
     iget-object v5, v0, LX/39a;->A2p:LX/1Pt;
 
     const/16 v3, 0x1079
@@ -3116,26 +3134,26 @@
 
     move-result v2
 
-    if-nez v27, :cond_53
+    if-nez v27, :cond_55
 
     and-int/lit8 v2, v2, 0x1
 
-    if-nez v2, :cond_54
+    if-nez v2, :cond_56
 
     const-string/jumbo v2, "voip/service/peekIncomingOffer: Ignoring 1:1 voice call offer"
 
     goto/16 :goto_e
 
-    :cond_53
+    :cond_55
     and-int/lit8 v2, v2, 0x2
 
-    if-nez v2, :cond_54
+    if-nez v2, :cond_56
 
     const-string/jumbo v2, "voip/service/peekIncomingOffer: Ignoring 1:1 video call offer"
 
     goto/16 :goto_e
 
-    :cond_54
+    :cond_56
     iget-wide v5, v1, LX/1f3;->A01:J
 
     iget-wide v2, v1, LX/1f3;->A00:J
@@ -3165,20 +3183,20 @@
 
     move-result v2
 
-    if-nez v2, :cond_56
+    if-nez v2, :cond_58
 
     goto/16 :goto_8
 
-    :cond_55
+    :cond_57
     iget-object v2, v10, LX/2xv;->A05:[B
 
-    if-eqz v2, :cond_63
+    if-eqz v2, :cond_65
 
     iget-object v2, v10, LX/2xv;->A03:Lcom/whatsapp/protocol/VoipStanzaChildNode;
 
     move-object/from16 v43, v2
 
-    :cond_56
+    :cond_58
     const-string/jumbo v3, "scheduled-id"
 
     move-object/from16 v2, v26
@@ -3189,7 +3207,7 @@
 
     const/4 v6, 0x0
 
-    if-eqz v2, :cond_58
+    if-eqz v2, :cond_5a
 
     iget-object v5, v2, LX/3DX;->A03:Ljava/lang/String;
 
@@ -3202,7 +3220,7 @@
 
     move-result-object v2
 
-    if-eqz v2, :cond_57
+    if-eqz v2, :cond_59
 
     iget-object v2, v2, LX/3DX;->A01:Lcom/whatsapp/jid/Jid;
 
@@ -3210,14 +3228,14 @@
 
     move-result-object v6
 
-    :cond_57
+    :cond_59
     invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
-    if-nez v2, :cond_1d
+    if-nez v2, :cond_1f
 
-    if-eqz v6, :cond_1d
+    if-eqz v6, :cond_1f
 
     invoke-virtual {v6}, Lcom/whatsapp/jid/Jid;->getRawString()Ljava/lang/String;
 
@@ -3241,7 +3259,7 @@
 
     goto/16 :goto_8
 
-    :cond_58
+    :cond_5a
     move-object v5, v6
 
     goto :goto_22
@@ -3253,7 +3271,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_1d
+    if-eqz v3, :cond_1f
 
     iget-object v3, v0, LX/39a;->A2t:LX/2sI;
 
@@ -3263,14 +3281,14 @@
 
     move-result-object v8
 
-    if-eqz v8, :cond_59
+    if-eqz v8, :cond_5b
 
     invoke-virtual {v8, v4}, LX/2su;->A03(I)V
 
-    :cond_59
+    :cond_5b
     iget-object v6, v1, LX/1f3;->A03:Lcom/whatsapp/jid/DeviceJid;
 
-    if-nez v6, :cond_5a
+    if-nez v6, :cond_5c
 
     iget-object v3, v0, LX/39a;->A1d:LX/2uE;
 
@@ -3278,23 +3296,23 @@
 
     move-result-object v6
 
-    :cond_5a
+    :cond_5c
     iget-object v5, v1, LX/2OZ;->A00:Lcom/whatsapp/jid/Jid;
 
     instance-of v3, v5, Lcom/whatsapp/jid/DeviceJid;
 
-    if-eqz v3, :cond_5c
+    if-eqz v3, :cond_5e
 
     check-cast v5, Lcom/whatsapp/jid/DeviceJid;
 
     :goto_23
     invoke-static {v5}, LX/3A6;->A07(Ljava/lang/Object;)V
 
-    if-eqz v8, :cond_5b
+    if-eqz v8, :cond_5d
 
     invoke-virtual {v8, v2}, LX/2su;->A03(I)V
 
-    :cond_5b
+    :cond_5d
     iget-object v8, v0, LX/39a;->A22:LX/2hB;
 
     iget-object v4, v1, LX/2OZ;->A03:Ljava/lang/String;
@@ -3341,7 +3359,7 @@
 
     goto/16 :goto_8
 
-    :cond_5c
+    :cond_5e
     const/4 v5, 0x0
 
     goto :goto_23
@@ -3353,7 +3371,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_1d
+    if-eqz v3, :cond_1f
 
     iget-object v3, v0, LX/39a;->A2t:LX/2sI;
 
@@ -3363,14 +3381,14 @@
 
     move-result-object v5
 
-    if-eqz v5, :cond_5d
+    if-eqz v5, :cond_5f
 
     invoke-virtual {v5, v4}, LX/2su;->A03(I)V
 
-    :cond_5d
+    :cond_5f
     iget-object v8, v1, LX/1f3;->A03:Lcom/whatsapp/jid/DeviceJid;
 
-    if-nez v8, :cond_5e
+    if-nez v8, :cond_60
 
     iget-object v3, v0, LX/39a;->A1d:LX/2uE;
 
@@ -3378,23 +3396,23 @@
 
     move-result-object v8
 
-    :cond_5e
+    :cond_60
     iget-object v6, v1, LX/2OZ;->A00:Lcom/whatsapp/jid/Jid;
 
     instance-of v3, v6, Lcom/whatsapp/jid/DeviceJid;
 
-    if-eqz v3, :cond_60
+    if-eqz v3, :cond_62
 
     check-cast v6, Lcom/whatsapp/jid/DeviceJid;
 
     :goto_24
     invoke-static {v6}, LX/3A6;->A07(Ljava/lang/Object;)V
 
-    if-eqz v5, :cond_5f
+    if-eqz v5, :cond_61
 
     invoke-virtual {v5, v2}, LX/2su;->A03(I)V
 
-    :cond_5f
+    :cond_61
     iget-object v9, v0, LX/39a;->A22:LX/2hB;
 
     iget-object v5, v1, LX/2OZ;->A03:Ljava/lang/String;
@@ -3443,7 +3461,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_1d
+    if-eqz v2, :cond_1f
 
     iget-object v2, v1, LX/1f3;->A06:Ljava/lang/String;
 
@@ -3455,12 +3473,12 @@
 
     goto/16 :goto_8
 
-    :cond_60
+    :cond_62
     const/4 v6, 0x0
 
     goto :goto_24
 
-    :cond_61
+    :cond_63
     iget-object v4, v6, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v4, LX/2Q8;
@@ -3473,7 +3491,7 @@
 
     sparse-switch v0, :sswitch_data_1
 
-    :cond_62
+    :cond_64
     :goto_25
     iget-object v2, v4, LX/2Q8;->A01:Lcom/whatsapp/jid/Jid;
 
@@ -3488,7 +3506,7 @@
     :goto_26
     const v0, 0x11174
 
-    if-ne v1, v0, :cond_12
+    if-ne v1, v0, :cond_14
 
     const/4 v0, 0x0
 
@@ -3504,7 +3522,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_62
+    if-eqz v0, :cond_64
 
     iget-object v1, v4, LX/2Q8;->A02:Ljava/lang/String;
 
@@ -3514,7 +3532,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_62
+    if-nez v0, :cond_64
 
     const-string/jumbo v0, "onCallIncomingAck: no matched request found, link_create_ack dropped"
 
@@ -3530,7 +3548,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_62
+    if-eqz v0, :cond_64
 
     const/4 v1, 0x4
 
@@ -3543,7 +3561,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_62
+    if-eqz v0, :cond_64
 
     const/4 v1, 0x3
 
@@ -3556,7 +3574,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_62
+    if-eqz v0, :cond_64
 
     const/4 v1, 0x2
 
@@ -3569,7 +3587,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_62
+    if-eqz v0, :cond_64
 
     const/4 v1, 0x1
 
@@ -3582,7 +3600,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_62
+    if-eqz v0, :cond_64
 
     const/4 v1, 0x0
 
@@ -3596,13 +3614,13 @@
     iget-object v5, v0, LX/39a;->A0U:LX/2Kj;
 
     :goto_2a
-    if-eqz v5, :cond_62
+    if-eqz v5, :cond_64
 
     iget-wide v0, v5, LX/2Kj;->A00:J
 
     cmp-long v2, v0, v8
 
-    if-nez v2, :cond_62
+    if-nez v2, :cond_64
 
     iget-object v1, v4, LX/2Q8;->A02:Ljava/lang/String;
 
@@ -3612,7 +3630,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_62
+    if-eqz v0, :cond_64
 
     :goto_2b
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -3637,7 +3655,7 @@
     iget-object v5, v0, LX/39a;->A0S:LX/2Kj;
 
     :goto_2c
-    if-eqz v5, :cond_62
+    if-eqz v5, :cond_64
 
     iget-object v1, v4, LX/2Q8;->A02:Ljava/lang/String;
 
@@ -3647,13 +3665,13 @@
 
     move-result v0
 
-    if-eqz v0, :cond_62
+    if-eqz v0, :cond_64
 
     iget-wide v1, v5, LX/2Kj;->A00:J
 
     cmp-long v0, v1, v8
 
-    if-nez v0, :cond_62
+    if-nez v0, :cond_64
 
     goto :goto_2b
 
@@ -3662,7 +3680,7 @@
 
     goto :goto_2a
 
-    :cond_63
+    :cond_65
     invoke-virtual {v7, v14}, LX/2pW;->A02(Ljava/lang/String;)V
 
     goto/16 :goto_6
@@ -3720,13 +3738,13 @@
 
     move-result-object v3
 
-    :cond_64
+    :cond_66
     :goto_2d
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    if-eqz v0, :cond_65
+    if-eqz v0, :cond_67
 
     invoke-static {v3}, LX/0yP;->A0R(Ljava/util/Iterator;)LX/37v;
 
@@ -3736,19 +3754,19 @@
 
     move-result v0
 
-    if-eqz v0, :cond_64
+    if-eqz v0, :cond_66
 
     invoke-virtual {v1}, LX/37v;->A0s()LX/2qt;
 
     move-result-object v0
 
-    if-eqz v0, :cond_64
+    if-eqz v0, :cond_66
 
     invoke-virtual {v0}, LX/2qt;->A03()Ljava/lang/Long;
 
     move-result-object v0
 
-    if-eqz v0, :cond_64
+    if-eqz v0, :cond_66
 
     invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
 
@@ -3760,13 +3778,13 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_64
+    if-eqz v0, :cond_66
 
     invoke-virtual {v5, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
 
     goto :goto_2d
 
-    :cond_65
+    :cond_67
     invoke-static {v5}, LX/3mv;->A0N(Ljava/lang/Iterable;)Ljava/util/Set;
 
     move-result-object v0
@@ -3841,7 +3859,7 @@
 
     iget-object v0, v0, Lcom/whatsapp/chatlock/dialogs/ChatLockQuickAddHelperBottomSheet;->A04:LX/2tD;
 
-    if-eqz v0, :cond_67
+    if-eqz v0, :cond_69
 
     invoke-virtual {v0}, LX/2tD;->A00()LX/8Fv;
 
@@ -3851,20 +3869,20 @@
 
     move-result v0
 
-    if-lez v0, :cond_66
+    if-lez v0, :cond_68
 
     invoke-virtual {v2, v1}, Landroid/view/View;->setVisibility(I)V
 
     return-void
 
-    :cond_66
+    :cond_68
     const/16 v0, 0x8
 
     invoke-virtual {v2, v0}, Landroid/view/View;->setVisibility(I)V
 
     return-void
 
-    :cond_67
+    :cond_69
     const-string v0, "deviceManager"
 
     invoke-static {v0}, LX/0yL;->A0T(Ljava/lang/String;)Ljava/lang/RuntimeException;
@@ -3895,7 +3913,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_68
+    if-eqz v0, :cond_6a
 
     invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -3937,7 +3955,7 @@
 
     goto :goto_2f
 
-    :cond_68
+    :cond_6a
     iget-object v0, v7, LX/5dD;->A09:LX/1cR;
 
     invoke-virtual {v0}, LX/1cR;->A07()V
@@ -3986,9 +4004,9 @@
 
     iget-object v2, v4, LX/3gO;->A0I:LX/1Za;
 
-    if-eqz v2, :cond_6a
+    if-eqz v2, :cond_6c
 
-    if-eqz v7, :cond_69
+    if-eqz v7, :cond_6b
 
     const-string v1, "contact_data_phone"
 
@@ -3998,7 +4016,7 @@
 
     invoke-virtual {v3, v1, v0}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_69
+    :cond_6b
     const-string v1, "contact_data_lid"
 
     iget-object v0, v2, Lcom/whatsapp/jid/Jid;->user:Ljava/lang/String;
@@ -4017,7 +4035,7 @@
 
     invoke-virtual {v3, v1, v0}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_6a
+    :cond_6c
     invoke-virtual {v5, v3}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
     invoke-virtual {v6, v5}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
@@ -4077,13 +4095,13 @@
 
     move-result-object v1
 
-    if-nez v1, :cond_6b
+    if-nez v1, :cond_6d
 
     invoke-virtual {v0, v2}, LX/33I;->A04(LX/1ZO;)V
 
     return-void
 
-    :cond_6b
+    :cond_6d
     iget-object v0, v4, LX/12V;->A00:LX/08S;
 
     invoke-virtual {v0, v1}, LX/0Y8;->A0F(Ljava/lang/Object;)V
@@ -4140,7 +4158,7 @@
     :try_start_3
     iget-object v0, v11, LX/6lO;->A07:Landroid/hardware/Camera;
 
-    if-eqz v0, :cond_82
+    if-eqz v0, :cond_84
 
     const/4 v2, 0x0
     :try_end_3
@@ -4151,7 +4169,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_6c
+    if-nez v0, :cond_6e
 
     iget-object v0, v11, LX/6lO;->A07:Landroid/hardware/Camera;
 
@@ -4161,7 +4179,7 @@
 
     iput-boolean v0, v11, LX/6lO;->A0M:Z
 
-    :cond_6c
+    :cond_6e
     iget-object v0, v11, LX/6lO;->A07:Landroid/hardware/Camera;
 
     invoke-virtual {v0, v1}, Landroid/hardware/Camera;->setPreviewDisplay(Landroid/view/SurfaceHolder;)V
@@ -4242,7 +4260,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_6d
+    if-eqz v0, :cond_6f
 
     iget-object v0, v5, LX/2by;->A02:LX/36d;
 
@@ -4258,7 +4276,7 @@
 
     invoke-static {v1, v0, v2, v3}, LX/0yL;->A0s(Landroid/content/SharedPreferences$Editor;Ljava/lang/String;J)V
 
-    :cond_6d
+    :cond_6f
     iget-object v0, v4, LX/3gM;->A0E:LX/3DL;
 
     iget-object v0, v0, LX/3DL;->A02:Ljava/lang/String;
@@ -4404,17 +4422,17 @@
 
     const/4 v4, 0x1
 
-    if-eqz v0, :cond_77
+    if-eqz v0, :cond_79
 
     iget-object v0, v5, Lcom/whatsapp/calling/spam/CallSpamActivity$ReportSpamOrBlockDialogFragment;->A01:Landroid/widget/CheckBox;
 
-    if-eqz v0, :cond_72
+    if-eqz v0, :cond_74
 
     invoke-virtual {v0}, Landroid/widget/CompoundButton;->isChecked()Z
 
     move-result v0
 
-    if-eqz v0, :cond_72
+    if-eqz v0, :cond_74
 
     iget-object v3, v5, Lcom/whatsapp/calling/spam/CallSpamActivity$ReportSpamOrBlockDialogFragment;->A0A:LX/2q0;
 
@@ -4451,7 +4469,7 @@
 
     iget-boolean v2, v5, Lcom/whatsapp/calling/spam/CallSpamActivity$ReportSpamOrBlockDialogFragment;->A0M:Z
 
-    if-eqz v2, :cond_71
+    if-eqz v2, :cond_73
 
     const-string/jumbo v26, "video"
 
@@ -4494,17 +4512,17 @@
 
     invoke-static {v13, v2, v11}, LX/0yK;->A1Q(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/Object;)V
 
-    if-eqz v10, :cond_75
+    if-eqz v10, :cond_77
 
-    if-eqz v3, :cond_75
+    if-eqz v3, :cond_77
 
     invoke-static {v9}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
-    if-nez v2, :cond_75
+    if-nez v2, :cond_77
 
-    if-eqz v8, :cond_75
+    if-eqz v8, :cond_77
 
     iget-object v13, v6, LX/2Oi;->A03:LX/2RF;
 
@@ -4516,18 +4534,18 @@
 
     move-object/from16 v20, v10
 
-    if-eqz v12, :cond_6e
+    if-eqz v12, :cond_70
 
     move-object/from16 v20, v3
 
-    :cond_6e
+    :cond_70
     const/16 v21, 0x0
 
-    if-eqz v11, :cond_6f
+    if-eqz v11, :cond_71
 
     move-object/from16 v21, v10
 
-    :cond_6f
+    :cond_71
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v23
@@ -4575,7 +4593,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_73
+    if-eqz v0, :cond_75
 
     invoke-static {v11}, LX/0yP;->A0R(Ljava/util/Iterator;)LX/37v;
 
@@ -4593,11 +4611,11 @@
 
     const/4 v0, 0x1
 
-    if-eqz v2, :cond_70
+    if-eqz v2, :cond_72
 
     const/4 v0, 0x0
 
-    :cond_70
+    :cond_72
     new-instance v8, LX/1qu;
 
     invoke-direct {v8, v10, v0}, LX/1qu;-><init>(Lcom/whatsapp/jid/Jid;I)V
@@ -4616,12 +4634,12 @@
 
     goto :goto_35
 
-    :cond_71
+    :cond_73
     const-string v26, "audio"
 
     goto/16 :goto_34
 
-    :cond_72
+    :cond_74
     iget-object v3, v5, Lcom/whatsapp/calling/spam/CallSpamActivity$ReportSpamOrBlockDialogFragment;->A0A:LX/2q0;
 
     iget-object v2, v5, Lcom/whatsapp/calling/spam/CallSpamActivity$ReportSpamOrBlockDialogFragment;->A0J:Ljava/lang/String;
@@ -4640,7 +4658,7 @@
 
     goto/16 :goto_33
 
-    :cond_73
+    :cond_75
     iget-object v0, v3, LX/2YR;->A00:LX/36T;
 
     invoke-static {v0}, LX/1qn;->A00(LX/36T;)LX/1qn;
@@ -4673,7 +4691,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_74
+    if-eqz v0, :cond_76
 
     invoke-virtual {v15}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
 
@@ -4684,20 +4702,20 @@
 
     move-result v0
 
-    if-eqz v0, :cond_74
+    if-eqz v0, :cond_76
 
     invoke-static {v8, v1}, LX/2We;->A0E(LX/2se;Ljava/util/Iterator;)V
 
     goto :goto_36
 
-    :cond_74
+    :cond_76
     const-wide/16 v0, 0x5
 
     invoke-static {v13, v2, v3, v0, v1}, LX/3A2;->A0Q(Ljava/util/List;JJ)Z
 
     move-result v0
 
-    if-eqz v0, :cond_76
+    if-eqz v0, :cond_78
 
     invoke-interface {v13}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -4708,20 +4726,20 @@
 
     move-result v0
 
-    if-eqz v0, :cond_76
+    if-eqz v0, :cond_78
 
     invoke-static {v8, v1}, LX/2We;->A0E(LX/2se;Ljava/util/Iterator;)V
 
     goto :goto_37
 
-    :cond_75
+    :cond_77
     const-string v0, "SpamXmppMethods/sendSpamCallReport; invalid request, missing fields; skipping..."
 
     invoke-static {v0}, Lcom/whatsapp/util/Log;->i(Ljava/lang/String;)V
 
     goto :goto_38
 
-    :cond_76
+    :cond_78
     invoke-static {v8, v12}, LX/0yN;->A19(LX/2se;LX/2We;)V
 
     invoke-static {v8, v9}, LX/2se;->A06(LX/2se;LX/2se;)V
@@ -4765,9 +4783,9 @@
 
     invoke-virtual {v2, v0, v1}, LX/31I;->A03(LX/3gO;LX/1Za;)V
 
-    if-eqz v16, :cond_78
+    if-eqz v16, :cond_7a
 
-    :cond_77
+    :cond_79
     iget-object v6, v5, Lcom/whatsapp/calling/spam/CallSpamActivity$ReportSpamOrBlockDialogFragment;->A03:LX/2uD;
 
     iget-object v2, v5, Lcom/whatsapp/calling/spam/CallSpamActivity$ReportSpamOrBlockDialogFragment;->A0C:Lcom/whatsapp/jid/UserJid;
@@ -4792,7 +4810,7 @@
 
     invoke-virtual/range {v6 .. v14}, LX/2uD;->A0E(Landroid/app/Activity;LX/1uX;LX/3gO;Lcom/whatsapp/jid/UserJid;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_78
+    :cond_7a
     iget-object v1, v5, Lcom/whatsapp/calling/spam/CallSpamActivity$ReportSpamOrBlockDialogFragment;->A07:LX/2p0;
 
     iget-object v0, v5, Lcom/whatsapp/calling/spam/CallSpamActivity$ReportSpamOrBlockDialogFragment;->A0C:Lcom/whatsapp/jid/UserJid;
@@ -4890,7 +4908,7 @@
 
     move-result-object v2
 
-    if-eqz v2, :cond_79
+    if-eqz v2, :cond_7b
 
     invoke-virtual {v2, v1}, LX/3gM;->A0C(I)V
 
@@ -4908,7 +4926,7 @@
     :try_end_c
     .catchall {:try_start_c .. :try_end_c} :catchall_3
 
-    :cond_79
+    :cond_7b
     monitor-exit v3
 
     return-void
@@ -5028,7 +5046,7 @@
 
     move-result-object v17
 
-    if-eqz v0, :cond_7b
+    if-eqz v0, :cond_7d
 
     sget-object v2, LX/1ug;->A03:LX/1ug;
 
@@ -5039,7 +5057,7 @@
 
     const/4 v9, 0x0
 
-    if-eqz v0, :cond_7a
+    if-eqz v0, :cond_7c
 
     invoke-virtual {v0}, LX/2qt;->A01()I
 
@@ -5054,22 +5072,22 @@
 
     iget-boolean v0, v13, LX/31r;->A02:Z
 
-    if-eqz v0, :cond_82
+    if-eqz v0, :cond_84
 
     goto :goto_3c
 
-    :cond_7a
+    :cond_7c
     move-object v1, v9
 
     goto :goto_3b
 
-    :cond_7b
+    :cond_7d
     sget-object v2, LX/1ug;->A02:LX/1ug;
 
     goto :goto_3a
 
     :goto_3c
-    if-eqz v1, :cond_82
+    if-eqz v1, :cond_84
 
     iget-object v8, v11, LX/2XB;->A01:LX/2BX;
 
@@ -5090,7 +5108,7 @@
 
     move-result v12
 
-    if-eq v12, v0, :cond_7c
+    if-eq v12, v0, :cond_7e
 
     const-string v15, "comment_deletes"
 
@@ -5105,7 +5123,7 @@
 
     goto :goto_3e
 
-    :cond_7c
+    :cond_7e
     const-string v15, "comments"
 
     goto :goto_3d
@@ -5133,7 +5151,7 @@
 
     const/16 v16, 0x0
 
-    if-nez v0, :cond_7d
+    if-nez v0, :cond_7f
 
     const-string v0, "CommentsDailyActionLoggingStore/incrementCount: table does not exist"
 
@@ -5153,7 +5171,7 @@
     :try_end_12
     .catchall {:try_start_12 .. :try_end_12} :catchall_8
 
-    :cond_7d
+    :cond_7f
     :try_start_13
     invoke-static {}, LX/001;->A0r()Ljava/lang/StringBuilder;
 
@@ -5199,13 +5217,13 @@
 
     invoke-virtual {v3}, LX/3fu;->A00()V
 
-    if-eqz v0, :cond_7e
+    if-eqz v0, :cond_80
 
     const/16 v16, 0x1
     :try_end_13
     .catchall {:try_start_13 .. :try_end_13} :catchall_4
 
-    :cond_7e
+    :cond_80
     :try_start_14
     invoke-virtual {v3}, LX/3fu;->close()V
     :try_end_14
@@ -5219,7 +5237,7 @@
     :try_start_16
     monitor-exit v8
 
-    if-nez v16, :cond_82
+    if-nez v16, :cond_84
 
     goto :goto_40
 
@@ -5229,13 +5247,13 @@
     :goto_40
     iget-object v3, v13, LX/31r;->A00:LX/1Za;
 
-    if-eqz v3, :cond_7f
+    if-eqz v3, :cond_81
 
     invoke-virtual {v3}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v2
 
-    if-eqz v2, :cond_7f
+    if-eqz v2, :cond_81
 
     invoke-static {}, LX/001;->A0r()Ljava/lang/StringBuilder;
 
@@ -5257,10 +5275,10 @@
 
     move-result-object v9
 
-    :cond_7f
+    :cond_81
     check-cast v3, LX/1ZZ;
 
-    if-eqz v3, :cond_80
+    if-eqz v3, :cond_82
 
     iget-object v0, v11, LX/2XB;->A00:LX/36U;
 
@@ -5285,13 +5303,13 @@
 
     goto :goto_42
 
-    :cond_80
+    :cond_82
     const/4 v0, 0x0
 
     goto :goto_41
 
     :goto_42
-    if-eqz v9, :cond_82
+    if-eqz v9, :cond_84
 
     invoke-virtual {v11, v10}, LX/2XB;->A00(LX/37v;)Ljava/lang/String;
 
@@ -5301,13 +5319,13 @@
 
     const/4 v2, 0x0
 
-    if-eq v12, v2, :cond_81
+    if-eq v12, v2, :cond_83
 
     goto :goto_43
     :try_end_16
     .catchall {:try_start_16 .. :try_end_16} :catchall_9
 
-    :cond_81
+    :cond_83
     :try_start_17
     const-string v12, "comments"
 
@@ -5418,7 +5436,7 @@
     :try_end_1f
     .catchall {:try_start_1f .. :try_end_1f} :catchall_9
 
-    :cond_82
+    :cond_84
     :goto_45
     monitor-exit v11
 
@@ -5431,7 +5449,7 @@
 
     throw v0
 
-    :cond_83
+    :cond_85
     const-string v0, "chatLockLogger"
 
     invoke-static {v0}, LX/0yL;->A0T(Ljava/lang/String;)Ljava/lang/RuntimeException;
@@ -5440,7 +5458,7 @@
 
     throw v0
 
-    :cond_84
+    :cond_86
     invoke-virtual {v4, v7}, LX/39a;->A06(Ljava/lang/String;)LX/2SB;
 
     move-result-object v1

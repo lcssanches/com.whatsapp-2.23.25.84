@@ -629,7 +629,6 @@
     if-eqz v2, :cond_12
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_2
 
     :try_start_6
     invoke-virtual {v9}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;

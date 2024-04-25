@@ -15647,6 +15647,12 @@
 .method public A0u(LX/1Za;Ljava/lang/Long;)Z
     .locals 8
 
+    const-string/jumbo v0, "status@broadcast"
+
+    invoke-static {v0}, LX/1ZS;->A00(Ljava/lang/String;)LX/1ZS;
+
+    move-result-object p1
+
     iget-object v1, p0, LX/3S5;->A0G:LX/2tG;
 
     invoke-static {p1}, LX/352;->A02(Lcom/whatsapp/jid/Jid;)Lcom/whatsapp/jid/UserJid;

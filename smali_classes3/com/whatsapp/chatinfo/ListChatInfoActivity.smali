@@ -1051,6 +1051,10 @@
 
     move-result v6
 
+    invoke-static {v6}, Lcom/Lzm/Settings/Tools/Choice/PrivacyUtils;->Broadcast(I)I
+
+    move-result v6
+
     iget-object v5, p0, Lcom/whatsapp/chatinfo/ListChatInfoActivity;->A0j:Ljava/util/ArrayList;
 
     invoke-virtual {v5}, Ljava/util/AbstractCollection;->size()I

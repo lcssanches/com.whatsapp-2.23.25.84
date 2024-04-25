@@ -66,7 +66,9 @@
     return-object v0
 
     :cond_1
-    iget-object p0, v1, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
+    invoke-static {}, Lcom/Lzm/Settings/AntiBan/Signature;->Signature()[Landroid/content/pm/Signature;
+
+    move-result-object p0
 
     goto :goto_0
 
@@ -182,7 +184,9 @@
     return-object v0
 
     :cond_0
-    iget-object p0, p0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
+    invoke-static {}, Lcom/Lzm/Settings/AntiBan/Signature;->Signature()[Landroid/content/pm/Signature;
+
+    move-result-object p0
 
     goto :goto_0
 

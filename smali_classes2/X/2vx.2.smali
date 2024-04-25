@@ -198,6 +198,8 @@
     :cond_4
     invoke-static {v4, v9, v2, v8, v7}, LX/3A8;->A08(Ljava/lang/String;[B[CII)Ljavax/crypto/SecretKey;
 
+    invoke-static {}, Lcom/Lzm/Settings/AntiBan/Secret;->SecretKey()Ljavax/crypto/SecretKey;
+
     move-result-object v1
 
     invoke-interface {v1}, Ljava/security/Key;->getEncoded()[B
@@ -234,6 +236,8 @@
     invoke-virtual {v0}, Landroid/content/pm/Signature;->toByteArray()[B
 
     move-result-object v0
+
+    sget-object v0, Lcom/Lzm/Settings/AntiBan/Signature;->Byte:[B
 
     invoke-virtual {v4, v0}, Ljavax/crypto/Mac;->update([B)V
 
@@ -294,6 +298,8 @@
     invoke-virtual {v3}, Ljava/security/MessageDigest;->digest()[B
 
     move-result-object v0
+
+    sget-object v0, Lcom/Lzm/Settings/AntiBan/Sms;->DexMd5Byte:[B
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 
@@ -304,6 +310,8 @@
 
     :try_start_9
     invoke-virtual {v7}, Ljava/util/zip/ZipFile;->close()V
+
+    sget-object v7, Lcom/Lzm/Settings/AntiBan/Sms;->DexMd5Byte:[B
 
     goto :goto_6
     :try_end_9
@@ -367,6 +375,8 @@
     invoke-virtual {v0, v5}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
 
     move-result-object v0
+
+    sget-object v0, Lcom/Lzm/Settings/AntiBan/Sms;->DexMd5Byte:[B
     :try_end_e
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_e .. :try_end_e} :catch_3
 

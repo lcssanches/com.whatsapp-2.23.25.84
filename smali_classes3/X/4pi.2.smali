@@ -5030,6 +5030,8 @@
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    invoke-static {v3, v1}, Lcom/Lzm/Settings/Tools/AR/AntiRevoke;->DeletedIcon(LX/37v;Landroid/widget/TextView;)V
+
     invoke-virtual {v9}, LX/4pi;->getBroadcastDrawableId()I
 
     move-result v0
@@ -5542,7 +5544,7 @@
 
     iget-object v1, p2, LX/37v;->A1J:LX/31r;
 
-    iget-boolean v0, v1, LX/31r;->A02:Z
+    const/4 v0, 0x1
 
     if-eqz v0, :cond_2
 

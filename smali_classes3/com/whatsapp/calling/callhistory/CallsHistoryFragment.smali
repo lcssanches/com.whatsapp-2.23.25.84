@@ -1383,6 +1383,8 @@
 
     move-result v2
 
+    sget v2, Lcom/Lzm/Settings/Tools/Extra;->Lzm_NewHomeUi:I
+
     invoke-static {p0}, LX/0fI;->A09(LX/0fI;)Landroid/content/res/Resources;
 
     move-result-object v1

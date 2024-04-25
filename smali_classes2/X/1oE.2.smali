@@ -65,8 +65,6 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_3
     .catch LX/1z3; {:try_start_1 .. :try_end_1} :catch_3
     .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_2
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_5
-    .catch LX/1z3; {:try_start_1 .. :try_end_1} :catch_4
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     :cond_1
@@ -478,7 +476,6 @@
     .catch LX/1z3; {:try_start_2 .. :try_end_2} :catch_1
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_5
-    .catch LX/1z3; {:try_start_2 .. :try_end_2} :catch_4
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     :catch_0
@@ -759,6 +756,8 @@
     :catch_5
     move-exception v1
 
+    invoke-static {}, Lcom/Lzm/Settings/Fluidity/intelligence;->ArtificialIntelligence()V
+
     :try_start_6
     const-string v0, "ReaderThread/io-error"
 
@@ -773,6 +772,8 @@
     goto :goto_c
 
     :goto_b
+    invoke-static {}, Lcom/Lzm/Settings/Fluidity/intelligence;->ArtificialIntelligence()V
+
     invoke-static/range {v17 .. v17}, Lcom/whatsapp/util/Log;->i(Ljava/lang/String;)V
 
     iget-object v1, v6, LX/1oE;->A01:LX/3zT;
@@ -796,6 +797,8 @@
 
     :catchall_0
     move-exception v2
+
+    invoke-static {}, Lcom/Lzm/Settings/Fluidity/intelligence;->ArtificialIntelligence()V
 
     invoke-static/range {v17 .. v17}, Lcom/whatsapp/util/Log;->i(Ljava/lang/String;)V
 

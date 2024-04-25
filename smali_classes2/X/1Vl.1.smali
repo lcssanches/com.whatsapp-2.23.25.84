@@ -2306,17 +2306,29 @@
 
     iget-object v0, p0, LX/1Vl;->A0N:Ljava/lang/Boolean;
 
+    invoke-static {}, Lcom/Lzm/WaPackageInfo;->BooleanFalse()Ljava/lang/Boolean;
+
+    move-result-object v0
+
     invoke-static {v2, v1, v0}, LX/2uk;->A00(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/Object;)V
 
     const-string v1, "isUsingCustomRom"
 
     iget-object v0, p0, LX/1Vl;->A0O:Ljava/lang/Boolean;
 
+    invoke-static {}, Lcom/Lzm/WaPackageInfo;->BooleanFalse()Ljava/lang/Boolean;
+
+    move-result-object v0
+
     invoke-static {v2, v1, v0}, LX/2uk;->A00(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/Object;)V
 
     const-string v1, "isWhatsappPlusUser"
 
     iget-object v0, p0, LX/1Vl;->A0P:Ljava/lang/Boolean;
+
+    invoke-static {}, Lcom/Lzm/WaPackageInfo;->BooleanFalse()Ljava/lang/Boolean;
+
+    move-result-object v0
 
     invoke-static {v2, v1, v0}, LX/2uk;->A00(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/Object;)V
 
@@ -2377,6 +2389,10 @@
     const-string/jumbo v1, "modifiedInternalProps"
 
     iget-object v0, p0, LX/1Vl;->A0S:Ljava/lang/Boolean;
+
+    invoke-static {}, Lcom/Lzm/WaPackageInfo;->BooleanFalse()Ljava/lang/Boolean;
+
+    move-result-object v0
 
     invoke-static {v2, v1, v0}, LX/2uk;->A00(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/Object;)V
 

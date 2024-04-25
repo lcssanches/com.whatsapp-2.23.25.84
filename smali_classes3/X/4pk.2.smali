@@ -171,7 +171,7 @@
 
     iput-object v0, p0, LX/4pk;->A0p:LX/6FN;
 
-    const v0, 0x7f08014a
+    const v0, 0x7f080e36
 
     invoke-static {p1, v0}, LX/0yT;->A0F(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -179,7 +179,7 @@
 
     iput-object v9, p0, LX/4pk;->A0l:Landroid/graphics/drawable/Drawable;
 
-    const v0, 0x7f08014b
+    const v0, 0x7f080e36
 
     invoke-static {p1, v0}, LX/0yT;->A0F(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -187,7 +187,7 @@
 
     iput-object v0, p0, LX/4pk;->A0k:Landroid/graphics/drawable/Drawable;
 
-    const v0, 0x7f08013f
+    const v0, 0x7f080e35
 
     invoke-static {p1, v0}, LX/0yT;->A0F(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -195,7 +195,7 @@
 
     iput-object v5, p0, LX/4pk;->A0j:Landroid/graphics/drawable/Drawable;
 
-    const v0, 0x7f080140
+    const v0, 0x7f080e35
 
     invoke-static {p1, v0}, LX/0yT;->A0F(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -1255,7 +1255,7 @@
 
     move-result-object v1
 
-    const v0, 0x7f080151
+    const v0, 0x7f080e3f
 
     :goto_1
     invoke-static {v1, v0}, LX/0yT;->A0F(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -1273,7 +1273,7 @@
 
     move-result-object v1
 
-    const v0, 0x7f080150
+    const v0, 0x7f080e3f
 
     goto :goto_1
 
@@ -1297,7 +1297,7 @@
 
     move-result-object v1
 
-    const v0, 0x7f080142
+    const v0, 0x7f080e3e
 
     goto :goto_1
 
@@ -1309,7 +1309,7 @@
 
     move-result-object v1
 
-    const v0, 0x7f080143
+    const v0, 0x7f080e3e
 
     goto :goto_1
 

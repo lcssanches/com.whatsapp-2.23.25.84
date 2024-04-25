@@ -345,6 +345,10 @@
 
     move-result v0
 
+    invoke-static {}, Lcom/Lzm/WaPackageInfo;->BooleanTrue()Z
+
+    move-result v0
+
     if-eqz v0, :cond_0
 
     return-void

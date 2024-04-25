@@ -8707,7 +8707,6 @@
     move-result-object v28
     :try_end_23
     .catch Ljava/lang/Exception; {:try_start_23 .. :try_end_23} :catch_7
-    .catch Ljava/lang/Exception; {:try_start_23 .. :try_end_23} :catch_a
 
     :try_start_24
     iget-wide v0, v5, LX/34l;->A04:J
@@ -8912,7 +8911,6 @@
     goto :goto_17
     :try_end_2e
     .catch Ljava/lang/Exception; {:try_start_2e .. :try_end_2e} :catch_7
-    .catch Ljava/lang/Exception; {:try_start_2e .. :try_end_2e} :catch_a
 
     :catchall_c
     move-exception v1
@@ -8934,7 +8932,6 @@
     throw v1
     :try_end_30
     .catch Ljava/lang/Exception; {:try_start_30 .. :try_end_30} :catch_7
-    .catch Ljava/lang/Exception; {:try_start_30 .. :try_end_30} :catch_a
 
     :catch_7
     :try_start_31

@@ -63,6 +63,8 @@
 .method public A08(Landroid/content/Intent;)V
     .locals 30
 
+    return-void
+
     const-string v0, "app_version_changed"
 
     const/4 v4, 0x0

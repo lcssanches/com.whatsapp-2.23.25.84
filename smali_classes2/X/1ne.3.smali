@@ -340,7 +340,6 @@
     .catch Landroid/provider/Settings$SettingNotFoundException; {:try_start_8 .. :try_end_8} :catch_0
     .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_1
     .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_3
-    .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_4
 
     :catch_0
     :try_start_9

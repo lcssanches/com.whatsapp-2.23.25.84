@@ -1110,6 +1110,10 @@
 
     const/4 v0, 0x3
 
+    invoke-static {v0}, Lcom/Lzm/Settings/Tools/Choice/PrivacyUtils;->PinLimit(I)I
+
+    move-result v0
+
     if-le v1, v0, :cond_1f
 
     iget-object v0, v8, Lcom/whatsapp/conversationslist/ConversationsFragment;->A1X:LX/2ih;

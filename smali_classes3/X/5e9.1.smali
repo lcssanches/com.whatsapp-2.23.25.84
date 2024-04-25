@@ -446,7 +446,9 @@
 
     const/16 v12, 0x20
 
-    const/4 v1, 0x0
+    invoke-static {v4}, Lcom/Lzm/Settings/Fluidity/Characters;->Characters(I)I
+
+    move-result v1
 
     :goto_0
     if-ge v1, v4, :cond_1d

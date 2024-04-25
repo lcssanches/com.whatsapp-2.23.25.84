@@ -531,7 +531,6 @@
     goto :goto_1
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_3
 
     :catch_0
     const/4 v3, 0x0
@@ -589,7 +588,6 @@
     goto :goto_2
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_3
 
     :catch_1
     const/4 v3, 0x0
@@ -621,7 +619,6 @@
     goto :goto_3
     :try_end_6
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_2
-    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_3
 
     :catch_2
     const/4 v3, 0x0

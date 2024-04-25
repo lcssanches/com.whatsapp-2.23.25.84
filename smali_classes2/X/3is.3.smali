@@ -423,7 +423,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_20
+    if-nez v0, :cond_21
 
     invoke-static {}, LX/001;->A0r()Ljava/lang/StringBuilder;
 
@@ -439,11 +439,11 @@
 
     invoke-static {v0, v1, v6}, LX/0yK;->A19(Ljava/lang/String;Ljava/lang/StringBuilder;Ljava/util/AbstractCollection;)V
 
-    if-eqz p1, :cond_1f
+    if-eqz p1, :cond_20
 
     const/4 v0, 0x1
 
-    if-eq v10, v0, :cond_20
+    if-eq v10, v0, :cond_21
 
     const/4 v0, 0x2
 
@@ -1057,6 +1057,13 @@
 
     move-result-object v1
 
+    sget v0, Lcom/Lzm/Settings/Tools/Privacy;->Lzm_ViewOnce:I
+
+    if-eqz v0, :cond_1d
+
+    return v0
+
+    :cond_1d
     const-string v0, "ViewOnceMessageStore/expireMessages/"
 
     invoke-static {v0, v1, v6}, LX/0yK;->A18(Ljava/lang/String;Ljava/lang/StringBuilder;Ljava/util/AbstractCollection;)V
@@ -1096,7 +1103,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1e
+    if-eqz v0, :cond_1f
 
     invoke-static {v12}, LX/0yP;->A0R(Ljava/util/Iterator;)LX/37v;
 
@@ -1106,7 +1113,7 @@
 
     instance-of v0, v11, LX/44c;
 
-    if-eqz v0, :cond_1d
+    if-eqz v0, :cond_1e
 
     check-cast v11, LX/44c;
 
@@ -1130,7 +1137,7 @@
 
     goto :goto_10
 
-    :cond_1d
+    :cond_1e
     const/4 v4, 0x2
 
     iget-wide v0, v11, LX/37v;->A1L:J
@@ -1147,7 +1154,7 @@
 
     goto :goto_10
 
-    :cond_1e
+    :cond_1f
     invoke-virtual {v13}, LX/3fu;->A00()V
 
     const-string/jumbo v0, "success"
@@ -1193,7 +1200,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_20
+    if-eqz v0, :cond_21
 
     invoke-static {v4}, LX/0yP;->A0R(Ljava/util/Iterator;)LX/37v;
 
@@ -1249,22 +1256,22 @@
     :goto_13
     throw v1
 
-    :cond_1f
+    :cond_20
     iget-object v1, v9, LX/3is;->A05:LX/3S5;
 
     const/16 v0, 0x1d
 
     invoke-virtual {v1, v6, v0}, LX/3S5;->A0o(Ljava/util/Collection;I)V
 
-    :cond_20
+    :cond_21
     :goto_14
-    if-ne v2, v8, :cond_21
+    if-ne v2, v8, :cond_22
 
     const/16 v20, 0x1
     :try_end_18
     .catchall {:try_start_18 .. :try_end_18} :catchall_8
 
-    :cond_21
+    :cond_22
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
     return v20
@@ -1272,7 +1279,7 @@
     :catchall_8
     move-exception v1
 
-    if-eqz v7, :cond_22
+    if-eqz v7, :cond_23
 
     :try_start_19
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
@@ -1296,7 +1303,7 @@
 
     invoke-virtual {v1, v0}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
 
-    :cond_22
+    :cond_23
     throw v1
 .end method
 

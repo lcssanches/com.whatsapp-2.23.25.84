@@ -89,7 +89,6 @@
     move-result-object v2
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
-    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_2
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     :try_start_2
@@ -134,7 +133,6 @@
     invoke-direct {v0, v1}, LX/0LG;-><init>(Landroid/os/Bundle;)V
     :try_end_3
     .catch Landroid/os/RemoteException; {:try_start_3 .. :try_end_3} :catch_1
-    .catch Landroid/os/RemoteException; {:try_start_3 .. :try_end_3} :catch_2
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
     :try_start_4
@@ -390,7 +388,6 @@
     throw v0
     :try_end_6
     .catch Landroid/os/RemoteException; {:try_start_6 .. :try_end_6} :catch_1
-    .catch Landroid/os/RemoteException; {:try_start_6 .. :try_end_6} :catch_2
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
     :catch_1

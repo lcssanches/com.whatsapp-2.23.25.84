@@ -47,6 +47,8 @@
 .method public onLowMemory()V
     .locals 0
 
+    invoke-static {}, Lcom/Lzm/Settings/Fluidity/intelligence;->OutOfMemory()V
+
     return-void
 .end method
 
@@ -88,6 +90,8 @@
     invoke-static {v1, v0}, LX/0yK;->A1I(Ljava/lang/StringBuilder;Ljava/lang/String;)V
 
     const/4 v2, 0x0
+
+    invoke-static {}, Lcom/Lzm/Settings/Fluidity/intelligence;->Sync()V
 
     :goto_0
     iget-object v1, p0, LX/1cd;->A04:LX/472;

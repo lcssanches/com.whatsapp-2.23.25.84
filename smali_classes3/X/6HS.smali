@@ -203,6 +203,10 @@
 
     move-result v0
 
+    invoke-static {v0}, Lcom/Lzm/Settings/Tools/Media;->ImageComposerQuality(I)I
+
+    move-result v0
+
     invoke-virtual {v2, v5, v0, v0}, LX/1lz;->A09(Landroid/net/Uri;II)Landroid/graphics/Bitmap;
 
     move-result-object v2

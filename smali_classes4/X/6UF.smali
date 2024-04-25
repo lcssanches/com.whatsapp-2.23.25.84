@@ -1056,7 +1056,6 @@
     .catch LX/72a; {:try_start_2 .. :try_end_2} :catch_2
     .catch LX/72T; {:try_start_2 .. :try_end_2} :catch_4
     .catch LX/72D; {:try_start_2 .. :try_end_2} :catch_1
-    .catch LX/72E; {:try_start_2 .. :try_end_2} :catch_5
 
     :cond_d
     :try_start_3

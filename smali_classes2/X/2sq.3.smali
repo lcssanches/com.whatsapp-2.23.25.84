@@ -666,7 +666,6 @@
     goto :goto_a
     :try_end_a
     .catch LX/1xv; {:try_start_a .. :try_end_a} :catch_1
-    .catch LX/1xv; {:try_start_a .. :try_end_a} :catch_5
     .catch LX/1xw; {:try_start_a .. :try_end_a} :catch_6
 
     :cond_f
@@ -857,7 +856,6 @@
     throw v1
     :try_end_d
     .catch LX/1xv; {:try_start_d .. :try_end_d} :catch_1
-    .catch LX/1xv; {:try_start_d .. :try_end_d} :catch_5
     .catch LX/1xw; {:try_start_d .. :try_end_d} :catch_6
 
     :catch_1

@@ -281,7 +281,6 @@
     .catch Lorg/json/JSONException; {:try_start_7 .. :try_end_7} :catch_5
     .catch Ljava/security/InvalidAlgorithmParameterException; {:try_start_7 .. :try_end_7} :catch_c
     .catch Ljava/security/NoSuchAlgorithmException; {:try_start_7 .. :try_end_7} :catch_d
-    .catch Lorg/json/JSONException; {:try_start_7 .. :try_end_7} :catch_d
     .catch LX/9Gl; {:try_start_7 .. :try_end_7} :catch_d
 
     :try_start_8
@@ -294,8 +293,6 @@
     .catch Ljava/security/NoSuchAlgorithmException; {:try_start_8 .. :try_end_8} :catch_4
     .catch Lorg/json/JSONException; {:try_start_8 .. :try_end_8} :catch_5
     .catch Ljava/security/InvalidAlgorithmParameterException; {:try_start_8 .. :try_end_8} :catch_c
-    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_8 .. :try_end_8} :catch_d
-    .catch Lorg/json/JSONException; {:try_start_8 .. :try_end_8} :catch_d
     .catch LX/9Gl; {:try_start_8 .. :try_end_8} :catch_d
 
     :try_start_9
@@ -317,7 +314,6 @@
     .catch Lorg/json/JSONException; {:try_start_9 .. :try_end_9} :catch_5
     .catch Ljava/security/InvalidAlgorithmParameterException; {:try_start_9 .. :try_end_9} :catch_c
     .catch Ljava/security/NoSuchAlgorithmException; {:try_start_9 .. :try_end_9} :catch_d
-    .catch Lorg/json/JSONException; {:try_start_9 .. :try_end_9} :catch_d
     .catch LX/9Gl; {:try_start_9 .. :try_end_9} :catch_d
 
     :catch_4
@@ -331,7 +327,6 @@
     .catch Lorg/json/JSONException; {:try_start_a .. :try_end_a} :catch_5
     .catch Ljava/security/InvalidAlgorithmParameterException; {:try_start_a .. :try_end_a} :catch_c
     .catch Ljava/security/NoSuchAlgorithmException; {:try_start_a .. :try_end_a} :catch_d
-    .catch Lorg/json/JSONException; {:try_start_a .. :try_end_a} :catch_d
     .catch LX/9Gl; {:try_start_a .. :try_end_a} :catch_d
 
     :catch_5
@@ -446,7 +441,6 @@
     .catch Lorg/json/JSONException; {:try_start_c .. :try_end_c} :catch_6
     .catch Ljava/security/InvalidAlgorithmParameterException; {:try_start_c .. :try_end_c} :catch_c
     .catch Ljava/security/NoSuchAlgorithmException; {:try_start_c .. :try_end_c} :catch_d
-    .catch Lorg/json/JSONException; {:try_start_c .. :try_end_c} :catch_d
     .catch LX/9Gl; {:try_start_c .. :try_end_c} :catch_d
 
     :catch_6
@@ -733,7 +727,6 @@
     :try_end_f
     .catch Ljava/security/NoSuchAlgorithmException; {:try_start_f .. :try_end_f} :catch_b
     .catch LX/9Gj; {:try_start_f .. :try_end_f} :catch_b
-    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_f .. :try_end_f} :catch_d
     .catch Lorg/json/JSONException; {:try_start_f .. :try_end_f} :catch_d
     .catch LX/9Gl; {:try_start_f .. :try_end_f} :catch_d
 
@@ -797,10 +790,7 @@
     .catch Ljava/security/NoSuchAlgorithmException; {:try_start_10 .. :try_end_10} :catch_9
     .catch Lorg/json/JSONException; {:try_start_10 .. :try_end_10} :catch_9
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_10 .. :try_end_10} :catch_9
-    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_10 .. :try_end_10} :catch_b
     .catch LX/9Gj; {:try_start_10 .. :try_end_10} :catch_b
-    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_10 .. :try_end_10} :catch_d
-    .catch Lorg/json/JSONException; {:try_start_10 .. :try_end_10} :catch_d
     .catch LX/9Gl; {:try_start_10 .. :try_end_10} :catch_d
 
     :try_start_11
@@ -827,7 +817,6 @@
     .catch Ljava/lang/Exception; {:try_start_11 .. :try_end_11} :catch_8
     .catch Ljava/security/NoSuchAlgorithmException; {:try_start_11 .. :try_end_11} :catch_b
     .catch LX/9Gj; {:try_start_11 .. :try_end_11} :catch_b
-    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_11 .. :try_end_11} :catch_d
     .catch Lorg/json/JSONException; {:try_start_11 .. :try_end_11} :catch_d
     .catch LX/9Gl; {:try_start_11 .. :try_end_11} :catch_d
 
@@ -838,7 +827,6 @@
     :try_end_12
     .catch Ljava/security/NoSuchAlgorithmException; {:try_start_12 .. :try_end_12} :catch_b
     .catch LX/9Gj; {:try_start_12 .. :try_end_12} :catch_b
-    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_12 .. :try_end_12} :catch_d
     .catch Lorg/json/JSONException; {:try_start_12 .. :try_end_12} :catch_d
     .catch LX/9Gl; {:try_start_12 .. :try_end_12} :catch_d
 
@@ -1046,10 +1034,7 @@
     .catch Ljava/security/NoSuchAlgorithmException; {:try_start_13 .. :try_end_13} :catch_a
     .catch Lorg/json/JSONException; {:try_start_13 .. :try_end_13} :catch_a
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_13 .. :try_end_13} :catch_a
-    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_13 .. :try_end_13} :catch_b
     .catch LX/9Gj; {:try_start_13 .. :try_end_13} :catch_b
-    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_13 .. :try_end_13} :catch_d
-    .catch Lorg/json/JSONException; {:try_start_13 .. :try_end_13} :catch_d
     .catch LX/9Gl; {:try_start_13 .. :try_end_13} :catch_d
 
     :try_start_14
@@ -1086,8 +1071,6 @@
     .catch Ljava/security/NoSuchAlgorithmException; {:try_start_14 .. :try_end_14} :catch_7
     .catch Lorg/json/JSONException; {:try_start_14 .. :try_end_14} :catch_7
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_14 .. :try_end_14} :catch_7
-    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_14 .. :try_end_14} :catch_d
-    .catch Lorg/json/JSONException; {:try_start_14 .. :try_end_14} :catch_d
     .catch LX/9Gl; {:try_start_14 .. :try_end_14} :catch_d
 
     :catch_7
@@ -1143,10 +1126,7 @@
     .catch Ljava/security/NoSuchAlgorithmException; {:try_start_16 .. :try_end_16} :catch_a
     .catch Lorg/json/JSONException; {:try_start_16 .. :try_end_16} :catch_a
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_16 .. :try_end_16} :catch_a
-    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_16 .. :try_end_16} :catch_b
     .catch LX/9Gj; {:try_start_16 .. :try_end_16} :catch_b
-    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_16 .. :try_end_16} :catch_d
-    .catch Lorg/json/JSONException; {:try_start_16 .. :try_end_16} :catch_d
     .catch LX/9Gl; {:try_start_16 .. :try_end_16} :catch_d
 
     :catch_8
@@ -1196,7 +1176,6 @@
     :try_end_17
     .catch Ljava/security/NoSuchAlgorithmException; {:try_start_17 .. :try_end_17} :catch_b
     .catch LX/9Gj; {:try_start_17 .. :try_end_17} :catch_b
-    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_17 .. :try_end_17} :catch_d
     .catch Lorg/json/JSONException; {:try_start_17 .. :try_end_17} :catch_d
     .catch LX/9Gl; {:try_start_17 .. :try_end_17} :catch_d
 

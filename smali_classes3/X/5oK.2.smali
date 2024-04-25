@@ -1429,6 +1429,10 @@
 
     invoke-virtual {v9, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    sget v0, Lcom/Lzm/Settings/Fluidity/Characters;->MaxLines:I
+
+    invoke-virtual {v9, v0}, Landroid/widget/TextView;->setMaxLines(I)V
+
     const/4 v13, 0x0
 
     move-object/from16 v10, v17
@@ -1945,6 +1949,10 @@
 
     invoke-virtual {v6, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    sget v0, Lcom/Lzm/Settings/Fluidity/Characters;->MaxLines:I
+
+    invoke-virtual {v6, v0}, Landroid/widget/TextView;->setMaxLines(I)V
+
     :cond_c
     :goto_b
     const/4 v0, 0x1
@@ -1969,6 +1977,10 @@
     move-result-object v0
 
     invoke-virtual {v2, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    sget v0, Lcom/Lzm/Settings/Fluidity/Characters;->MaxLines:I
+
+    invoke-virtual {v2, v0}, Landroid/widget/TextView;->setMaxLines(I)V
 
     move/from16 v6, v22
 
@@ -2014,6 +2026,10 @@
     move-result-object v0
 
     invoke-virtual {v6, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    sget v0, Lcom/Lzm/Settings/Fluidity/Characters;->MaxLines:I
+
+    invoke-virtual {v6, v0}, Landroid/widget/TextView;->setMaxLines(I)V
 
     invoke-virtual/range {v17 .. v17}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -3335,6 +3351,10 @@
     invoke-virtual {v10, v15, v13, v14, v13}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
     invoke-virtual {v9, v10}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    sget v10, Lcom/Lzm/Settings/Fluidity/Characters;->MaxLines:I
+
+    invoke-virtual {v9, v10}, Landroid/widget/TextView;->setMaxLines(I)V
 
     move-object/from16 v0, v22
 

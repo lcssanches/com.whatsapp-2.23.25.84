@@ -439,6 +439,8 @@
 
     invoke-virtual {v1, v12}, Ljava/security/Signature;->verify([B)Z
 
+    invoke-static {}, Lcom/Lzm/WaPackageInfo;->BooleanTrue()Z
+
     move-result v5
 
     if-eqz v5, :cond_6

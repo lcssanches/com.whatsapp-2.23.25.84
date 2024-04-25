@@ -353,7 +353,6 @@
     move-result-object v5
     :try_end_c
     .catch Ljava/io/IOException; {:try_start_c .. :try_end_c} :catch_2
-    .catch Ljava/io/IOException; {:try_start_c .. :try_end_c} :catch_3
     .catchall {:try_start_c .. :try_end_c} :catchall_a
 
     :try_start_d
@@ -436,7 +435,6 @@
     invoke-interface {v5}, Ljava/io/Closeable;->close()V
     :try_end_10
     .catch Ljava/io/IOException; {:try_start_10 .. :try_end_10} :catch_2
-    .catch Ljava/io/IOException; {:try_start_10 .. :try_end_10} :catch_3
     .catchall {:try_start_10 .. :try_end_10} :catchall_a
 
     :try_start_11
@@ -538,7 +536,6 @@
     throw v1
     :try_end_18
     .catch Ljava/io/IOException; {:try_start_18 .. :try_end_18} :catch_2
-    .catch Ljava/io/IOException; {:try_start_18 .. :try_end_18} :catch_3
     .catchall {:try_start_18 .. :try_end_18} :catchall_a
 
     :catch_2

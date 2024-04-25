@@ -1225,7 +1225,6 @@
     const/16 v13, 0x2000
     :try_end_1a
     .catch Ljava/io/IOException; {:try_start_1a .. :try_end_1a} :catch_6
-    .catch Ljava/io/IOException; {:try_start_1a .. :try_end_1a} :catch_12
     .catchall {:try_start_1a .. :try_end_1a} :catchall_11
 
     :try_start_1b
@@ -1253,7 +1252,6 @@
     goto :goto_5
     :try_end_1c
     .catch Ljava/io/IOException; {:try_start_1c .. :try_end_1c} :catch_6
-    .catch Ljava/io/IOException; {:try_start_1c .. :try_end_1c} :catch_12
     .catchall {:try_start_1c .. :try_end_1c} :catchall_11
 
     :catchall_1
@@ -1276,7 +1274,6 @@
     throw v1
     :try_end_1e
     .catch Ljava/io/IOException; {:try_start_1e .. :try_end_1e} :catch_6
-    .catch Ljava/io/IOException; {:try_start_1e .. :try_end_1e} :catch_12
     .catchall {:try_start_1e .. :try_end_1e} :catchall_11
 
     :catch_6

@@ -710,6 +710,8 @@
 
     invoke-super {p0, p1}, LX/1HG;->onCreate(Landroid/os/Bundle;)V
 
+    invoke-static {p0}, Lcom/Lzm/WaPackageInfo;->FinishActivity(Landroid/app/Activity;)V
+
     iget-object v0, p0, LX/1HG;->A0F:LX/3Iq;
 
     invoke-virtual {v0}, LX/3Iq;->A0B()Z

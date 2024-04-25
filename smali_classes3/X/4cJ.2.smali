@@ -1014,6 +1014,10 @@
 
     move-result v0
 
+    invoke-static {v0}, Lcom/Lzm/Settings/Tools/Choice/PrivacyUtils;->Broadcast(I)I
+
+    move-result v0
+
     if-nez v0, :cond_0
 
     :cond_9

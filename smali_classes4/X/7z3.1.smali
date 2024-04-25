@@ -2916,7 +2916,6 @@
     iget v10, v2, LX/7z3;->A01:I
     :try_end_1
     .catch LX/72D; {:try_start_1 .. :try_end_1} :catch_2
-    .catch LX/72D; {:try_start_1 .. :try_end_1} :catch_3
 
     :try_start_2
     sget v8, LX/7mF;->A01:I
@@ -2993,7 +2992,6 @@
     .catch Ljava/lang/UnsupportedOperationException; {:try_start_2 .. :try_end_2} :catch_1
     .catch Ljava/lang/IllegalArgumentException; {:try_start_2 .. :try_end_2} :catch_1
     .catch LX/72D; {:try_start_2 .. :try_end_2} :catch_2
-    .catch LX/72D; {:try_start_2 .. :try_end_2} :catch_3
 
     :goto_3
     :try_start_3
@@ -3004,7 +3002,6 @@
     if-ne v9, v5, :cond_c
     :try_end_3
     .catch LX/72D; {:try_start_3 .. :try_end_3} :catch_2
-    .catch LX/72D; {:try_start_3 .. :try_end_3} :catch_3
 
     :try_start_4
     iput-object v4, v2, LX/7z3;->A0C:Landroid/media/AudioTrack;
@@ -3184,7 +3181,6 @@
     :try_end_6
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_0
     .catch LX/72D; {:try_start_6 .. :try_end_6} :catch_2
-    .catch LX/72D; {:try_start_6 .. :try_end_6} :catch_3
 
     :catch_0
     :try_start_7
@@ -3199,7 +3195,6 @@
     iget v0, v7, LX/7Rh;->A04:I
     :try_end_7
     .catch LX/72D; {:try_start_7 .. :try_end_7} :catch_2
-    .catch LX/72D; {:try_start_7 .. :try_end_7} :catch_3
 
     invoke-static {v0}, LX/6LH;->A1S(I)Z
 
@@ -3236,7 +3231,6 @@
     iget v0, v7, LX/7Rh;->A04:I
     :try_end_8
     .catch LX/72D; {:try_start_8 .. :try_end_8} :catch_2
-    .catch LX/72D; {:try_start_8 .. :try_end_8} :catch_3
 
     invoke-static {v0}, LX/6LH;->A1S(I)Z
 
@@ -3258,7 +3252,6 @@
     throw v7
     :try_end_9
     .catch LX/72D; {:try_start_9 .. :try_end_9} :catch_2
-    .catch LX/72D; {:try_start_9 .. :try_end_9} :catch_3
 
     :catch_2
     move-exception v1

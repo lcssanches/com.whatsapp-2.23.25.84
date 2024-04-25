@@ -59,7 +59,6 @@
     invoke-static {p1, v0, v1}, LX/8Bw;->A02(Landroid/net/Uri;LX/32F;LX/2sZ;)LX/2Lx;
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
 
     :try_start_2
     invoke-static {p1, v0, v1}, LX/8Bw;->A02(Landroid/net/Uri;LX/32F;LX/2sZ;)LX/2Lx;

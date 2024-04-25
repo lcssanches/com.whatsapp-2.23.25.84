@@ -2836,7 +2836,6 @@
     invoke-static {v1, v0, v2}, LX/7m4;->A09(Ljava/util/LinkedHashSet;Ljava/util/List;LX/8J4;)V
     :try_end_a
     .catch LX/72G; {:try_start_a .. :try_end_a} :catch_14
-    .catch LX/72G; {:try_start_a .. :try_end_a} :catch_18
 
     :try_start_b
     move-object/from16 v0, p2
@@ -4240,7 +4239,6 @@
     move-result-object v1
     :try_end_2a
     .catch LX/72G; {:try_start_2a .. :try_end_2a} :catch_f
-    .catch LX/72G; {:try_start_2a .. :try_end_2a} :catch_18
 
     :try_start_2b
     invoke-static {v0, v7}, LX/7m4;->A05(Ljava/lang/String;Ljava/security/cert/X509Extension;)LX/8dm;
@@ -4254,7 +4252,6 @@
     goto :goto_1f
     :try_end_2b
     .catch LX/72G; {:try_start_2b .. :try_end_2b} :catch_e
-    .catch LX/72G; {:try_start_2b .. :try_end_2b} :catch_18
 
     :cond_37
     :try_start_2c

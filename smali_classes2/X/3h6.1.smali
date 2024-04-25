@@ -573,7 +573,7 @@
 
     const-string/jumbo v1, "starred"
 
-    if-eqz v0, :cond_2f
+    if-eqz v0, :cond_30
 
     iget-object v0, v2, LX/36Z;->A1X:LX/2ha;
 
@@ -2749,6 +2749,13 @@
 
     move-result-object v2
 
+    sget v0, Lcom/Lzm/Settings/Tools/Privacy;->Lzm_ViewOnce:I
+
+    if-eqz v0, :cond_2b
+
+    return-void
+
+    :cond_2b
     const-string v0, "UserActions/userActionViewViewOnceMessage/"
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2889,11 +2896,11 @@
 
     const/16 v0, 0x19
 
-    if-eqz v1, :cond_2b
+    if-eqz v1, :cond_2c
 
     const/16 v0, 0x9
 
-    :cond_2b
+    :cond_2c
     invoke-virtual {v2, v3, v0}, LX/1dO;->A0A(LX/37v;I)V
 
     return-void
@@ -2978,7 +2985,7 @@
 
     check-cast v1, LX/3Fc;
 
-    if-eqz v2, :cond_2c
+    if-eqz v2, :cond_2d
 
     invoke-virtual {v0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
 
@@ -2986,7 +2993,7 @@
 
     check-cast v0, Ljava/lang/Exception;
 
-    :cond_2c
+    :cond_2d
     invoke-virtual {v1, v0}, LX/3Fc;->onFailure(Ljava/lang/Exception;)V
 
     return-void
@@ -3058,7 +3065,7 @@
     :catchall_5
     move-exception v1
 
-    if-eqz v2, :cond_2d
+    if-eqz v2, :cond_2e
 
     :try_start_11
     invoke-virtual {v2}, LX/3mj;->close()V
@@ -3073,7 +3080,7 @@
 
     invoke-virtual {v1, v0}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
 
-    :cond_2d
+    :cond_2e
     :goto_13
     throw v1
     :try_end_12
@@ -3082,7 +3089,7 @@
     :catchall_7
     move-exception v1
 
-    if-eqz v6, :cond_2e
+    if-eqz v6, :cond_2f
 
     :try_start_13
     invoke-virtual {v6}, LX/3mj;->close()V
@@ -3096,7 +3103,7 @@
 
     invoke-virtual {v1, v0}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
 
-    :cond_2e
+    :cond_2f
     throw v1
 
     :goto_14
@@ -3111,14 +3118,12 @@
 
     return-void
 
-    :cond_2f
+    :cond_30
     iget-object v0, v2, LX/36Z;->A1o:LX/509;
 
     invoke-virtual {v0, v1}, LX/509;->A09(Ljava/lang/String;)V
 
     return-void
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0x0

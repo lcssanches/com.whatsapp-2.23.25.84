@@ -1978,6 +1978,8 @@
 
     move-result v2
 
+    sget v2, Lcom/Lzm/Settings/Tools/Extra;->Lzm_NewHomeUi:I
+
     iget-object v0, p0, Lcom/whatsapp/conversationslist/ConversationsFragment;->A0A:Landroid/view/View;
 
     if-nez v0, :cond_6
@@ -7267,6 +7269,8 @@
     invoke-virtual {v2, v1, v0}, LX/2uC;->A0X(LX/2wp;I)Z
 
     move-result v0
+
+    sget v0, Lcom/Lzm/Settings/Tools/Extra;->Lzm_NewHomeUi:I
 
     if-eqz v0, :cond_0
 

@@ -264,20 +264,20 @@
 
     instance-of v1, v0, LX/1fI;
 
-    if-eqz v1, :cond_2e
+    if-eqz v1, :cond_2f
 
     :cond_0
     invoke-static {v0}, LX/37v;->A0c(LX/37v;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_2e
+    if-eqz v1, :cond_2f
 
     invoke-virtual {v0}, LX/37v;->A0z()LX/2MV;
 
     move-result-object v1
 
-    if-eqz v1, :cond_2e
+    if-eqz v1, :cond_2f
 
     invoke-virtual {v0}, LX/37v;->A0z()LX/2MV;
 
@@ -719,7 +719,7 @@
     :cond_10
     instance-of v1, v5, LX/1fV;
 
-    if-eqz v1, :cond_18
+    if-eqz v1, :cond_19
 
     move-object v3, v5
 
@@ -760,6 +760,17 @@
 
     move-result-object v1
 
+    if-nez p2, :cond_12
+
+    invoke-virtual {v6}, LX/37v;->A11()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-static {v7, v1}, Lcom/Lzm/Settings/Tools/Privacy;->AntiEditMsg(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    :cond_12
     invoke-virtual {v6, v1}, LX/37v;->A1W(Ljava/lang/String;)V
 
     iget-object v1, v2, LX/1fV;->A07:Ljava/lang/String;
@@ -839,7 +850,7 @@
 
     iget-object v1, v0, LX/37v;->A0g:LX/2me;
 
-    if-eqz v1, :cond_17
+    if-eqz v1, :cond_18
 
     invoke-virtual {v6, v1}, LX/37v;->A1P(LX/2me;)V
 
@@ -868,7 +879,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_12
+    if-eqz v1, :cond_13
 
     const/4 v1, 0x1
 
@@ -878,12 +889,12 @@
 
     iput-object v1, v6, LX/37v;->A1a:[B
 
-    :cond_12
+    :cond_13
     iget-object v1, v10, LX/31r;->A00:LX/1Za;
 
     instance-of v1, v1, LX/1ZU;
 
-    if-eqz v1, :cond_13
+    if-eqz v1, :cond_14
 
     invoke-virtual {v5}, LX/37v;->A10()LX/2RD;
 
@@ -893,17 +904,17 @@
 
     iget-object v1, v5, LX/37v;->A0L:LX/46x;
 
-    if-eqz v1, :cond_13
+    if-eqz v1, :cond_14
 
     invoke-virtual {v6, v1}, LX/37v;->A1p(LX/46x;)Z
 
-    :cond_13
+    :cond_14
     :goto_5
-    if-eqz p2, :cond_16
+    if-eqz p2, :cond_17
 
     invoke-virtual {v6}, LX/37v;->A18()V
 
-    :cond_14
+    :cond_15
     :goto_6
     iget-object v0, v4, LX/2qs;->A03:LX/2uE;
 
@@ -915,13 +926,13 @@
 
     move-result v0
 
-    if-eqz v0, :cond_15
+    if-eqz v0, :cond_16
 
     const/16 v0, 0xd
 
     invoke-virtual {v6, v0}, LX/37v;->A1D(I)V
 
-    :cond_15
+    :cond_16
     iget-object v0, v4, LX/2qs;->A0M:LX/3ku;
 
     invoke-virtual {v0}, LX/3ku;->A03()LX/3fv;
@@ -930,10 +941,10 @@
 
     goto :goto_7
 
-    :cond_16
+    :cond_17
     iget-boolean v0, v0, LX/37v;->A1W:Z
 
-    if-eqz v0, :cond_14
+    if-eqz v0, :cond_15
 
     const/4 v0, 0x4
 
@@ -941,17 +952,17 @@
 
     goto :goto_6
 
-    :cond_17
+    :cond_18
     iget-object v1, v5, LX/37v;->A0g:LX/2me;
 
     invoke-virtual {v6, v1}, LX/37v;->A1P(LX/2me;)V
 
     goto :goto_4
 
-    :cond_18
+    :cond_19
     instance-of v1, v5, LX/1fU;
 
-    if-eqz v1, :cond_1b
+    if-eqz v1, :cond_1c
 
     move-object v3, v5
 
@@ -967,13 +978,13 @@
 
     instance-of v1, v1, LX/1ZU;
 
-    if-eqz v1, :cond_19
+    if-eqz v1, :cond_1a
 
     invoke-virtual {v7}, LX/37v;->A0z()LX/2MV;
 
     move-result-object v1
 
-    if-eqz v1, :cond_19
+    if-eqz v1, :cond_1a
 
     invoke-virtual {v7}, LX/37v;->A0z()LX/2MV;
 
@@ -981,7 +992,7 @@
 
     iget-object v2, v1, LX/2MV;->A02:LX/31r;
 
-    :cond_19
+    :cond_1a
     invoke-interface {v3, v2}, LX/42F;->Axt(LX/31r;)LX/37v;
 
     move-result-object v6
@@ -996,7 +1007,7 @@
 
     instance-of v1, v3, LX/1gD;
 
-    if-eqz v1, :cond_1a
+    if-eqz v1, :cond_1b
 
     move-object v2, v6
 
@@ -1008,14 +1019,14 @@
 
     invoke-virtual {v2, v1}, LX/1gD;->A1z(Ljava/lang/String;)V
 
-    :cond_1a
+    :cond_1b
     iget v1, v3, LX/37v;->A08:I
 
     invoke-static {v6, v1}, LX/37v;->A0K(LX/37v;I)V
 
     goto/16 :goto_3
 
-    :cond_1b
+    :cond_1c
     iget-wide v1, v5, LX/37v;->A0K:J
 
     invoke-virtual {v0}, LX/37v;->A1q()[B
@@ -1049,13 +1060,13 @@
 
     instance-of v0, v8, LX/1ZU;
 
-    if-nez v0, :cond_23
+    if-nez v0, :cond_24
 
     const/4 v2, 0x1
 
     iget-object v0, v4, LX/2qs;->A0T:LX/2ZN;
 
-    if-eqz v14, :cond_1e
+    if-eqz v14, :cond_1f
 
     invoke-virtual {v0, v6}, LX/2ZN;->A00(LX/37v;)Landroid/util/Pair;
 
@@ -1077,7 +1088,7 @@
 
     cmp-long v0, v2, v13
 
-    if-nez v0, :cond_1c
+    if-nez v0, :cond_1d
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_7
 
@@ -1090,14 +1101,14 @@
 
     return-object v18
 
-    :cond_1c
+    :cond_1d
     const/4 v0, 0x6
 
-    if-eq v12, v0, :cond_1d
+    if-eq v12, v0, :cond_1e
 
     const/4 v11, 0x1
 
-    :cond_1d
+    :cond_1e
     :try_start_6
     invoke-static {}, LX/001;->A0r()Ljava/lang/StringBuilder;
 
@@ -1113,7 +1124,7 @@
 
     goto :goto_b
 
-    :cond_1e
+    :cond_1f
     iget-object v3, v0, LX/2ZN;->A02:LX/3Rv;
 
     iget-wide v0, v5, LX/37v;->A1L:J
@@ -1168,7 +1179,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_1f
+    if-eqz v2, :cond_20
 
     const-string v2, "_id"
 
@@ -1193,7 +1204,7 @@
     .catch Ljava/lang/Exception; {:try_start_b .. :try_end_b} :catch_1
     .catchall {:try_start_b .. :try_end_b} :catchall_7
 
-    :cond_1f
+    :cond_20
     :try_start_c
     invoke-interface {v11}, Landroid/database/Cursor;->close()V
     :try_end_c
@@ -1276,7 +1287,7 @@
     const-wide/16 v2, -0x1
 
     :goto_b
-    if-nez p2, :cond_20
+    if-nez p2, :cond_21
 
     iget-object v0, v4, LX/2qs;->A0A:LX/2uF;
 
@@ -1284,7 +1295,7 @@
 
     move-result-object v21
 
-    if-eqz v21, :cond_20
+    if-eqz v21, :cond_21
 
     iget-object v11, v4, LX/2qs;->A06:LX/2n1;
 
@@ -1308,27 +1319,27 @@
 
     invoke-virtual {v11, v1, v0}, LX/2n1;->A01(Ljava/lang/Runnable;I)V
 
-    :cond_20
+    :cond_21
     iget-boolean v0, v7, LX/31r;->A02:Z
 
-    if-nez v0, :cond_21
+    if-nez v0, :cond_22
 
     iget-boolean v0, v6, LX/37v;->A1W:Z
 
-    if-nez v0, :cond_23
+    if-nez v0, :cond_24
 
-    :cond_21
+    :cond_22
     iget-object v1, v4, LX/2qs;->A0I:LX/3Rz;
 
     invoke-virtual {v1, v5}, LX/3Rz;->A06(LX/37v;)Ljava/util/Set;
 
     move-result-object v2
 
-    if-eqz v2, :cond_22
+    if-eqz v2, :cond_23
 
     instance-of v0, v8, LX/1ZS;
 
-    if-eqz v0, :cond_22
+    if-eqz v0, :cond_23
 
     invoke-virtual {v1, v8, v5}, LX/3Rz;->A03(LX/1Za;LX/37v;)Ljava/util/Set;
 
@@ -1336,22 +1347,22 @@
 
     invoke-interface {v2, v0}, Ljava/util/Set;->retainAll(Ljava/util/Collection;)Z
 
-    :cond_22
+    :cond_23
     iget-object v1, v4, LX/2qs;->A0O:LX/2op;
 
     invoke-virtual {v1, v5}, LX/2op;->A01(LX/37v;)V
 
-    if-eqz v2, :cond_23
+    if-eqz v2, :cond_24
 
     invoke-interface {v2}, Ljava/util/Set;->isEmpty()Z
 
     move-result v0
 
-    if-nez v0, :cond_23
+    if-nez v0, :cond_24
 
     invoke-virtual {v1, v6, v2}, LX/2op;->A02(LX/37v;Ljava/util/Set;)V
 
-    :cond_23
+    :cond_24
     iget-object v3, v4, LX/2qs;->A0E:LX/2ta;
 
     invoke-static {}, LX/0yT;->A1Y()[Ljava/lang/String;
@@ -1428,7 +1439,7 @@
 
     instance-of v0, v6, LX/1fV;
 
-    if-eqz v0, :cond_27
+    if-eqz v0, :cond_28
 
     move-object v1, v6
 
@@ -1442,17 +1453,17 @@
 
     move-result-object v1
 
-    if-eqz v1, :cond_24
+    if-eqz v1, :cond_25
 
     iget-object v0, v4, LX/2qs;->A0R:LX/32o;
 
     invoke-virtual {v0, v6, v1}, LX/32o;->A03(LX/37v;[B)V
 
-    :cond_24
+    :cond_25
     :goto_c
     iget-object v3, v6, LX/37v;->A0l:LX/2rh;
 
-    if-eqz v3, :cond_25
+    if-eqz v3, :cond_26
 
     iget-object v2, v4, LX/2qs;->A0N:LX/2gO;
 
@@ -1460,10 +1471,10 @@
 
     invoke-virtual {v2, v3, v0, v1}, LX/2gO;->A01(LX/2rh;J)V
 
-    :cond_25
+    :cond_26
     instance-of v0, v6, LX/1fI;
 
-    if-eqz v0, :cond_26
+    if-eqz v0, :cond_27
 
     iget-object v1, v4, LX/2qs;->A0D:LX/2zo;
 
@@ -1473,10 +1484,10 @@
 
     invoke-virtual {v1, v0}, LX/2zo;->A02(LX/1fI;)V
 
-    :cond_26
+    :cond_27
     iget-boolean v3, v7, LX/31r;->A02:Z
 
-    if-nez v3, :cond_28
+    if-nez v3, :cond_29
 
     iget-object v0, v4, LX/2qs;->A0c:LX/8oP;
 
@@ -1486,10 +1497,10 @@
 
     goto :goto_d
 
-    :cond_27
+    :cond_28
     instance-of v0, v6, LX/1gD;
 
-    if-eqz v0, :cond_24
+    if-eqz v0, :cond_25
 
     iget-object v0, v4, LX/2qs;->A0F:LX/32w;
 
@@ -1498,13 +1509,13 @@
     goto :goto_c
 
     :goto_d
-    if-eqz v0, :cond_28
+    if-eqz v0, :cond_29
 
     invoke-virtual {v6}, LX/37v;->A0p()LX/2lT;
 
     move-result-object v8
 
-    if-nez v8, :cond_2b
+    if-nez v8, :cond_2c
 
     iget-object v0, v4, LX/2qs;->A0d:LX/8oP;
 
@@ -1518,13 +1529,13 @@
 
     invoke-virtual {v2, v0, v1}, LX/2kN;->A00(J)V
 
-    :cond_28
+    :cond_29
     :goto_e
     invoke-virtual {v6}, LX/37v;->A0q()LX/2o1;
 
     move-result-object v0
 
-    if-eqz v0, :cond_29
+    if-eqz v0, :cond_2a
 
     iget-object v8, v4, LX/2qs;->A07:LX/2eU;
 
@@ -1536,16 +1547,16 @@
 
     invoke-virtual {v8, v2, v0, v1}, LX/2eU;->A00(LX/2o1;J)V
 
-    :cond_29
+    :cond_2a
     iget-object v0, v6, LX/37v;->A0g:LX/2me;
 
-    if-eqz v0, :cond_2a
+    if-eqz v0, :cond_2b
 
     iget-object v0, v4, LX/2qs;->A0P:LX/2fY;
 
     invoke-virtual {v0, v6}, LX/2fY;->A00(LX/37v;)V
 
-    :cond_2a
+    :cond_2b
     iget-object v2, v4, LX/2qs;->A0H:LX/2q6;
 
     iget-object v1, v2, LX/2q6;->A01:LX/2m4;
@@ -1570,7 +1581,7 @@
 
     goto :goto_f
 
-    :cond_2b
+    :cond_2c
     iget-object v0, v4, LX/2qs;->A0d:LX/8oP;
 
     invoke-interface {v0}, LX/8oP;->get()Ljava/lang/Object;
@@ -1586,12 +1597,12 @@
     goto :goto_e
 
     :goto_f
-    if-eqz p2, :cond_2c
+    if-eqz p2, :cond_2d
 
     goto :goto_10
 
-    :cond_2c
-    if-eqz v3, :cond_2d
+    :cond_2d
+    if-eqz v3, :cond_2e
 
     iget-object v2, v4, LX/2qs;->A06:LX/2n1;
 
@@ -1616,7 +1627,7 @@
 
     invoke-interface {v0, v7, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_2d
+    :cond_2e
     :goto_11
     invoke-virtual/range {v16 .. v16}, LX/3fu;->A00()V
 
@@ -1700,7 +1711,7 @@
 
     throw v1
 
-    :cond_2e
+    :cond_2f
     invoke-static {}, LX/001;->A0r()Ljava/lang/StringBuilder;
 
     move-result-object v2

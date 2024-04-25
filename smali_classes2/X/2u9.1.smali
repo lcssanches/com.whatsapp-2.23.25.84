@@ -773,7 +773,6 @@
     move-object v4, v1
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
 
     :try_start_2
     iget-object v0, v3, Landroid/util/Pair;->second:Ljava/lang/Object;
@@ -2201,7 +2200,6 @@
     goto :goto_0
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_2
 
     :cond_1
     invoke-virtual {v8, v5}, LX/2t8;->A02(Ljava/lang/String;)Ljava/io/File;

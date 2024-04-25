@@ -1960,6 +1960,12 @@
 .method public A1D(Landroid/view/Menu;Landroid/view/MenuInflater;)V
     .locals 4
 
+    invoke-virtual {p0}, LX/0fI;->A0Q()LX/03u;
+
+    move-result-object v0
+
+    invoke-static {p1, v0}, Lcom/Lzm/Menu/WaMenu;->A0B(Landroid/view/Menu;Landroid/app/Activity;)V
+
     iget-boolean v0, p0, Lcom/whatsapp/contact/picker/ContactPickerFragment;->A3V:Z
 
     const/4 v2, 0x0
@@ -8413,6 +8419,10 @@
 
     move-result v2
 
+    invoke-static {v2}, Lcom/Lzm/Settings/Tools/Choice/PrivacyUtils;->Broadcast(I)I
+
+    move-result v2
+
     iget-object v1, p0, Lcom/whatsapp/contact/picker/ContactPickerFragment;->A0d:LX/3Sp;
 
     sget-object v0, LX/3Sp;->A1g:LX/1F0;
@@ -8493,6 +8503,10 @@
 
     const/4 v8, 0x5
 
+    invoke-static {v8}, Lcom/Lzm/Settings/Tools/Choice/PrivacyUtils;->ForwardLimit(I)I
+
+    move-result v8
+
     goto :goto_2
 
     :cond_c
@@ -8503,7 +8517,7 @@
     :cond_d
     const/4 v8, 0x1
 
-    goto :goto_2
+    goto/16 :goto_2
 
     :cond_e
     iget-object v0, p2, LX/3gO;->A0I:LX/1Za;

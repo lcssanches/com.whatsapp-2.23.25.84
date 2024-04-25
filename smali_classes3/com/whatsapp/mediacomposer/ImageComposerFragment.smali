@@ -717,6 +717,10 @@
 
     move-result v1
 
+    invoke-static {v1}, Lcom/Lzm/Settings/Tools/Media;->ImageComposerQuality(I)I
+
+    move-result v1
+
     iget-object v0, p0, Lcom/whatsapp/mediacomposer/MediaComposerFragment;->A0O:LX/1lz;
 
     invoke-virtual {v0, v5, v1, v1}, LX/1lz;->A09(Landroid/net/Uri;II)Landroid/graphics/Bitmap;

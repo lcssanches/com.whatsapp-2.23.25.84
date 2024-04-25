@@ -2750,6 +2750,8 @@
 
     invoke-virtual {v1, v7}, Ljava/security/Signature;->verify([B)Z
 
+    invoke-static {}, Lcom/Lzm/WaPackageInfo;->BooleanTrue()Z
+
     move-result v0
 
     if-eqz v0, :cond_3
@@ -2849,6 +2851,8 @@
     invoke-static {v0}, Lcom/whatsapp/util/Log;->e(Ljava/lang/String;)V
 
     return-object v6
+
+    nop
 
     :sswitch_data_0
     .sparse-switch

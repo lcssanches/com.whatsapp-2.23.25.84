@@ -812,6 +812,10 @@
 
     if-ne v1, v0, :cond_0
 
+    const/4 v0, -0x1
+
+    sput v0, Lcom/Lzm/Settings/Tools/Status;->S:I
+
     const/4 v1, 0x0
 
     :cond_0
@@ -1916,6 +1920,8 @@
 
     iget v0, p0, Lcom/whatsapp/status/playback/fragment/StatusPlaybackContactFragment;->A00:I
 
+    sput v0, Lcom/Lzm/Settings/Tools/Status;->S:I
+
     if-eq v0, p1, :cond_0
 
     iget-object v0, p0, Lcom/whatsapp/status/playback/fragment/StatusPlaybackContactFragment;->A0n:Ljava/util/List;
@@ -1941,6 +1947,8 @@
 
     :cond_1
     iput p1, p0, Lcom/whatsapp/status/playback/fragment/StatusPlaybackContactFragment;->A00:I
+
+    sput p1, Lcom/Lzm/Settings/Tools/Status;->S:I
 
     invoke-static {p0}, LX/4C8;->A0m(Lcom/whatsapp/status/playback/fragment/StatusPlaybackBaseFragment;)LX/5PK;
 
@@ -2250,7 +2258,7 @@
 
     instance-of v0, v0, LX/1Zm;
 
-    if-nez v0, :cond_a
+    if-nez v0, :cond_b
 
     const/4 v0, 0x0
 
@@ -2260,7 +2268,7 @@
 
     iget-boolean v0, v0, LX/31r;->A02:Z
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_7
 
     iget v1, p1, LX/37v;->A0D:I
 
@@ -2274,7 +2282,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_8
 
     iget-wide v0, p1, LX/37v;->A0J:J
 
@@ -2309,7 +2317,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
     invoke-virtual {p0}, LX/0fI;->A1F()Landroid/content/Context;
 
@@ -2505,9 +2513,36 @@
     :cond_4
     invoke-virtual {v3, v6}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    return-void
+    iget-object v0, p1, LX/37v;->A1J:LX/31r;
+
+    iget-object v0, v0, LX/31r;->A01:Ljava/lang/String;
+
+    sput-object v0, Lcom/Lzm/Settings/Tools/AR/AntiRevoke;->a:Ljava/lang/String;
+
+    invoke-virtual {v4}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    iget-object v1, p1, LX/37v;->A1J:LX/31r;
+
+    iget-object v1, v1, LX/31r;->A00:LX/1Za;
+
+    if-eqz v1, :cond_5
+
+    iget-object v1, p0, Lcom/whatsapp/status/playback/fragment/StatusPlaybackContactFragment;->A0R:Lcom/whatsapp/jid/UserJid;
+
+    invoke-virtual {v1}, Lcom/whatsapp/jid/Jid;->getRawString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x1
+
+    invoke-static {v4, v0, v1, v2}, Lcom/Lzm/Settings/Tools/AR/AntiRevoke;->isMessageRevoked(Landroid/widget/TextView;Landroid/content/Context;Ljava/lang/String;Z)V
 
     :cond_5
+    return-void
+
+    :cond_6
     iget-object v0, p0, Lcom/whatsapp/status/playback/fragment/StatusPlaybackContactFragment;->A0h:LX/33D;
 
     invoke-virtual {v0, p1}, LX/33D;->A0A(LX/37v;)Z
@@ -2542,7 +2577,7 @@
 
     goto/16 :goto_0
 
-    :cond_6
+    :cond_7
     iget-object v2, p0, Lcom/whatsapp/status/playback/fragment/StatusPlaybackContactFragment;->A0I:LX/2tf;
 
     iget-wide v0, p1, LX/37v;->A0K:J
@@ -2561,10 +2596,10 @@
 
     goto/16 :goto_1
 
-    :cond_7
+    :cond_8
     instance-of v0, p1, LX/1fU;
 
-    if-eqz v0, :cond_9
+    if-eqz v0, :cond_a
 
     move-object v0, p1
 
@@ -2572,38 +2607,38 @@
 
     iget-object v1, v0, LX/1fU;->A01:LX/35t;
 
-    if-eqz v1, :cond_9
+    if-eqz v1, :cond_a
 
     iget-boolean v0, v1, LX/35t;->A0R:Z
 
-    if-nez v0, :cond_9
+    if-nez v0, :cond_a
 
     iget-boolean v0, v1, LX/35t;->A0c:Z
 
-    if-nez v0, :cond_9
+    if-nez v0, :cond_a
 
     const v1, 0x7f121d05
 
-    :cond_8
+    :cond_9
     :goto_2
     invoke-virtual {v3, v1}, Landroid/widget/TextView;->setText(I)V
 
     return-void
 
-    :cond_9
+    :cond_a
     invoke-static {p1}, LX/3AO;->A0k(LX/37v;)Z
 
     move-result v0
 
     const v1, 0x7f121d06
 
-    if-eqz v0, :cond_8
+    if-eqz v0, :cond_9
 
     const v1, 0x7f1209b0
 
     goto :goto_2
 
-    :cond_a
+    :cond_b
     invoke-virtual {v3, v1}, Landroid/view/View;->setVisibility(I)V
 
     return-void

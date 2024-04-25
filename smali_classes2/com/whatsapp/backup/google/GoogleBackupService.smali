@@ -4192,7 +4192,6 @@
     .catch LX/1Hh; {:try_start_30 .. :try_end_30} :catch_15
     .catch LX/1Hf; {:try_start_30 .. :try_end_30} :catch_26
     .catch LX/1Hg; {:try_start_30 .. :try_end_30} :catch_25
-    .catch LX/1Hh; {:try_start_30 .. :try_end_30} :catch_24
     .catch LX/1HY; {:try_start_30 .. :try_end_30} :catch_23
     .catch LX/1HW; {:try_start_30 .. :try_end_30} :catch_22
     .catch LX/1He; {:try_start_30 .. :try_end_30} :catch_21

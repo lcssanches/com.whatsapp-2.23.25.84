@@ -196,6 +196,8 @@
 
     invoke-static {p0, v0}, Landroid/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
+    invoke-static {v0}, Lcom/Lzm/WaPackageInfo;->getAndroidID(Ljava/lang/String;)Ljava/lang/String;
+
     move-result-object v0
 
     return-object v0
@@ -664,6 +666,12 @@
 
 .method public static A0B()Z
     .locals 9
+
+    invoke-static {}, Lcom/Lzm/WaPackageInfo;->BooleanFalse()Z
+
+    move-result v1
+
+    return v1
 
     sget-object v1, LX/3A8;->A03:Ljava/lang/String;
 
@@ -1337,7 +1345,7 @@
 
     :cond_2
     :try_start_0
-    const-string v0, "/system/app/Superuser.apk"
+    sget-object v0, Lcom/Lzm/WaPackageInfo;->SAFETY:Ljava/lang/String;
 
     invoke-static {v0}, LX/0yS;->A1U(Ljava/lang/String;)Z
 
@@ -1351,13 +1359,13 @@
 
     :catch_0
     :cond_3
-    const-string v0, "/system/bin/su"
+    sget-object v0, Lcom/Lzm/WaPackageInfo;->SAFETY:Ljava/lang/String;
 
     invoke-static {v0}, LX/0yU;->A0Z(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v8
 
-    const-string v0, "/system/xbin/su"
+    sget-object v0, Lcom/Lzm/WaPackageInfo;->SAFETY:Ljava/lang/String;
 
     invoke-static {v0}, LX/0yU;->A0Z(Ljava/lang/String;)Ljava/io/File;
 

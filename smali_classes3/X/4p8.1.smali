@@ -758,6 +758,8 @@
 
     move-result v0
 
+    sget v0, Lcom/Lzm/Settings/Tools/Extra;->Lzm_NewSelectUi:I
+
     invoke-static {v0}, LX/0yP;->A03(I)I
 
     move-result v1

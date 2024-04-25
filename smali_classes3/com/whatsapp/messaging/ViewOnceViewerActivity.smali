@@ -172,8 +172,6 @@
 
     const/16 v0, 0x2000
 
-    invoke-virtual {v1, v0, v0}, Landroid/view/Window;->setFlags(II)V
-
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0

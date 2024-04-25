@@ -342,7 +342,6 @@
     move-result-object v4
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_3
 
     :try_start_3
     invoke-static {}, LX/0yM;->A0i()Ljavax/crypto/SecretKey;
@@ -353,7 +352,6 @@
     :try_end_3
     .catch Ljava/security/NoSuchAlgorithmException; {:try_start_3 .. :try_end_3} :catch_0
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
-    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_3
 
     :catch_0
     const/4 v2, 0x0
@@ -409,7 +407,6 @@
     goto :goto_2
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_2
-    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_3
 
     :goto_3
     :try_start_5
@@ -420,8 +417,6 @@
     goto :goto_4
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_2
-    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_3
 
     :catch_1
     const/4 v0, 0x0
@@ -439,7 +434,6 @@
     invoke-static {v0, v8, v5, v7}, LX/000;->A1E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
     :try_end_6
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_2
-    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_3
 
     :catch_2
     :try_start_7

@@ -75,9 +75,17 @@
 
     invoke-virtual {v3, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    sget v0, Lcom/Lzm/Settings/Fluidity/Characters;->MaxLines:I
+
+    invoke-virtual {v3, v0}, Landroid/widget/TextView;->setMaxLines(I)V
+
     iget-object v0, v1, Lcom/whatsapp/location/PlaceInfo;->A0B:Ljava/lang/String;
 
     invoke-virtual {v2, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    sget v0, Lcom/Lzm/Settings/Fluidity/Characters;->MaxLines:I
+
+    invoke-virtual {v2, v0}, Landroid/widget/TextView;->setMaxLines(I)V
 
     :cond_0
     return-object v4

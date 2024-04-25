@@ -2025,7 +2025,6 @@
     invoke-static {v0}, LX/38f;->A04(Ljava/io/Closeable;)V
     :try_end_f
     .catch Ljava/io/IOException; {:try_start_f .. :try_end_f} :catch_4
-    .catch Ljava/io/IOException; {:try_start_f .. :try_end_f} :catch_5
 
     :catch_4
     :try_start_10

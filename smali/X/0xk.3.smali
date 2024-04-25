@@ -483,7 +483,6 @@
     goto :goto_3
     :try_end_7
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_2
-    .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_6
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_3
 
@@ -565,7 +564,6 @@
     :try_end_a
     .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_3
     .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_6
-    .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_7
     .catchall {:try_start_a .. :try_end_a} :catchall_3
 
     :catch_3
@@ -598,7 +596,6 @@
     :try_end_d
     .catch Ljava/lang/Exception; {:try_start_d .. :try_end_d} :catch_5
     .catch Ljava/io/IOException; {:try_start_d .. :try_end_d} :catch_6
-    .catch Ljava/lang/Exception; {:try_start_d .. :try_end_d} :catch_7
     .catchall {:try_start_d .. :try_end_d} :catchall_3
 
     :catch_5

@@ -258,6 +258,10 @@
 .method public final A03(LX/37v;Ljava/util/Set;Z)V
     .locals 18
 
+    invoke-static/range {p1 .. p2}, Lcom/DroidzinModder/SpamMessage;->A00(LX/37v;Ljava/util/Set;)Ljava/util/Set;
+
+    move-result-object p2
+
     move-object/from16 v4, p2
 
     invoke-interface {v4}, Ljava/util/Set;->isEmpty()Z

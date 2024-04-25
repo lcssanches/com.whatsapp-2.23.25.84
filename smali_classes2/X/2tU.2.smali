@@ -1246,7 +1246,6 @@
     move-result-object v4
     :try_end_7
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_2
-    .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_3
 
     :try_start_8
     invoke-static {v8}, LX/0yU;->A0b(Ljava/io/File;)Ljava/io/FileInputStream;
@@ -1304,7 +1303,6 @@
     goto :goto_6
     :try_end_c
     .catch Ljava/io/IOException; {:try_start_c .. :try_end_c} :catch_2
-    .catch Ljava/io/IOException; {:try_start_c .. :try_end_c} :catch_3
 
     :catchall_3
     move-exception v1
@@ -1329,7 +1327,6 @@
     throw v1
     :try_end_e
     .catch Ljava/io/IOException; {:try_start_e .. :try_end_e} :catch_2
-    .catch Ljava/io/IOException; {:try_start_e .. :try_end_e} :catch_3
 
     :catch_2
     :try_start_f

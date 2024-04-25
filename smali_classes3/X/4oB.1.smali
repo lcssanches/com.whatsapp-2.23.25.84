@@ -307,6 +307,10 @@
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    sget v0, Lcom/Lzm/Settings/Fluidity/Characters;->MaxLines:I
+
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setMaxLines(I)V
+
     :goto_0
     iget-object v6, v10, LX/4oB;->A0K:LX/5cm;
 
@@ -696,6 +700,10 @@
 
     invoke-virtual {v9, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    sget v4, Lcom/Lzm/Settings/Fluidity/Characters;->MaxLines:I
+
+    invoke-virtual {v9, v4}, Landroid/widget/TextView;->setMaxLines(I)V
+
     invoke-virtual {v7, v8}, Landroid/view/View;->setVisibility(I)V
 
     const v0, 0x7f120350
@@ -990,6 +998,10 @@
     iget-object v2, p0, LX/4oB;->A0U:Landroid/widget/TextView;
 
     invoke-virtual {v2, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    sget p1, Lcom/Lzm/Settings/Fluidity/Characters;->MaxLines:I
+
+    invoke-virtual {v1, p1}, Landroid/widget/TextView;->setMaxLines(I)V
 
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
@@ -1537,6 +1549,10 @@
     move-result-object v0
 
     invoke-virtual {v3, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    sget v0, Lcom/Lzm/Settings/Fluidity/Characters;->MaxLines:I
+
+    invoke-virtual {v3, v0}, Landroid/widget/TextView;->setMaxLines(I)V
 
     return-void
 

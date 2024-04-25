@@ -403,7 +403,6 @@
     invoke-static {v13, v10, v3}, LX/3A2;->A06(LX/39Z;LX/42D;[Ljava/lang/String;)Ljava/lang/Object;
     :try_end_2
     .catch LX/1z3; {:try_start_2 .. :try_end_2} :catch_0
-    .catch LX/1z3; {:try_start_2 .. :try_end_2} :catch_1
 
     :catch_0
     :try_start_3
@@ -903,7 +902,6 @@
     invoke-static {v13, v7, v6}, LX/3A2;->A06(LX/39Z;LX/42D;[Ljava/lang/String;)Ljava/lang/Object;
     :try_end_a
     .catch LX/1z3; {:try_start_a .. :try_end_a} :catch_3
-    .catch LX/1z3; {:try_start_a .. :try_end_a} :catch_4
 
     :catch_3
     :try_start_b

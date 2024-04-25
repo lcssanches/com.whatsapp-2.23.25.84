@@ -521,7 +521,6 @@
     goto :goto_1
     :try_end_8
     .catch Ljava/lang/SecurityException; {:try_start_8 .. :try_end_8} :catch_2
-    .catch Ljava/lang/SecurityException; {:try_start_8 .. :try_end_8} :catch_3
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_8 .. :try_end_8} :catch_3
     .catch Ljava/lang/IllegalStateException; {:try_start_8 .. :try_end_8} :catch_3
     .catchall {:try_start_8 .. :try_end_8} :catchall_2
@@ -730,7 +729,6 @@
     :try_end_13
     .catch Ljava/lang/SecurityException; {:try_start_13 .. :try_end_13} :catch_4
     .catch Ljava/lang/IllegalStateException; {:try_start_13 .. :try_end_13} :catch_5
-    .catch Ljava/lang/SecurityException; {:try_start_13 .. :try_end_13} :catch_5
     .catch Ljava/lang/NullPointerException; {:try_start_13 .. :try_end_13} :catch_5
     .catchall {:try_start_13 .. :try_end_13} :catchall_8
 

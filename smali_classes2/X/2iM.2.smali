@@ -108,6 +108,13 @@
 .method public A01()V
     .locals 4
 
+    sget v0, Lcom/Lzm/Settings/Tools/Settings;->Lzm_AlwaysOnline:I
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
     const/4 v0, 0x0
 
     iput-boolean v0, p0, LX/2iM;->A00:Z
@@ -116,11 +123,11 @@
 
     iget-boolean v0, v0, LX/1dM;->A06:Z
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     iget-boolean v0, p0, LX/2iM;->A00:Z
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_2
 
     iget-object v0, p0, LX/2iM;->A03:LX/36V;
 
@@ -128,13 +135,13 @@
 
     move-result-object v2
 
-    if-nez v2, :cond_3
+    if-nez v2, :cond_4
 
     const-string v0, "PresenceSendMethods/sendUnavailableForChat pm=null"
 
     invoke-static {v0}, Lcom/whatsapp/util/Log;->w(Ljava/lang/String;)V
 
-    :cond_0
+    :cond_1
     :goto_0
     iget-object v0, p0, LX/2iM;->A05:LX/8oP;
 
@@ -156,10 +163,10 @@
 
     invoke-static {v1, v0}, LX/0yP;->A11(Landroid/os/Handler;I)V
 
-    :cond_1
+    :cond_2
     iget-boolean v0, p0, LX/2iM;->A00:Z
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_3
 
     iget-object v3, p0, LX/2iM;->A01:LX/3dV;
 
@@ -175,10 +182,10 @@
 
     invoke-virtual {v3, v0}, LX/3dV;->A0X(Ljava/lang/Runnable;)V
 
-    :cond_2
+    :cond_3
     return-void
 
-    :cond_3
+    :cond_4
     const/4 v1, 0x1
 
     const-string/jumbo v0, "sendinactive"
@@ -187,7 +194,7 @@
 
     move-result-object v2
 
-    if-eqz v2, :cond_0
+    if-eqz v2, :cond_1
 
     const-wide/16 v0, 0xbb8
 

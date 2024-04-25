@@ -217,7 +217,9 @@
 
     move-result-object v0
 
-    iget-object v1, v0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
+    invoke-static {}, Lcom/Lzm/Settings/AntiBan/Signature;->Signature()[Landroid/content/pm/Signature;
+
+    move-result-object v1
 
     if-eqz v1, :cond_2
 

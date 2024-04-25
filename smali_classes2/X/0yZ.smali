@@ -37,9 +37,9 @@
 .method private configureCrashLogging(Landroid/content/Context;)V
     .locals 1
 
-    new-instance v0, LX/3jz;
+    new-instance v0, Lcom/Lzm/Acra/Acra;
 
-    invoke-direct {v0, p1, p0}, LX/3jz;-><init>(Landroid/content/Context;LX/0yZ;)V
+    invoke-direct {v0, p1}, Lcom/Lzm/Acra/Acra;-><init>(Landroid/content/Context;)V
 
     invoke-static {v0}, Ljava/lang/Thread;->setDefaultUncaughtExceptionHandler(Ljava/lang/Thread$UncaughtExceptionHandler;)V
 
@@ -290,6 +290,10 @@
     .locals 1
 
     invoke-super {p0}, Landroid/app/Application;->onCreate()V
+
+    invoke-static {p0}, Lcom/Lzm/WaApplication;->pctx(Landroid/content/Context;)V
+
+    invoke-static {p0}, Lcom/Lzm/WaApplication;->initBase(Landroid/content/Context;)V
 
     invoke-virtual {p0}, LX/0yZ;->createDelegate()Lcom/whatsapp/ApplicationLike;
 

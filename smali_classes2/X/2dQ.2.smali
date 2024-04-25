@@ -204,7 +204,6 @@
     move-result-object v20
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_3
     .catchall {:try_start_1 .. :try_end_1} :catchall_16
 
     :try_start_2
@@ -648,7 +647,6 @@
     move-object v3, v1
     :try_end_7
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_1
-    .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_3
     .catchall {:try_start_7 .. :try_end_7} :catchall_16
 
     :cond_a
@@ -1836,7 +1834,6 @@
     throw v1
     :try_end_32
     .catch Ljava/io/IOException; {:try_start_32 .. :try_end_32} :catch_1
-    .catch Ljava/io/IOException; {:try_start_32 .. :try_end_32} :catch_3
     .catchall {:try_start_32 .. :try_end_32} :catchall_16
 
     :catch_1

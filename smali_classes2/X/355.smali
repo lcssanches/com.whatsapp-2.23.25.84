@@ -212,7 +212,6 @@
     move-result-object v11
     :try_end_4
     .catch Lorg/json/JSONException; {:try_start_4 .. :try_end_4} :catch_0
-    .catch Lorg/json/JSONException; {:try_start_4 .. :try_end_4} :catch_2
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
     :try_start_5
@@ -225,7 +224,6 @@
     goto :goto_3
     :try_end_5
     .catch Lorg/json/JSONException; {:try_start_5 .. :try_end_5} :catch_1
-    .catch Lorg/json/JSONException; {:try_start_5 .. :try_end_5} :catch_2
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
     :catch_0

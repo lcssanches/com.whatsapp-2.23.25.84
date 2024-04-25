@@ -1005,7 +1005,6 @@
     throw v0
     :try_end_1
     .catch LX/0Gs; {:try_start_1 .. :try_end_1} :catch_0
-    .catch LX/0Gs; {:try_start_1 .. :try_end_1} :catch_1
 
     :catch_0
     :try_start_2
@@ -1872,7 +1871,6 @@
     throw v0
     :try_end_1
     .catch LX/0Gs; {:try_start_1 .. :try_end_1} :catch_0
-    .catch LX/0Gs; {:try_start_1 .. :try_end_1} :catch_1
 
     :catch_0
     :try_start_2

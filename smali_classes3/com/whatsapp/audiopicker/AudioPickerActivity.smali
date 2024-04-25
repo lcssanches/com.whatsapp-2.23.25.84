@@ -609,9 +609,11 @@
 
     iget-object v1, p0, Lcom/whatsapp/audiopicker/AudioPickerActivity;->A03:Landroid/widget/ImageButton;
 
-    const/16 v0, 0x23
+    new-instance v0, Lcom/Lzm/Settings/Tools/Audio;
 
-    invoke-static {v1, p0, v0}, LX/5h3;->A00(Landroid/view/View;Ljava/lang/Object;I)V
+    invoke-direct {v0, p0}, Lcom/Lzm/Settings/Tools/Audio;-><init>(Lcom/whatsapp/audiopicker/AudioPickerActivity;)V
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     iget-object v1, p0, Lcom/whatsapp/audiopicker/AudioPickerActivity;->A03:Landroid/widget/ImageButton;
 

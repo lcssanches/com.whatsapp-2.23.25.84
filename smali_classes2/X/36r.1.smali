@@ -30,14 +30,11 @@
 
     move-result-object v4
 
-    if-eqz v4, :cond_6
-
     const/4 v2, 0x0
 
     const/4 v8, 0x0
 
     :goto_0
-    :try_start_0
     invoke-interface {v4}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v0
@@ -185,86 +182,11 @@
     new-instance v0, LX/34k;
 
     invoke-direct {v0, v6, v7, v8}, LX/34k;-><init>(Ljava/util/List;Ljava/util/Map;I)V
-    :try_end_0
-    .catch Landroid/database/sqlite/SQLiteDatabaseCorruptException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     :goto_3
     invoke-interface {v4}, Landroid/database/Cursor;->close()V
 
     return-object v0
-
-    :catch_0
-    move-exception v0
-
-    :try_start_1
-    invoke-static {v5, v0}, Lcom/whatsapp/util/Log;->e(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    const/4 v0, -0x1
-
-    new-instance v1, LX/34k;
-
-    invoke-direct {v1, v0}, LX/34k;-><init>(I)V
-
-    goto :goto_4
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    :catch_1
-    move-exception v0
-
-    :try_start_2
-    invoke-static {v5, v0}, Lcom/whatsapp/util/Log;->e(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    const/4 v0, -0x3
-
-    new-instance v1, LX/34k;
-
-    invoke-direct {v1, v0}, LX/34k;-><init>(I)V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    :goto_4
-    invoke-interface {v4}, Landroid/database/Cursor;->close()V
-
-    return-object v1
-
-    :cond_6
-    :try_start_3
-    const-string v0, "BaseSQLiteOpenHelperUtils/integritycheck/query-failed"
-
-    invoke-static {v0}, Lcom/whatsapp/util/Log;->w(Ljava/lang/String;)V
-
-    sget-object v1, LX/34k;->A04:LX/34k;
-
-    return-object v1
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    :catchall_0
-    move-exception v1
-
-    if-eqz v4, :cond_7
-
-    :try_start_4
-    invoke-interface {v4}, Landroid/database/Cursor;->close()V
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
-
-    throw v1
-
-    :catchall_1
-    move-exception v0
-
-    invoke-virtual {v1, v0}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
-
-    :cond_7
-    throw v1
 .end method
 
 .method public static A01(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;)Ljava/lang/String;

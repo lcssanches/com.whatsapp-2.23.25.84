@@ -395,7 +395,6 @@
     goto :goto_2
     :try_end_9
     .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_0
-    .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_2
     .catchall {:try_start_9 .. :try_end_9} :catchall_4
 
     :catch_0

@@ -1669,7 +1669,6 @@
     invoke-direct {v7, v2}, LX/80I;-><init>(Landroid/media/MediaCodec;)V
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_2
     .catch LX/72X; {:try_start_4 .. :try_end_4} :catch_4
 
     :try_start_5
@@ -1712,7 +1711,6 @@
     move-result-wide v17
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_0
-    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_2
     .catch LX/72X; {:try_start_5 .. :try_end_5} :catch_4
 
     :try_start_6
@@ -4015,7 +4013,6 @@
     goto :goto_5
     :try_end_1
     .catch Ljava/lang/IllegalStateException; {:try_start_1 .. :try_end_1} :catch_1
-    .catch Ljava/lang/IllegalStateException; {:try_start_1 .. :try_end_1} :catch_3
 
     :cond_12
     :try_start_2
@@ -4186,7 +4183,6 @@
     goto :goto_8
     :try_end_3
     .catch Ljava/lang/IllegalStateException; {:try_start_3 .. :try_end_3} :catch_0
-    .catch Ljava/lang/IllegalStateException; {:try_start_3 .. :try_end_3} :catch_3
 
     :catch_0
     :try_start_4
